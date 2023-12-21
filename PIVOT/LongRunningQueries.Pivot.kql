@@ -1,0 +1,105 @@
+
+let _entraTenantId = '<Entra Tenant Id>';
+let _environmentType = '<Environment Type>';
+let _environmentName = '<Environment Name>';
+let _companyName = '<Company Name>';
+let _startTime = datetime('<Start Datetime>');
+let _endTime = datetime('<End Datetime>');
+let TableCount = (
+traces
+| where customDimensions.aadTenantId has_any (_entraTenantId)
+| where customDimensions.environmentType has_any (_environmentType)
+| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.companyName has_any (_companyName)
+| where timestamp between (_startTime .. _endTime)// adjust as needed
+| where customDimensions.eventId == 'RT0005' 
+| where customDimensions.alObjectId > 0 // filter out internal server calls
+| project 
+timestamp
+, sqlStatement = tostring(customDimensions.sqlStatement)
+, extensionId = tostring(customDimensions.extensionId)
+, extensionPublisher = tostring(customDimensions.extensionPublisher)
+, extensionName = tostring(customDimensions.extensionName)
+, alObjectId = tostring(customDimensions.alObjectId)
+, alObjectName = tostring(customDimensions.alObjectName)
+, alObjectType = tostring(customDimensions.alObjectType)
+, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan 
+| extend operationType = case(
+  sqlStatement startswith "UPDATE", "UPDATE"
+, sqlStatement startswith "DELETE", "DELETE"
+, sqlStatement startswith "BeginTransaction", "BEGIN_TRANS"
+, sqlStatement matches regex "INSERT INTO", "INSERT"
+, sqlStatement startswith "SELECT", "SELECT"
+, sqlStatement matches regex "IF EXISTS \\(SELECT (.*)\\) SELECT", "SELECT'"
+, sqlStatement has "SELECT NEXT VALUE FOR", "SELECT_SEQUENCE_VALUE"
+, sqlStatement has "SELECT @@SPID", "SELECT_SPID"
+, sqlStatement matches regex "(.*)WITH", "SELECT"
+, sqlStatement startswith "CREATE TABLE", "CREATE_TABLE"
+, sqlStatement startswith "ALTER TABLE", "ALTER_TABLE"
+, sqlStatement startswith "exec sp_rename", "RENAME_TABLE" 
+, sqlStatement matches regex "(.*)DROP TABLE", "DROP_TABLE"
+, sqlStatement startswith "SET LOCK_TIMEOUT", "SET_LOCK_TIMEOUT"
+, sqlStatement has "sp_getapplock", "GET_APP_LOCK"
+, "UNKNOWN"
+)
+, dayBin = bin(timestamp,1d)
+| extend day = strcat(strcat(format_datetime(dayBin, "yyyy-MM-dd"))," (Count)") 
+| project-away timestamp, sqlStatement, dayBin, executionTimeInMS
+| sort by day asc 
+| evaluate pivot(day, count())
+);
+TableCount
+| join
+(traces
+| where customDimensions.aadTenantId has_any (_entraTenantId)
+| where customDimensions.environmentType has_any (_environmentType)
+| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.companyName has_any (_companyName)
+| where timestamp between (_startTime .. _endTime)// adjust as needed
+| where customDimensions.eventId == 'RT0005' 
+| where customDimensions.alObjectId > 0 // filter out internal server calls
+| project 
+timestamp
+, sqlStatement = tostring(customDimensions.sqlStatement)
+, extensionId = tostring(customDimensions.extensionId)
+, extensionPublisher = tostring(customDimensions.extensionPublisher)
+, extensionName = tostring(customDimensions.extensionName)
+, alObjectId = tostring(customDimensions.alObjectId)
+, alObjectName = tostring(customDimensions.alObjectName)
+, alObjectType = tostring(customDimensions.alObjectType)
+, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan 
+// this part of the query derives various insights from the SQL statement
+| extend operationType = case(
+  sqlStatement startswith "UPDATE", "UPDATE"
+, sqlStatement startswith "DELETE", "DELETE"
+, sqlStatement startswith "BeginTransaction", "BEGIN_TRANS"
+, sqlStatement matches regex "INSERT INTO", "INSERT"
+, sqlStatement startswith "SELECT", "SELECT"
+, sqlStatement matches regex "IF EXISTS \\(SELECT (.*)\\) SELECT", "SELECT'"
+, sqlStatement has "SELECT NEXT VALUE FOR", "SELECT_SEQUENCE_VALUE"
+, sqlStatement has "SELECT @@SPID", "SELECT_SPID"
+, sqlStatement matches regex "(.*)WITH", "SELECT"
+, sqlStatement startswith "CREATE TABLE", "CREATE_TABLE"
+, sqlStatement startswith "ALTER TABLE", "ALTER_TABLE"
+, sqlStatement startswith "exec sp_rename", "RENAME_TABLE" 
+, sqlStatement matches regex "(.*)DROP TABLE", "DROP_TABLE"
+, sqlStatement startswith "SET LOCK_TIMEOUT", "SET_LOCK_TIMEOUT"
+, sqlStatement has "sp_getapplock", "GET_APP_LOCK"
+, "UNKNOWN"
+)
+, dayBin = bin(timestamp,1d)
+| extend day = strcat(strcat(format_datetime(dayBin, "yyyy-MM-dd")), " (avg)")
+| project-away timestamp, sqlStatement, dayBin
+| summarize Average = round(avg(executionTimeInMS),0) by extensionId, extensionPublisher, extensionName, alObjectType, alObjectId, alObjectName, operationType, day
+| sort by day asc 
+| evaluate pivot(day,sum(Average))
+)
+on
+$left.extensionId == $right.extensionId,
+$left.extensionPublisher == $right.extensionPublisher,
+$left.extensionName == $right.extensionName,
+$left.alObjectType == $right.alObjectType,
+$left.alObjectId == $right.alObjectId,
+$left.alObjectName == $right.alObjectName,
+$left.operationType == $right.operationType
+| project-away extensionId1, extensionPublisher1, extensionName1, alObjectType1, alObjectId1, alObjectName1, operationType1

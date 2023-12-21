@@ -1,0 +1,23 @@
+
+let _entraTenantId = '<Entra Tenant Id>';
+let _environmentType = '<Environment Type>';
+let _environmentName = '<Environment Name>';
+let _companyName = '<Company Name>';
+let _startTime = datetime('<Start Datetime>');
+let _endTime = datetime('<End Datetime>');
+pageViews
+| where timestamp >= todatetime(_startTime)
+    and timestamp <= todatetime(_endTime) + totimespan(24h) - totimespan(1ms) 
+| where customDimensions.aadTenantId has_any (_entraTenantId)
+| where customDimensions.environmentType has_any (_environmentType)
+| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.companyName has_any (_companyName)
+| where customDimensions.alObjectId > 0
+| extend bucketIndex = case(
+    performanceBucket in (">=5min", "2min-5min", "1min-2min", "30sec-1min", "15sec-30sec"), "5-BLOODY BAD"
+    , performanceBucket == "7sec-15sec", "4-VERY BAD"
+    , performanceBucket == "3sec-7sec", "3-BAD"
+    , performanceBucket == "1sec-3sec", "2-GOOD"
+    , performanceBucket in ("500ms-1sec", "250ms-500ms", "<250ms"), "1-VERY GOOD"
+    , "00")
+| summarize count() by name, bucketIndex, bin(timestamp,1d)
