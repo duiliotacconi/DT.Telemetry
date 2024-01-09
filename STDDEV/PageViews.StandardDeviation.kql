@@ -1,0 +1,91 @@
+let _aadTenanatId = '<yourEntraTenantId>';
+let _environmentName = '<yourEnvironmentName>';
+let _startTimePre = datetime(2023-09-01T00:47:51Z);
+let _endTimePre = datetime(2023-12-01T14:47:51Z);
+let _startTimePost = datetime(2023-12-06T00:47:51Z);
+let _endTimePost = datetime(2024-09-01T14:47:51Z);
+let PageViewsPost = (
+pageViews
+| where customDimensions.aadTenantId == _aadTenanatId
+| where customDimensions.environmentName == _environmentName
+| where timestamp between (_startTimePost .. _endTimePost)
+| where customDimensions.alObjectId > 0
+| where customDimensions.pageType !in ("ReportPreview","ReportProcessingOnly","XmlPort","FilterPage","StandardDialog","ConfirmationDialog")
+| extend 
+    alObjectName = tostring(customDimensions.alObjectName)
+    , alObjectId = tostring(customDimensions.alObjectId)
+    , clientType = tostring(customDimensions.clientType)
+    , eventId = tostring(customDimensions.eventID) 
+    , pageMode = tostring(customDimensions.pageMode)
+    , pageType = tostring(customDimensions.pageType)
+    , environmentName = tostring(customDimensions.environmentName)
+| summarize 
+    ExecutionCount = count(),
+    avgTime = toint(avg(duration)),
+    stdDev = toint(stdev(duration))
+    by
+    alObjectId,
+    alObjectName,
+    eventId,
+    pageType
+| project
+    ["AL Object ID"] = alObjectId,
+    ["AL Object Name"] = alObjectName,
+    ["Page Type"] = pageType,
+    ["Count POST"] = ExecutionCount,
+    ["Avg. Time POST"] = avgTime,
+    ["Std. Dev. POST"] = stdDev
+);
+PageViewsPost
+| join
+(
+pageViews
+| where customDimensions.aadTenantId == _aadTenanatId
+| where customDimensions.environmentName == _environmentName
+| where timestamp between (_startTimePre .. _endTimePre)
+| where customDimensions.alObjectId > 0
+| where customDimensions.pageType !in ("ReportPreview","ReportProcessingOnly","XmlPort","FilterPage","StandardDialog","ConfirmationDialog")
+| extend 
+    alObjectName = tostring(customDimensions.alObjectName)
+    , alObjectId = tostring(customDimensions.alObjectId)
+    , clientType = tostring(customDimensions.clientType)
+    , eventId = tostring(customDimensions.eventID) 
+    , pageMode = tostring(customDimensions.pageMode)
+    , pageType = tostring(customDimensions.pageType)
+    , environmentName = tostring(customDimensions.environmentName)
+| summarize 
+    ExecutionCount = count(),
+    avgTime = toint(avg(duration)),
+    stdDev = toint(stdev(duration))
+    by
+    alObjectId,
+    alObjectName,
+    eventId,
+    pageType
+| project
+    ["AL Object ID"] = alObjectId,
+    ["AL Object Name"] = alObjectName,
+    ["Page Type"] = pageType,
+    ["Count PRE"] = ExecutionCount,
+    ["Avg. Time PRE"] = avgTime,
+    ["Std. Dev. PRE"] = stdDev
+)
+on
+$left.['AL Object ID'] == $right.['AL Object ID'],
+$left.['AL Object Name'] == $right.['AL Object Name'],
+$left.['Page Type'] == $right.['Page Type']
+|project
+    ["AL Object ID"] ,
+    ["AL Object Name"] ,
+    ["Page Type"] ,
+    ["Count PRE"] ,
+    ['Count POST'] ,
+    ["Avg. Time PRE"] ,
+    ['Avg. Time POST'] ,
+    ['Avg. Time DELTA'] = toint(['Avg. Time POST'] - ['Avg. Time PRE']),
+    ["Std. Dev. PRE"] ,
+    ['Std. Dev. POST'] ,
+    ['Std Dev. DELTA'] = toint(['Std. Dev. POST'] - ['Std. Dev. PRE'])
+| where ['Count POST'] > 150
+| where ['Avg. Time POST'] > 1500
+| sort by ['Avg. Time DELTA'] asc 
