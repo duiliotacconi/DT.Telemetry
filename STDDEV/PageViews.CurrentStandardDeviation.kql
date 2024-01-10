@@ -1,0 +1,40 @@
+// Calculates the standard deviation for pages. Use this to see which pages that have slow loading
+// Doc: https://duiliotacconi.com/2024/01/09/measuring-saas-ui-stability-standard-deviation-and-the-rollercoaster-effect/
+// Source: https://github.com/duiliotacconi/DT.Telemetry/blob/main/STDDEV/PageViews.CurrentStandardDeviation.kql
+let _aadTenanatId = '<yourEntraTenantId>';
+let _environmentName = '<yourEnvironmentName>';
+let _startTime = datetime(2023-09-01T00:47:51Z);
+let _endTime = datetime(2024-01-10T14:47:51Z);
+pageViews
+// | where customDimensions.aadTenantId == _aadTenanatId
+// | where customDimensions.environmentName == _environmentName
+| where timestamp between (_startTime .. _endTime)
+| where customDimensions.alObjectId > 0
+| where customDimensions.pageType !in ("ReportPreview","ReportProcessingOnly","XmlPort","FilterPage","StandardDialog","ConfirmationDialog")
+| extend 
+    alObjectName = tostring(customDimensions.alObjectName)
+    , alObjectId = tostring(customDimensions.alObjectId)
+    , clientType = tostring(customDimensions.clientType)
+    , eventId = tostring(customDimensions.eventID) 
+    , pageMode = tostring(customDimensions.pageMode)
+    , pageType = tostring(customDimensions.pageType)
+    , environmentName = tostring(customDimensions.environmentName)
+| summarize 
+    ExecutionCount = count(),
+    avgTime = toint(avg(duration)),
+    stdDev = toint(stdev(duration))
+    by
+    alObjectId,
+    alObjectName,
+    eventId,
+    pageType
+| project
+    ["AL Object ID"] = alObjectId,
+    ["AL Object Name"] = alObjectName,
+    ["Page Type"] = pageType,
+    ["Count"] = ExecutionCount,
+    ["Avg. Time (ms)"] = avgTime,
+    ["Std. Dev."] = stdDev
+| where ['Count'] > 150
+| where ['Avg. Time (ms)'] > 1500
+| sort by ['Avg. Time (ms)'] asc 
