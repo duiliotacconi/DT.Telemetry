@@ -1,3 +1,6 @@
+// Calculates the standard deviation for pages and compares before and after upgrade 
+// Doc: https://duiliotacconi.com/2024/01/09/measuring-saas-ui-stability-standard-deviation-and-the-rollercoaster-effect/
+// Source: https://github.com/duiliotacconi/DT.Telemetry/blob/main/STDDEV/PageViews.StandardDeviation.kql
 let _aadTenanatId = '<yourEntraTenantId>';
 let _environmentName = '<yourEnvironmentName>';
 let _startTimePre = datetime(2023-09-01T00:47:51Z);
