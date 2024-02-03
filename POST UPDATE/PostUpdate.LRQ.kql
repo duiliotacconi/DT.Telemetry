@@ -1,0 +1,112 @@
+﻿// Determine delta and delta % duration differences between last 2 updates. Long running SQL Queries.
+// Doc: https://duiliotacconi.com/2024/02/03/how-to-spot-post-update-performance-trends-in-saas/
+// Source: https://github.com/duiliotacconi/DT.Telemetry/blob/main/STDDEV/PageViews.CurrentStandardDeviation.kql
+let _entraTenanatId = '<yourEntraTenantId>';
+let _environmentName = '<yourEnvironmentName>';
+let _environmentType = '<theEnvironmentType>';
+let _previousUpdateStartTime = datetime(2024-02-03T21:02:19Z);
+let _updateStartTime = datetime(2024-02-03T22:02:19Z);
+let _now = now();
+let TableCount = (
+traces
+| where timestamp between (_previousUpdateStartTime .. _now)
+//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.environmentType has_any (_environmentType)
+//| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.eventId == 'RT0005' 
+| where customDimensions.alObjectId > 0 
+| project timestamp
+, clientType = tostring(customDimensions.clientType)
+, sqlStatement = tostring(customDimensions.sqlStatement)
+, extensionId = tostring(customDimensions.extensionId)
+, extensionPublisher = tostring(customDimensions.extensionPublisher)
+, extensionName = trim('GMK',tostring(customDimensions.extensionName))
+, alObjectId = tostring(customDimensions.alObjectId)
+, alObjectName = trim('GMK',tostring(customDimensions.alObjectName))
+, alObjectType = tostring(customDimensions.alObjectType)
+, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan 
+| extend operationType = case(
+  sqlStatement startswith "UPDATE", "UPDATE"
+, sqlStatement startswith "DELETE", "DELETE"
+, sqlStatement startswith "BeginTransaction", "BEGIN_TRANS"
+, sqlStatement matches regex "INSERT INTO", "INSERT"
+, sqlStatement startswith "SELECT", "SELECT"
+, sqlStatement matches regex "IF EXISTS \\(SELECT (.*)\\) SELECT", "SELECT'"
+, sqlStatement has "SELECT NEXT VALUE FOR", "SELECT_SEQUENCE_VALUE"
+, sqlStatement has "SELECT @@SPID", "SELECT_SPID"
+, sqlStatement matches regex "(.*)WITH", "SELECT"
+, sqlStatement startswith "CREATE TABLE", "CREATE_TABLE"
+, sqlStatement startswith "ALTER TABLE", "ALTER_TABLE"
+, sqlStatement startswith "exec sp_rename", "RENAME_TABLE" 
+, sqlStatement matches regex "(.*)DROP TABLE", "DROP_TABLE"
+, sqlStatement startswith "SET LOCK_TIMEOUT", "SET_LOCK_TIMEOUT"
+, sqlStatement has "sp_getapplock", "GET_APP_LOCK"
+, "UNKNOWN"
+)
+, signalsBin = iff(timestamp < _updateStartTime,'Previous Update', 'New Update')
+| extend signals = strcat(signalsBin," (Count)") 
+| project-away timestamp, signalsBin, executionTimeInMS
+| sort by signals asc 
+| evaluate pivot(signals, count())
+);
+TableCount
+| join
+(traces
+| where timestamp between (_previousUpdateStartTime .. _now)
+//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.environmentType has_any (_environmentType)
+//| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.eventId == 'RT0005' 
+| where customDimensions.alObjectId > 0 
+| project timestamp
+, clientType = tostring(customDimensions.clientType)
+, sqlStatement = tostring(customDimensions.sqlStatement)
+, extensionId = tostring(customDimensions.extensionId)
+, extensionPublisher = tostring(customDimensions.extensionPublisher)
+, extensionName = trim('GMK',tostring(customDimensions.extensionName))
+, alObjectId = tostring(customDimensions.alObjectId)
+, alObjectName = trim('GMK',tostring(customDimensions.alObjectName))
+, alObjectType = tostring(customDimensions.alObjectType)
+, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan 
+// this part of the query derives various insights from the SQL statement
+| extend operationType = case(
+  sqlStatement startswith "UPDATE", "UPDATE"
+, sqlStatement startswith "DELETE", "DELETE"
+, sqlStatement startswith "BeginTransaction", "BEGIN_TRANS"
+, sqlStatement matches regex "INSERT INTO", "INSERT"
+, sqlStatement startswith "SELECT", "SELECT"
+, sqlStatement matches regex "IF EXISTS \\(SELECT (.*)\\) SELECT", "SELECT'"
+, sqlStatement has "SELECT NEXT VALUE FOR", "SELECT_SEQUENCE_VALUE"
+, sqlStatement has "SELECT @@SPID", "SELECT_SPID"
+, sqlStatement matches regex "(.*)WITH", "SELECT"
+, sqlStatement startswith "CREATE TABLE", "CREATE_TABLE"
+, sqlStatement startswith "ALTER TABLE", "ALTER_TABLE"
+, sqlStatement startswith "exec sp_rename", "RENAME_TABLE" 
+, sqlStatement matches regex "(.*)DROP TABLE", "DROP_TABLE"
+, sqlStatement startswith "SET LOCK_TIMEOUT", "SET_LOCK_TIMEOUT"
+, sqlStatement has "sp_getapplock", "GET_APP_LOCK"
+, "UNKNOWN"
+)
+, signalsBin = iff(timestamp < _updateStartTime,'Previous Update', 'New Update')
+| extend signals = strcat(signalsBin," (Avg)") 
+| project-away timestamp, signalsBin
+| summarize Average = round(avg(executionTimeInMS),0) by extensionId, extensionPublisher, extensionName, alObjectType, alObjectId, alObjectName, operationType, sqlStatement, clientType, signals
+| sort by signals asc 
+| evaluate pivot(signals,sum(Average))
+)
+on
+$left.extensionId == $right.extensionId,
+$left.extensionPublisher == $right.extensionPublisher,
+$left.extensionName == $right.extensionName,
+$left.alObjectType == $right.alObjectType,
+$left.alObjectId == $right.alObjectId,
+$left.alObjectName == $right.alObjectName,
+$left.clientType == $right.clientType,
+$left.operationType == $right.operationType,
+$left.sqlStatement == $right.sqlStatement
+| project-away extensionId, extensionId1, extensionPublisher1, extensionName1, alObjectType1, alObjectId1, alObjectName1, operationType1, sqlStatement1, clientType1
+| where ["New Update (Count)"] > 100
+| extend isNew = tostring(iif(["Previous Update (Count)"] < 1, "Yes",""))
+| extend delta = iif(isNew == "Yes", 0.0, ["Previous Update (Avg)"] - ["New Update (Avg)"]) 
+    , deltaPerc = iif(isNew == "Yes", 0.0, round((["Previous Update (Avg)"] - ["New Update (Avg)"]) * 100 / ["Previous Update (Avg)"],0))
+| sort by ["New Update (Count)"] desc

@@ -1,0 +1,56 @@
+﻿// Determine delta and delta % duration differences between last 2 updates. Page Views.
+// Doc: https://duiliotacconi.com/2024/02/03/how-to-spot-post-update-performance-trends-in-saas/
+// Source: https://github.com/duiliotacconi/DT.Telemetry/blob/main/STDDEV/PageViews.CurrentStandardDeviation.kql
+let _entraTenanatId = '<yourEntraTenantId>';
+let _environmentName = '<yourEnvironmentName>';
+let _previousUpdateStartTime = datetime(2024-02-03T21:02:19Z);
+let _updateStartTime = datetime(2024-02-03T22:02:19Z);
+let _now = now();
+let PageViewCount = (
+pageViews
+| where timestamp between (_previousUpdateStartTime .. _now)
+//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.alObjectId > 0
+| project timestamp
+    , alObjectId = tostring(customDimensions.alObjectId)
+    , alObjectName = replace_string(tostring(customDimensions.alObjectName),'GMK','')
+    , eventId = tostring(customDimensions.eventID) 
+    , pageType = tostring(customDimensions.pageType)
+    , durationInMs = toint(duration)
+    , signalsBin = iff(timestamp < _updateStartTime,'Previous Update', 'New Update')
+| extend signals = strcat(signalsBin," (Count)") 
+| project-away timestamp, signalsBin, durationInMs
+| sort by signals asc 
+| evaluate pivot(signals, count())
+);
+PageViewCount
+| join
+(pageViews
+| where timestamp between (_previousUpdateStartTime .. _now)
+//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.environmentName has_any (_environmentName)
+| where customDimensions.alObjectId > 0
+| project timestamp
+    , alObjectId = tostring(customDimensions.alObjectId)
+    , alObjectName = replace_string(tostring(customDimensions.alObjectName),'GMK','')
+    , eventId = tostring(customDimensions.eventID) 
+    , pageType = tostring(customDimensions.pageType)
+    , durationInMs = toint(duration)
+    , signalsBin = iff(timestamp < _updateStartTime,'Previous Update', 'New Update')
+| extend signals = strcat(signalsBin," (Avg)") 
+| project-away timestamp, signalsBin
+| summarize Average = round(avg(durationInMs),0) by alObjectId, alObjectName, pageType, signals
+| sort by signals asc 
+| evaluate pivot(signals,sum(Average))
+)
+on
+$left.alObjectId == $right.alObjectId,
+$left.alObjectName == $right.alObjectName,
+$left.pageType == $right.pageType
+| project-away alObjectId1, alObjectName1, pageType1
+| where ["New Update (Count)"] > 100
+| extend isNew = tostring(iif(["Previous Update (Count)"] < 1, "Yes",""))
+| extend delta = iif(isNew == "Yes", 0.0, ["Previous Update (Avg)"] - ["New Update (Avg)"]) 
+    , deltaPerc = iif(isNew == "Yes", 0.0, round((["Previous Update (Avg)"] - ["New Update (Avg)"]) * 100 / ["Previous Update (Avg)"],0))
+| sort by ["New Update (Count)"] desc
