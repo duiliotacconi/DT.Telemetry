@@ -14,7 +14,7 @@ pageViews
 | where customDimensions.alObjectId > 0
 | project timestamp
     , alObjectId = tostring(customDimensions.alObjectId)
-    , alObjectName = replace_string(tostring(customDimensions.alObjectName),'GMK','')
+    , alObjectName = tostring(customDimensions.alObjectName)
     , eventId = tostring(customDimensions.eventID) 
     , pageType = tostring(customDimensions.pageType)
     , durationInMs = toint(duration)
@@ -33,7 +33,7 @@ PageViewCount
 | where customDimensions.alObjectId > 0
 | project timestamp
     , alObjectId = tostring(customDimensions.alObjectId)
-    , alObjectName = replace_string(tostring(customDimensions.alObjectName),'GMK','')
+    , alObjectName = tostring(customDimensions.alObjectName)
     , eventId = tostring(customDimensions.eventID) 
     , pageType = tostring(customDimensions.pageType)
     , durationInMs = toint(duration)
