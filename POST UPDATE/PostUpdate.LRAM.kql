@@ -20,9 +20,9 @@ traces
 , stackTrace = tostring(customDimensions.alStackTrace)
 , extensionId = tostring(customDimensions.extensionId)
 , extensionPublisher = tostring(customDimensions.extensionPublisher)
-, extensionName = trim('GMK',tostring(customDimensions.extensionName))
+, extensionName = tostring(customDimensions.extensionName)
 , alObjectId = tostring(customDimensions.alObjectId)
-, alObjectName = trim('GMK',tostring(customDimensions.alObjectName))
+, alObjectName = tostring(customDimensions.alObjectName)
 , alObjectType = tostring(customDimensions.alObjectType)
 , executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan 
 , signalsBin = iff(timestamp < _updateStartTime,'Previous Update', 'New Update')
@@ -45,9 +45,9 @@ TableCount
 , stackTrace = tostring(customDimensions.alStackTrace)
 , extensionId = tostring(customDimensions.extensionId)
 , extensionPublisher = tostring(customDimensions.extensionPublisher)
-, extensionName = trim('GMK',tostring(customDimensions.extensionName))
+, extensionName = tostring(customDimensions.extensionName)
 , alObjectId = tostring(customDimensions.alObjectId)
-, alObjectName = trim('GMK',tostring(customDimensions.alObjectName))
+, alObjectName = tostring(customDimensions.alObjectName)
 , alObjectType = tostring(customDimensions.alObjectType)
 , executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan 
 // this part of the query derives various insights from the SQL statement
