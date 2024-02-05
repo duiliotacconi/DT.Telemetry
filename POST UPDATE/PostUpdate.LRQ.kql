@@ -10,7 +10,7 @@ let _now = now();
 let TableCount = (
 traces
 | where timestamp between (_previousUpdateStartTime .. _now)
-//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.aadTenantId has_any (_entraTenantId)
 //| where customDimensions.environmentType has_any (_environmentType)
 //| where customDimensions.environmentName has_any (_environmentName)
 | where customDimensions.eventId == 'RT0005' 
@@ -53,7 +53,7 @@ TableCount
 | join
 (traces
 | where timestamp between (_previousUpdateStartTime .. _now)
-//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.aadTenantId has_any (_entraTenantId)
 //| where customDimensions.environmentType has_any (_environmentType)
 //| where customDimensions.environmentName has_any (_environmentName)
 | where customDimensions.eventId == 'RT0005' 
