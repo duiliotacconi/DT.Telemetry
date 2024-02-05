@@ -9,7 +9,7 @@ let _now = now();
 let PageViewCount = (
 pageViews
 | where timestamp between (_previousUpdateStartTime .. _now)
-//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.aadTenantId has_any (_entraTenantId)
 //| where customDimensions.environmentName has_any (_environmentName)
 | where customDimensions.alObjectId > 0
 | project timestamp
@@ -28,7 +28,7 @@ PageViewCount
 | join
 (pageViews
 | where timestamp between (_previousUpdateStartTime .. _now)
-//| where customDimensions.environmentName has_any (_entraTenantId)
+//| where customDimensions.aadTenantId has_any (_entraTenantId)
 //| where customDimensions.environmentName has_any (_environmentName)
 | where customDimensions.alObjectId > 0
 | project timestamp
