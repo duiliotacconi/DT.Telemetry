@@ -1,1276 +1,1276 @@
 [
  {
-   "Event ID": "RT0001",
+   "EventID": "RT0001",
    "Area": "Authorization",
    "Message": "Authorization Failed (Pre Open Company): {failure reason}"
  },
  {
-   "Event ID": "RT0002",
+   "EventID": "RT0002",
    "Area": "Authorization",
    "Message": "Authorization Failed (Open Company): {failure reason}"
  },
  {
-   "Event ID": "RT0003",
+   "EventID": "RT0003",
    "Area": "Authorization",
    "Message": "Authorization Succeeded (Pre Open Company)"
  },
  {
-   "Event ID": "RT0004",
+   "EventID": "RT0004",
    "Area": "Authorization",
    "Message": "Authorization Succeeded (Open Company)"
  },
  {
-   "Event ID": "RT0005",
+   "EventID": "RT0005",
    "Area": "Performance",
    "Message": "Operation exceeded time threshold (SQL query)"
  },
  {
-   "Event ID": "RT0006",
+   "EventID": "RT0006",
    "Area": "Report generation",
    "Message": "Success report generation"
  },
  {
-   "Event ID": "RT0006",
+   "EventID": "RT0006",
    "Area": "Report generation",
    "Message": "Report rendering failed: {report ID} - {report name}"
  },
  {
-   "Event ID": "RT0007",
+   "EventID": "RT0007",
    "Area": "Report generation",
    "Message": "Cancellation report generation"
  },
  {
-   "Event ID": "RT0008",
+   "EventID": "RT0008",
    "Area": "Incoming Web service requests",
    "Message": "Web service called ({category of request}): {endpoint}"
  },
  {
-   "Event ID": "RT0010",
+   "EventID": "RT0010",
    "Area": "Extension lifecycle",
    "Message": "Extension Update Failed: exception raised in extension {extensionName} by {extensionPublisher} (updating to version {extensionTargetedVersion})"
  },
  {
-   "Event ID": "RT0011",
+   "EventID": "RT0011",
    "Area": "Report generation",
    "Message": "Report cancelled but a commit occurred"
  },
  {
-   "Event ID": "RT0012",
+   "EventID": "RT0012",
    "Area": "Performance",
    "Message": "Database lock timed out"
  },
  {
-   "Event ID": "RT0013",
+   "EventID": "RT0013",
    "Area": "Performance",
    "Message": "Database lock snapshot: {snapshotId}"
  },
  {
-   "Event ID": "RT0014",
+   "EventID": "RT0014",
    "Area": "Security",
    "Message": "App Key Vault initialization succeeded: '{keyVaultUri}'"
  },
  {
-   "Event ID": "RT0015",
+   "EventID": "RT0015",
    "Area": "Security",
    "Message": "App Key Vault initialization failed"
  },
  {
-   "Event ID": "RT0016",
+   "EventID": "RT0016",
    "Area": "Security",
    "Message": "App Key Vault secret retrieval succeeded from key vault '{keyVaultUri}'"
  },
  {
-   "Event ID": "RT0017",
+   "EventID": "RT0017",
    "Area": "Security",
    "Message": "App Key Vault secret retrieval failed from key vault: '{keyVaultUri}'"
  },
  {
-   "Event ID": "RT0018",
+   "EventID": "RT0018",
    "Area": "Performance",
    "Message": "Operation exceeded time threshold (AL method)"
  },
  {
-   "Event ID": "RT0019",
+   "EventID": "RT0019",
    "Area": "Outgoing Web service requests",
    "Message": "Web Service Called (Outgoing): {endpoint}"
  },
  {
-   "Event ID": "RT0020",
+   "EventID": "RT0020",
    "Area": "Web service key request",
    "Message": "Authentication with Web Service Key succeeded: {endpoint}"
  },
  {
-   "Event ID": "RT0021",
+   "EventID": "RT0021",
    "Area": "Web service key request",
    "Message": "Authentication with Web Service Key failed: {endpoint}"
  },
  {
-   "Event ID": "RT0023",
+   "EventID": "RT0023",
    "Area": "Troubleshooting",
    "Message": "Verbose telemetry enabled for session: {sessionId}"
  },
  {
-   "Event ID": "RT0024",
+   "EventID": "RT0024",
    "Area": "Troubleshooting",
    "Message": "Verbose telemetry disabled for session: {sessionId}"
  },
  {
-   "Event ID": "RT0025",
+   "EventID": "RT0025",
    "Area": "Performance",
    "Message": "Database wait statistics snapshot taken: {snapshotId}"
  },
  {
-   "Event ID": "RT0026",
+   "EventID": "RT0026",
    "Area": "Performance",
    "Message": "Database wait statistics snapshot entry: {databaseWaitStatisticsCategory}"
  },
  {
-   "Event ID": "RT0028",
+   "EventID": "RT0028",
    "Area": "Performance",
    "Message": "Database deadlock occurred"
  },
  {
-   "Event ID": "RT0029",
+   "EventID": "RT0029",
    "Area": "Sessions",
    "Message": "The StopSession method was invoked on session {failureReason}"
  },
  {
-   "Event ID": "RT0030",
+   "EventID": "RT0030",
    "Area": "Error method call",
    "Message": "Error dialog displayed: {errorMessage}"
  },
  {
-   "Event ID": "RT0031",
+   "EventID": "RT0031",
    "Area": "Permission error",
    "Message": "Permission error shown"
  },
  {
-   "Event ID": "RT0032",
+   "EventID": "RT0032",
    "Area": "Permission error",
    "Message": "Dependency cycle discovered in permission sets"
  },
  {
-   "Event ID": "RT0033",
+   "EventID": "RT0033",
    "Area": "Web service publishing",
    "Message": "Web service metadata error: Name for subpage of parent page '{parentPageName}' is missing. Subpage is skipped."
  },
  {
-   "Event ID": "RT0034",
+   "EventID": "RT0034",
    "Area": "Web service publishing",
    "Message": "Web service metadata error: Control element with id {metadataObjectName} has a missing name. The page with the control was skipped."
  },
  {
-   "Event ID": "RT0035",
+   "EventID": "RT0035",
    "Area": "Web service publishing",
    "Message": "Web service metadata error: The record with name '{webserviceRecordName}' was skipped."
  },
  {
-   "Event ID": "RT0036",
+   "EventID": "RT0036",
    "Area": "Web service publishing",
    "Message": "Web service metadata error: Table field name error, the page contaning the field with caption '{metaFieldCaption}' was skipped."
  },
  {
-   "Event ID": "RT0038",
+   "EventID": "RT0038",
    "Area": "Web service publishing",
    "Message": "Web service metadata warning: Multiple options while generation navigation property for tablerelation."
  },
  {
-   "Event ID": "RT0039",
+   "EventID": "RT0039",
    "Area": "Web service publishing",
    "Message": "Web service metadata error: The record with name '{entityName}' was skipped."
  },
  {
-   "Event ID": "AL0000E24",
+   "EventID": "AL0000E24",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry enqueued: {alJobQueueId}"
  },
  {
-   "Event ID": "AL0000FNY",
+   "EventID": "AL0000FNY",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry not enqueued: {alJobQueueId}"
  },
  {
-   "Event ID": "AL0000E25",
+   "EventID": "AL0000E25",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry started: {alJobQueueId}"
  },
  {
-   "Event ID": "AL0000E26",
+   "EventID": "AL0000E26",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry finished: {alJobQueueId}"
  },
  {
-   "Event ID": "AL0000HE7",
+   "EventID": "AL0000HE7",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry errored: {alJobQueueId}"
  },
  {
-   "Event ID": "AL0000I49",
+   "EventID": "AL0000I49",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry rescheduled on login: {alJobQueueId}"
  },
  {
-   "Event ID": "AL0000JRG",
+   "EventID": "AL0000JRG",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry {Job Queue Id} errored after {attempt number} attempts"
  },
  {
-   "Event ID": "AL0000FMG",
+   "EventID": "AL0000FMG",
    "Area": "Job Queue Lifecycle",
    "Message": "Running job queue once"
  },
  {
-   "Event ID": "AL0000I49",
+   "EventID": "AL0000I49",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry rescheduled on login: {job queue entry id}"
  },
  {
-   "Event ID": "AL0000KZV",
+   "EventID": "AL0000KZV",
    "Area": "Job Queue Lifecycle",
    "Message": "Job queue entry cancelled: {job queue entry id}"
  },
  {
-   "Event ID": "AL0000E3F",
+   "EventID": "AL0000E3F",
    "Area": "Configuration Package",
    "Message": "Configuration package export started: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000E3G",
+   "EventID": "AL0000E3G",
    "Area": "Configuration Package",
    "Message": "Configuration package exported successfully: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000E3H",
+   "EventID": "AL0000E3H",
    "Area": "Configuration Package",
    "Message": "Configuration package import started: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000E3I",
+   "EventID": "AL0000E3I",
    "Area": "Configuration Package",
    "Message": "Configuration package imported successfully: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000E3N",
+   "EventID": "AL0000E3N",
    "Area": "Configuration Package",
    "Message": "Configuration package apply started: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000E3O",
+   "EventID": "AL0000E3O",
    "Area": "Configuration Package",
    "Message": "Configuration package applied successfully: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000E3P",
+   "EventID": "AL0000E3P",
    "Area": "Configuration Package",
    "Message": "Configuration package deleted successfully: {alPackageCode}"
  },
  {
-   "Event ID": "AL0000EJ9",
+   "EventID": "AL0000EJ9",
    "Area": "Extension Lifecycle",
    "Message": "Upgrade tag searched for: {AlUpgradeTag}"
  },
  {
-   "Event ID": "AL0000FJ1",
+   "EventID": "AL0000FJ1",
    "Area": "Cloud migration",
    "Message": "Companion table repair started"
  },
  {
-   "Event ID": "AL0000FJ4",
+   "EventID": "AL0000FJ4",
    "Area": "Cloud migration",
    "Message": "Companion table repair completed successfully"
  },
  {
-   "Event ID": "AL0000FXC",
+   "EventID": "AL0000FXC",
    "Area": "Cloud migration",
    "Message": "Companion table repair scheduled"
  },
  {
-   "Event ID": "AL0000IGC",
+   "EventID": "AL0000IGC",
    "Area": "Cloud migration",
    "Message": "Cloud migration has been disabled from company {companyname}"
  },
  {
-   "Event ID": "AL0000K0H",
+   "EventID": "AL0000K0H",
    "Area": "Cloud migration",
    "Message": "Replication run completed"
  },
  {
-   "Event ID": "AL0000K0I",
+   "EventID": "AL0000K0I",
    "Area": "Cloud migration",
    "Message": "Replication run completed with failed tables"
  },
  {
-   "Event ID": "AL0000K0J",
+   "EventID": "AL0000K0J",
    "Area": "Cloud migration",
    "Message": "Replication run started"
  },
  {
-   "Event ID": "AL0000K0K",
+   "EventID": "AL0000K0K",
    "Area": "Cloud migration",
    "Message": "Cloud migration data upgrade scheduled"
  },
  {
-   "Event ID": "AL0000EJA",
+   "EventID": "AL0000EJA",
    "Area": "Extension Lifecycle",
    "Message": "Upgrade tag set: {AlUpgradeTag}"
  },
  {
-   "Event ID": "AL0000EIQ",
+   "EventID": "AL0000EIQ",
    "Area": "User Checklist Lifecycle",
    "Message": "User checklist status updated: {oldStatus} to {newStatus}"
  },
  {
-   "Event ID": "AL0000JT3",
+   "EventID": "AL0000JT3",
    "Area": "Feature Lifecycle",
    "Message": "Feature switch has been flipped"
  },
  {
-   "Event ID": "AL0000G7J",
+   "EventID": "AL0000G7J",
    "Area": "Feature Lifecycle",
    "Message": "More than one telemetry logger has been registered for publisher {publisher}"
  },
  {
-   "Event ID": "AL0000G7K",
+   "EventID": "AL0000G7K",
    "Area": "Feature Lifecycle",
    "Message": "No telemetry logger has been registered for publisher {publisher}"
  },
  {
-   "Event ID": "LC0001",
+   "EventID": "LC0001",
    "Area": "Company Lifecycle",
    "Message": "Company created: {companyName}"
  },
  {
-   "Event ID": "LC0002",
+   "EventID": "LC0002",
    "Area": "Company Lifecycle",
    "Message": "Company creation canceled: {companyName}"
  },
  {
-   "Event ID": "LC0003",
+   "EventID": "LC0003",
    "Area": "Company Lifecycle",
    "Message": "Company creation failed: {companyName}"
  },
  {
-   "Event ID": "LC0004",
+   "EventID": "LC0004",
    "Area": "Company Lifecycle",
    "Message": "Company copied: {companyNameSource} to {companyNameDestination}"
  },
  {
-   "Event ID": "LC0005",
+   "EventID": "LC0005",
    "Area": "Company Lifecycle",
    "Message": "Company copied canceled: {companyNameSource} to {companyNameDestination}"
  },
  {
-   "Event ID": "LC0006",
+   "EventID": "LC0006",
    "Area": "Company Lifecycle",
    "Message": "Company copy failed: {companyNameSource} to {companyNameDestination}"
  },
  {
-   "Event ID": "LC0007",
+   "EventID": "LC0007",
    "Area": "Company Lifecycle",
    "Message": "Company deleted: {companyName}"
  },
  {
-   "Event ID": "LC0008",
+   "EventID": "LC0008",
    "Area": "Company Lifecycle",
    "Message": "Company deletion canceled: {companyName}"
  },
  {
-   "Event ID": "LC0009",
+   "EventID": "LC0009",
    "Area": "Company Lifecycle",
    "Message": "Company deletion failed: {companyName}"
  },
  {
-   "Event ID": "LC0010",
+   "EventID": "LC0010",
    "Area": "Extension Lifecycle",
    "Message": "Extension installed successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0011",
+   "EventID": "LC0011",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to install: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0012",
+   "EventID": "LC0012",
    "Area": "Extension Lifecycle",
    "Message": "Extension synchronized successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId}"
  },
  {
-   "Event ID": "LC0013",
+   "EventID": "LC0013",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to synchronize: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0014",
+   "EventID": "LC0014",
    "Area": "Extension Lifecycle",
    "Message": "Extension published successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0015",
+   "EventID": "LC0015",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to publish: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0016",
+   "EventID": "LC0016",
    "Area": "Extension Lifecycle",
    "Message": "Extension un-installed successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0017",
+   "EventID": "LC0017",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to un-install: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0018",
+   "EventID": "LC0018",
    "Area": "Extension Lifecycle",
    "Message": "Extension unpublished successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0019",
+   "EventID": "LC0019",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to un-publish: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0020",
+   "EventID": "LC0020",
    "Area": "Extension Lifecycle",
    "Message": "Extension compiled successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0021",
+   "EventID": "LC0021",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to compile: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0022",
+   "EventID": "LC0022",
    "Area": "Extension Lifecycle",
    "Message": "Extension updated successfully: {extensionName} version {extensionVersion} by {extensionPublisher}"
  },
  {
-   "Event ID": "LC0023",
+   "EventID": "LC0023",
    "Area": "Extension Lifecycle",
    "Message": "Extension failed to update: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0024",
+   "EventID": "LC0024",
    "Area": "Table Index Lifecycle",
    "Message": "Index enabled: {tableName}"
  },
  {
-   "Event ID": "LC0025",
+   "EventID": "LC0025",
    "Area": "Table Index Lifecycle",
    "Message": "Index disabled: {tableName}"
  },
  {
-   "Event ID": "LC0026",
+   "EventID": "LC0026",
    "Area": "Extension Lifecycle",
    "Message": "Dependent Extension installed successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0027",
+   "EventID": "LC0027",
    "Area": "Extension Lifecycle",
    "Message": "Dependent extension un-installed successfully: {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0028",
+   "EventID": "LC0028",
    "Area": "AppSource Submission",
    "Message": "AppSource submission validation request started: {validationRequestId}"
  },
  {
-   "Event ID": "LC0029",
+   "EventID": "LC0029",
    "Area": "AppSource Submission",
    "Message": "AppSource submission validation request completed successfully: {validationRequestId}"
  },
  {
-   "Event ID": "LC0030",
+   "EventID": "LC0030",
    "Area": "AppSource Submission",
    "Message": "(Version, country-region) validation started: version {version}, country/region {countryRegion}"
  },
  {
-   "Event ID": "LC0031",
+   "EventID": "LC0031",
    "Area": "AppSource Submission",
    "Message": "(Version, country-region) validation completed successfully: version {version}, country/region {countryRegion}"
  },
  {
-   "Event ID": "LC0032",
+   "EventID": "LC0032",
    "Area": "AppSource Submission",
    "Message": "Extension validation started: version {version}, country/region {countryRegion} for extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0033",
+   "EventID": "LC0033",
    "Area": "AppSource Submission",
    "Message": "Extension validation completed successfully: version {version}, country/region {countryRegion} for extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0034",
+   "EventID": "LC0034",
    "Area": "AppSource Submission",
    "Message": "Validation diagnostic reported: version {version}, country/region {countryRegion} for extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0035",
+   "EventID": "LC0035",
    "Area": "AppSource Submission",
    "Message": "AppSource submission validation request completed with failures: {validationRequestId}"
  },
  {
-   "Event ID": "LC0036",
+   "EventID": "LC0036",
    "Area": "AppSource Submission",
    "Message": "(Version, country-region) validation completed with failures: version {version}, country-region {countryRegion}"
  },
  {
-   "Event ID": "LC0037",
+   "EventID": "LC0037",
    "Area": "AppSource Submission",
    "Message": "Extension validation completed with failures: version {version}, country-region {countryRegion} for extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0038",
+   "EventID": "LC0038",
    "Area": "AppSource Submission",
    "Message": "Diagnostic reported on AppSource submission validation request: {validationRequestId}"
  },
  {
-   "Event ID": "LC0040",
+   "EventID": "LC0040",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} created: {codeunitObjectId} scheduled to run after {notBefore}. Ready to run: {isReady}"
  },
  {
-   "Event ID": "LC0041",
+   "EventID": "LC0041",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} ready: {codeunitObjectId} set ready to run after {notBefore}."
  },
  {
-   "Event ID": "LC0042",
+   "EventID": "LC0042",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} removed: {codeunitObjectId}."
  },
  {
-   "Event ID": "LC0043",
+   "EventID": "LC0043",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} main/failure codeunit {codeunitObjectId} completed."
  },
  {
-   "Event ID": "LC0044",
+   "EventID": "LC0044",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} main/failure codeunit {codeunitObjectId} canceled."
  },
  {
-   "Event ID": "LC0045",
+   "EventID": "LC0045",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} main/failure codeunit {codeunitObjectId} failed."
  },
  {
-   "Event ID": "LC0057",
+   "EventID": "LC0057",
    "Area": "Task Scheduler",
    "Message": "Task {taskId} timeout changed to: {timeout} because it was exceeding the max timeout value."
  },
  {
-   "Event ID": "LC0046",
+   "EventID": "LC0046",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile import succeeded: {ProfileId} in app/extension {ProfileAppId}"
  },
  {
-   "Event ID": "LC0047",
+   "EventID": "LC0047",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile import failed: {ProfileId} in app/extension {ProfileAppId}"
  },
  {
-   "Event ID": "LC0048",
+   "EventID": "LC0048",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profiles exported successfully"
  },
  {
-   "Event ID": "LC0049",
+   "EventID": "LC0049",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profiles failed to be exported"
  },
  {
-   "Event ID": "LC0050",
+   "EventID": "LC0050",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile copy succeeded: {ProfileId} to {NewProfileId} from app/extension {ProfileAppId} to app/extension {NewProfileAppId}"
  },
  {
-   "Event ID": "LC0051",
+   "EventID": "LC0051",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile copy failed: {ProfileId} to {NewProfileId} from app/extension {ProfileAppId} to app/extension {NewProfileAppId}"
  },
  {
-   "Event ID": "LC0052",
+   "EventID": "LC0052",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile created successfully:  {ProfileId} in app/extension {ProfileAppId}"
  },
  {
-   "Event ID": "LC0053",
+   "EventID": "LC0053",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile removed: {ProfileId} in app/extension {ProfileAppId}"
  },
  {
-   "Event ID": "LC0054",
+   "EventID": "LC0054",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile page customization removed: {ProfileId} in app/extension {ProfileAppId}"
  },
  {
-   "Event ID": "LC0055",
+   "EventID": "LC0055",
    "Area": "Profile Configuration Lifecycle",
    "Message": "Profile page customization converted: {ProfileId} in app/extension {ProfileAppId}"
  },
  {
-   "Event ID": "LC0056",
+   "EventID": "LC0056",
    "Area": "Extension Lifecycle",
    "Message": "Extension is already synchronized: {extensionName}"
  },
  {
-   "Event ID": "LC0058",
+   "EventID": "LC0058",
    "Area": "Permissions",
    "Message": "Permission set changed by an extension"
  },
  {
-   "Event ID": "LC0100",
+   "EventID": "LC0100",
    "Area": "Environment",
    "Message": "Environment update available for scheduling: {environmentName} to version {destinationVersion}."
  },
  {
-   "Event ID": "LC0101",
+   "EventID": "LC0101",
    "Area": "Environment",
    "Message": "Environment update scheduled: {environmentName} to version {destinationVersion}, update on or after date: {registeredForUpdateOnOrAfterDateUtc}"
  },
  {
-   "Event ID": "LC0102",
+   "EventID": "LC0102",
    "Area": "Environment",
    "Message": "Environment update missed: {environmentName} to version {destinationVersion}"
  },
  {
-   "Event ID": "LC0103",
+   "EventID": "LC0103",
    "Area": "Environment",
    "Message": "Environment update postponed: {environmentName} to version {destinationVersion}"
  },
  {
-   "Event ID": "LC0104",
+   "EventID": "LC0104",
    "Area": "Environment",
    "Message": "Environment update resumed: {environmentName} to version {destinationVersion}"
  },
  {
-   "Event ID": "LC0105",
+   "EventID": "LC0105",
    "Area": "Environment",
    "Message": "Environment update started: {environmentName} to version {destinationVersion}"
  },
  {
-   "Event ID": "LC0106",
+   "EventID": "LC0106",
    "Area": "Environment",
    "Message": "Environment updated successfully: {environmentName} to version {destinationVersion}"
  },
  {
-   "Event ID": "LC0107",
+   "EventID": "LC0107",
    "Area": "Environment",
    "Message": "Environment failed to update: {environmentName} to version {destinationVersion}"
  },
  {
-   "Event ID": "LC0110",
+   "EventID": "LC0110",
    "Area": "Environment",
    "Message": "Environment restart operation initiated: {environmentName}"
  },
  {
-   "Event ID": "LC0111",
+   "EventID": "LC0111",
    "Area": "Environment",
    "Message": "Environment restarted successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0112",
+   "EventID": "LC0112",
    "Area": "Environment",
    "Message": "Environment restart operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0113",
+   "EventID": "LC0113",
    "Area": "Environment",
    "Message": "Environment start operation initiated: {environmentName}"
  },
  {
-   "Event ID": "LC0114",
+   "EventID": "LC0114",
    "Area": "Environment",
    "Message": "Environment started successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0115",
+   "EventID": "LC0115",
    "Area": "Environment",
    "Message": "Environment start operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0116",
+   "EventID": "LC0116",
    "Area": "Environment",
    "Message": "Environment stop operation initiated: {environmentName}"
  },
  {
-   "Event ID": "LC0117",
+   "EventID": "LC0117",
    "Area": "Environment",
    "Message": "Environment stopped successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0118",
+   "EventID": "LC0118",
    "Area": "Environment",
    "Message": "Environment stop operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0119",
+   "EventID": "LC0119",
    "Area": "Environment",
    "Message": "Environment copy operation started on source: {environmentName} to {destinationEnvironmentName}"
  },
  {
-   "Event ID": "LC0120",
+   "EventID": "LC0120",
    "Area": "Environment",
    "Message": "Environment copied successfully: {environmentName} to {destinationEnvironmentName}"
  },
  {
-   "Event ID": "LC0121",
+   "EventID": "LC0121",
    "Area": "Environment",
    "Message": "Environment copy operation failed on source: {environmentName} to {destinationEnvironmentName}"
  },
  {
-   "Event ID": "LC0122",
+   "EventID": "LC0122",
    "Area": "Environment",
    "Message": "Environment copy operation started on destination: {environmentName} from {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0123",
+   "EventID": "LC0123",
    "Area": "Environment",
    "Message": "Environment copied successfully to destination: {environmentName} from {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0124",
+   "EventID": "LC0124",
    "Area": "Environment",
    "Message": "Environment copy operation failed on destination: {environmentName} from {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0125",
+   "EventID": "LC0125",
    "Area": "Environment",
    "Message": "Environment point-in-time restore operation started on source: {environmentName} to {destinationEnvironmentName}"
  },
  {
-   "Event ID": "LC0126",
+   "EventID": "LC0126",
    "Area": "Environment",
    "Message": "Environment point-in-time restored successfully: {environmentName} to {destinationEnvironmentName}"
  },
  {
-   "Event ID": "LC0127",
+   "EventID": "LC0127",
    "Area": "Environment",
    "Message": "Environment point-in-time restore operation failed on source: {environmentName} to {destinationEnvironmentName}"
  },
  {
-   "Event ID": "LC0128",
+   "EventID": "LC0128",
    "Area": "Environment",
    "Message": "Environment point-in-time restore operation started on destination: {environmentName} from {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0129",
+   "EventID": "LC0129",
    "Area": "Environment",
    "Message": "Environment point-in-time restored successfully to destination: {environmentName} from {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0130",
+   "EventID": "LC0130",
    "Area": "Environment",
    "Message": "Environment point-in-time restore operation failed on destination: {environmentName} from {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0131",
+   "EventID": "LC0131",
    "Area": "Environment",
    "Message": "Environment move to {destinationAadTenantId} AAD tenant operation scheduled to run at {registeredForMoveDateUtc}: {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0132",
+   "EventID": "LC0132",
    "Area": "Environment",
    "Message": "Environment move to {destinationAadTenantId} AAD tenant operation scheduling failed: {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0133",
+   "EventID": "LC0133",
    "Area": "Environment",
    "Message": "Environment move to {destinationAadTenantId} AAD tenant operation started: {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0134",
+   "EventID": "LC0134",
    "Area": "Environment",
    "Message": "Environment moved to {destinationAadTenantId} AAD tenant successfully: {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0135",
+   "EventID": "LC0135",
    "Area": "Environment",
    "Message": "Environment move to {destinationAadTenantId} AAD tenant operation failed: {sourceEnvironmentName}"
  },
  {
-   "Event ID": "LC0136",
+   "EventID": "LC0136",
    "Area": "Environment",
    "Message": "Environment session {sessionId} cancellation started: {environmentName}"
  },
  {
-   "Event ID": "LC0137",
+   "EventID": "LC0137",
    "Area": "Environment",
    "Message": "Environment session {sessionId} cancelled successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0138",
+   "EventID": "LC0138",
    "Area": "Environment",
    "Message": "Environment session {sessionId} cancellation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0139",
+   "EventID": "LC0139",
    "Area": "Environment",
    "Message": "Environment database export operation started: {environmentName}"
  },
  {
-   "Event ID": "LC0140",
+   "EventID": "LC0140",
    "Area": "Environment",
    "Message": "Environment session {sessionId} cancelled successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0141",
+   "EventID": "LC0141",
    "Area": "Environment",
    "Message": "Environment session {sessionId} cancellation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0142",
+   "EventID": "LC0142",
    "Area": "Environment",
    "Message": "Environment configuration key {environmentConfigurationKey} updated for environment {environmentName} to value: {newValue}"
  },
  {
-   "Event ID": "LC0143",
+   "EventID": "LC0143",
    "Area": "Environment",
    "Message": "Environment configuration key {environmentConfigurationKey} failed to update for environment {environmentName}"
  },
  {
-   "Event ID": "LC0144",
+   "EventID": "LC0144",
    "Area": "Environment",
    "Message": "Environment configuration key {environmentConfigurationKey} deleted for environment {environmentName}"
  },
  {
-   "Event ID": "LC0145",
+   "EventID": "LC0145",
    "Area": "Environment",
    "Message": "Environment configuration key {environmentConfigurationKey} failed to delete for environment {environmentName}"
  },
  {
-   "Event ID": "LC0146",
+   "EventID": "LC0146",
    "Area": "Environment",
    "Message": "Environment update window was modified for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0147",
+   "EventID": "LC0147",
    "Area": "Environment",
    "Message": "Environment update window modification failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0149",
+   "EventID": "LC0149",
    "Area": "Environment",
    "Message": "Environment delete operation started: {environmentName}"
  },
  {
-   "Event ID": "LC0150",
+   "EventID": "LC0150",
    "Area": "Environment",
    "Message": "Environment deleted successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0151",
+   "EventID": "LC0151",
    "Area": "Environment",
    "Message": "Environment delete operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0152",
+   "EventID": "LC0152",
    "Area": "Environment",
    "Message": "Environment rename operation started: {environmentName}"
  },
  {
-   "Event ID": "LC0153",
+   "EventID": "LC0153",
    "Area": "Environment",
    "Message": "Environment renamed successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0154",
+   "EventID": "LC0154",
    "Area": "Environment",
    "Message": "Environment rename operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0155",
+   "EventID": "LC0155",
    "Area": "Environment",
    "Message": "Environment app '{extensionName}' hotfix to version {extensionDestinationVersion} scheduled for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0156",
+   "EventID": "LC0156",
    "Area": "Environment",
    "Message": "Environment app '{extensionName}' hotfix to version {extensionDestinationVersion} scheduling failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0157",
+   "EventID": "LC0157",
    "Area": "Environment",
    "Message": "Environment app '{extensionName}' hotfix to version {extensionDestinationVersion} was cancelled for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0158",
+   "EventID": "LC0158",
    "Area": "Environment",
    "Message": "Environment app '{extensionName}' hotfix to version {extensionDestinationVersion} started for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0159",
+   "EventID": "LC0159",
    "Area": "Environment",
    "Message": "Environment app '{extensionName}' hotfix to version {extensionDestinationVersion} applied successfully for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0160",
+   "EventID": "LC0160",
    "Area": "Environment",
    "Message": "Environment app '{extensionName}' hotfix to version {extensionDestinationVersion} failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0161",
+   "EventID": "LC0161",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionName} install to version {extensionDestinationVersion} scheduled for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0162",
+   "EventID": "LC0162",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId}, version {extensionDestinationVersion} installation scheduling failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0163",
+   "EventID": "LC0163",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId}, version {extensionDestinationVersion} installation started for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0164",
+   "EventID": "LC0164",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionName}, version {extensionVersion} installation succeeded for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0165",
+   "EventID": "LC0165",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionName}, version {extensionDestinationVersion} installation failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0166",
+   "EventID": "LC0166",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionName}, version {extensionDestinationVersion} installation/update requires automatically installing a new dependency app dependencyExtensionName}, version {dependencyExtensionDestinationVersion} for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0167",
+   "EventID": "LC0167",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionName} update to version {extensionDestinationVersion} scheduled for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0168",
+   "EventID": "LC0168",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId} update to version {extensionDestinationVersion} scheduling failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0169",
+   "EventID": "LC0169",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId} update to version {extensionDestinationVersion} started for environment:  {environmentName}"
  },
  {
-   "Event ID": "LC0170",
+   "EventID": "LC0170",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId} update to version {extensionDestinationVersion} succeeded for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0171",
+   "EventID": "LC0171",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId} update to version {extensionDestinationVersion} failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0173",
+   "EventID": "LC0173",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionName} uninstall scheduled for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0174",
+   "EventID": "LC0174",
    "Area": "Extension Lifecycle",
    "Message": "Environment app {extensionId} uninstall scheduling failed for environment: {environmentName}"
  },
  {
-   "Event ID": "LC0175",
+   "EventID": "LC0175",
    "Area": "Cloud migration",
    "Message": "Environment data upgrade operation started: {environmentName}"
  },
  {
-   "Event ID": "LC0176",
+   "EventID": "LC0176",
    "Area": "Cloud migration",
    "Message": "Environment data upgrade operation completed successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0177",
+   "EventID": "LC0177",
    "Area": "Cloud migration",
    "Message": "Environment data upgrade operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0178",
+   "EventID": "LC0178",
    "Area": "Cloud migration",
    "Message": "Recovery from a failed data upgrade operation has completed successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0179",
+   "EventID": "LC0179",
    "Area": "Cloud migration",
    "Message": "Recovery from a failed data upgrade operation has failed: {environmentName}"
  },
  {
-   "Event ID": "LC0180",
+   "EventID": "LC0180",
    "Area": "Environment",
    "Message": "Environment soft delete operation started: {environmentName}"
  },
  {
-   "Event ID": "LC0181",
+   "EventID": "LC0181",
    "Area": "Environment",
    "Message": "Environment soft deleted successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0182",
+   "EventID": "LC0182",
    "Area": "Environment",
    "Message": "Environment soft delete operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0183",
+   "EventID": "LC0183",
    "Area": "Environment",
    "Message": "Environment recovery operation started: {environmentName}"
  },
  {
-   "Event ID": "LC0184",
+   "EventID": "LC0184",
    "Area": "Environment",
    "Message": "Environment recovered successfully: {environmentName}"
  },
  {
-   "Event ID": "LC0185",
+   "EventID": "LC0185",
    "Area": "Environment",
    "Message": "Environment recovery operation failed: {environmentName}"
  },
  {
-   "Event ID": "LC0200",
+   "EventID": "LC0200",
    "Area": "Per-tenant extension",
    "Message": "PTE validation started: request {submissionId}"
  },
  {
-   "Event ID": "LC0202",
+   "EventID": "LC0202",
    "Area": "Per-tenant extension",
    "Message": "PTE submission validation request completed successfully: request {submission id}"
  },
  {
-   "Event ID": "LC0203",
+   "EventID": "LC0203",
    "Area": "Per-tenant extension",
    "Message": "PTE validation completed with failures: request {submissionId}"
  },
  {
-   "Event ID": "LC0204",
+   "EventID": "LC0204",
    "Area": "Per-tenant extension",
    "Message": "Extension validation started: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0205",
+   "EventID": "LC0205",
    "Area": "Per-tenant extension",
    "Message": "Extension validation completed successfully: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0206",
+   "EventID": "LC0206",
    "Area": "Per-tenant extension",
    "Message": "Extension validation completed with failures: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0210",
+   "EventID": "LC0210",
    "Area": "Per-tenant extension",
    "Message": "Validation diagnostic reported: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0220",
+   "EventID": "LC0220",
    "Area": "Environment validation",
    "Message": "Environment validation started: environment {environmentName} target build version {targetVersion}"
  },
  {
-   "Event ID": "LC0224",
+   "EventID": "LC0224",
    "Area": "Environment validation",
    "Message": "Extension validation started: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0225",
+   "EventID": "LC0225",
    "Area": "Environment validation",
    "Message": "Extension validation completed successfully: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0226",
+   "EventID": "LC0226",
    "Area": "Environment validation",
    "Message": "Extension validation completed with failures: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "LC0222",
+   "EventID": "LC0222",
    "Area": "Environment validation",
    "Message": "Environment validation request completed successfully for {environmentName} target build version  {targetVersion}"
  },
  {
-   "Event ID": "LC0223",
+   "EventID": "LC0223",
    "Area": "Environment validation",
    "Message": "Environment validation request completed with failures for environment {environmentName} target build version {targetVersion}"
  },
  {
-   "Event ID": "LC0227",
+   "EventID": "LC0227",
    "Area": "Environment validation",
    "Message": "Validation diagnostic reported: extension {extensionName} version {extensionVersion} by {extensionPublisher} ({extensionId})"
  },
  {
-   "Event ID": "CL0001",
+   "EventID": "CL0001",
    "Area": "Page views",
    "Message": "Page opened: {alObjectName}"
  },
  {
-   "Event ID": "CL0002",
+   "EventID": "CL0002",
    "Area": "Error message quality",
    "Message": "User gave feedback on error message: [OK|Not OK]"
  },
  {
-   "Event ID": "CL0003",
+   "EventID": "CL0003",
    "Area": "Client action",
    "Message": "Client action invoked: {Action}"
  },
  {
-   "Event ID": "AL0000LA2",
+   "EventID": "AL0000LA2",
    "Area": "Changelog configuration",
    "Message": "Field added to changelog configuration"
  },
  {
-   "Event ID": "AL0000LA1",
+   "EventID": "AL0000LA1",
    "Area": "Changelog configuration",
    "Message": "Field logging changed in changelog configuration"
  },
  {
-   "Event ID": "AL0000LA3",
+   "EventID": "AL0000LA3",
    "Area": "Changelog configuration",
    "Message": "Field removed from changelog configuration"
  },
  {
-   "Event ID": "AL0000CTV",
+   "EventID": "AL0000CTV",
    "Area": "Email",
    "Message": "Email sent successfully"
  },
  {
-   "Event ID": "AL0000CTP",
+   "EventID": "AL0000CTP",
    "Area": "Email",
    "Message": "Failed to send email"
  },
  {
-   "Event ID": "AL0000GKK",
+   "EventID": "AL0000GKK",
    "Area": "Email",
    "Message": "Authenticated to SMTP server"
  },
  {
-   "Event ID": "AL0000GKJ",
+   "EventID": "AL0000GKJ",
    "Area": "Email",
    "Message": "Connected to SMTP server"
  },
  {
-   "Event ID": "AL0000GKL",
+   "EventID": "AL0000GKL",
    "Area": "Email",
    "Message": "Email sent (using SMTP)"
  },
  {
-   "Event ID": "AL0000CTE",
+   "EventID": "AL0000CTE",
    "Area": "Field monitoring",
    "Message": "Sensitive field value has changed: {alfieldCaption} ({alFieldNumber}) in table {altableCaption} ({alTableNumber})"
  },
  {
-   "Event ID": "AL0000DD3",
+   "EventID": "AL0000DD3",
    "Area": "Field monitoring",
    "Message": "Sensitive field monitor status has changed to {almonitorStatus}"
  },
  {
-   "Event ID": "AL0000EMW",
+   "EventID": "AL0000EMW",
    "Area": "Field monitoring",
    "Message": "Sensitive field added to or removed from monitor: {alfieldCaption} ({alFieldNumber}) in table {alTableCaption} ({alTableNumber})"
  },
  {
-   "Event ID": "AL0000E2A",
+   "EventID": "AL0000E2A",
    "Area": "Permissions",
    "Message": "User-defined permission set added: {alPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E2B",
+   "EventID": "AL0000E2B",
    "Area": "Permissions",
    "Message": "User-defined permission set removed: {alPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E28",
+   "EventID": "AL0000E28",
    "Area": "Permissions",
    "Message": "Permission set link added: {alSourcePermissionSetId} -> {alLinkedPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E29",
+   "EventID": "AL0000E29",
    "Area": "Permissions",
    "Message": "Permission set link removed: {alSourcePermissionSetId} -> {alLinkedPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E2C",
+   "EventID": "AL0000E2C",
    "Area": "Permissions",
    "Message": "Permission set assigned to user: {alPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E2D",
+   "EventID": "AL0000E2D",
    "Area": "Permissions",
    "Message": "Permission set removed from user: {alPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E2E",
+   "EventID": "AL0000E2E",
    "Area": "Permissions",
    "Message": "Permission set assigned to user group: {alPermissionSetId}"
  },
  {
-   "Event ID": "AL0000E2F",
+   "EventID": "AL0000E2F",
    "Area": "Permissions",
    "Message": "Permission set removed from user group: {alPermissionSetId}"
  },
  {
-   "Event ID": "AL0000D3L",
+   "EventID": "AL0000D3L",
    "Area": "Retention Policy",
    "Message": "Retention Policy Log Entry Logged: {alMessageType}"
  },
  {
-   "Event ID": "AL0000D6H",
+   "EventID": "AL0000D6H",
    "Area": "Retention Policy",
    "Message": "Records Deleted Using Retention Policy: Deleted {alRecordsDeleted} records from Table {alTableNo}, {alTableName}"
  },
  {
-   "Event ID": "AL0000D6I",
+   "EventID": "AL0000D6I",
    "Area": "Retention Policy",
    "Message": "First retention policy enabled on: {alCompanyName}"
  },
  {
-   "Event ID": "AL0000D6J",
+   "EventID": "AL0000D6J",
    "Area": "Retention Policy",
    "Message": "Last retention policy disabled on: {alCompanyName}"
  },
  {
-   "Event ID": "AL0000I74",
+   "EventID": "AL0000I74",
    "Area": "Azure Function Integration",
    "Message": "Request sent to Azure function succeeded: {Function Host}"
  },
  {
-   "Event ID": "AL0000I75",
+   "EventID": "AL0000I75",
    "Area": "Azure Function Integration",
    "Message": "Authorization failed to Azure function: {Function Host}"
  },
  {
-   "Event ID": "AL0000I7P",
+   "EventID": "AL0000I7P",
    "Area": "Azure Function Integration",
    "Message": "Request sent to Azure function failed: {Function Host}"
  },
  {
-   "Event ID": "AL0000DHR",
+   "EventID": "AL0000DHR",
    "Area": "Performance Toolkit",
    "Message": "Performance Toolkit run started"
  },
  {
-   "Event ID": "AL0000DHS",
+   "EventID": "AL0000DHS",
    "Area": "Performance Toolkit",
    "Message": "Performance Toolkit run finished"
  },
  {
-   "Event ID": "AL0000DHT",
+   "EventID": "AL0000DHT",
    "Area": "Performance Toolkit",
    "Message": "Performance Toolkit run cancelled"
  },
  {
-   "Event ID": "AL0000DGF",
+   "EventID": "AL0000DGF",
    "Area": "Performance Toolkit",
    "Message": "Performance Toolkit - {BCPT Header code} - {BCPT Scenario code} - {BCPT Line status}"
  },
  {
-   "Event ID": "AL0000EIW",
+   "EventID": "AL0000EIW",
    "Area": "Onboarding",
    "Message": "Onboarding Started"
  },
  {
-   "Event ID": "AL0000EIV",
+   "EventID": "AL0000EIV",
    "Area": "Onboarding",
    "Message": "Onboarding criteria completed: {Criteria}"
  }
