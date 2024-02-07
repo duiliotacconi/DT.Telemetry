@@ -1,17 +1,17 @@
 {
 [
  {
-   "Event ID": "RT0001",
+   "EventID": "RT0001",
    "Area": "Authorization",
    "Message": "Authorization Failed (Pre Open Company): {failure reason}"
  },
  {
-   "Event ID": "RT0002",
+   "EventID": "RT0002",
    "Area": "Authorization",
    "Message": "Authorization Failed (Open Company): {failure reason}"
  },
  {
-   "Event ID": "RT0003",
+   "EventID": "RT0003",
    "Area": "Authorization",
    "Message": "Authorization Succeeded (Pre Open Company)"
  }
