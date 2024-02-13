@@ -1,0 +1,35 @@
+let signalDefinitionTable =(externaldata(tarot_interpretations : string)[h@'https://raw.githubusercontent.com/duiliotacconi/DT.Telemetry/main/JSON/Tarot.json']with(format='multijson')
+| extend tarots = parse_json(tarot_interpretations)
+| mv-apply tarots on (
+    project Name = tostring(tarots.name),
+            Rank = tostring(tarots.rank),
+            Suite = tostring(tarots.suit),
+            FortuneTellings = tostring(tarots.fortune_telling),
+            Keywords = tostring(tarots.keywords),
+            Meanings = tostring(tarots.meanings)
+)
+//FortuneTellings
+| extend FortuneTelling = parse_json(FortuneTellings)
+| mv-expand FortuneTelling
+//Keywords
+| extend Keyword = parse_json(Keywords)
+| mv-expand Keyword
+//Meanings
+| extend Meaning = parse_json(Meanings)
+| mv-apply Meaning on (
+    project Lights = tostring(Meaning.light),
+            Shadows = tostring(Meaning.shadow)
+)
+//Meaning.lights
+| extend LightNull = parse_json(Lights)
+| mv-expand LightNull
+//Meaning.shadows
+| extend ShadowNull = parse_json(Shadows)
+| mv-expand ShadowNull
+| sample (1)
+);
+signalDefinitionTable
+| project Name, Suite, FortuneTelling, Keyword, 
+    Light = iff(LightNull == "##(null)","",LightNull), Shadow = iff(ShadowNull ==  "##(null)","",ShadowNull)
+| evaluate narrow()
+| project Label = Column, Value = Value
