@@ -1,0 +1,46 @@
+let _entraTenantId = '<yourEntraTenantId>';
+let _environmentType = '<yourEnvironmentName>';
+let _environmentName = '<yourEnvironmentName>';
+let _startTime_Ingestion = datetime(<datetime>);
+let _endTime_ingestion = datetime(<datetime>);
+// EventStatistics
+let signalDefinitionTable = externaldata(EventID :string, Area:string, Message:string)[h@'https://raw.githubusercontent.com/duiliotacconi/DT.Telemetry/main/JSON/SignalDefinitions.json']with(format='multijson');
+let traceEvents = traces
+| where timestamp between (_startTime_Ingestion .. _endTime_ingestion)
+| where customDimensions.aadTenantId has_any (_entraTenantId)
+| where customDimensions.environmentType has_any (_environmentType)
+| where customDimensions.environmentName has_any (_environmentName)
+| project timestamp
+, EntraTenantId = tostring(customDimensions.aadTenantId )
+, EnvironmentType = tostring(customDimensions.environmentType )
+, EnvironmentName = tostring(customDimensions.environmentName )
+, EventId = tostring(customDimensions.eventId)
+| summarize EventCount=count() by EntraTenantId, EnvironmentName, EnvironmentType, EventId
+;
+let pageViewEvents = 
+pageViews
+| where timestamp between (_startTime_Ingestion .. _endTime_ingestion)
+| where customDimensions.aadTenantId has_any (_entraTenantId)
+| where customDimensions.environmentType has_any (_environmentType)
+| where customDimensions.environmentName has_any (_environmentName)
+| project timestamp
+, EntraTenantId = tostring(customDimensions.aadTenantId )
+, EnvironmentName = tostring(customDimensions.environmentType )
+, EnvironmentType = tostring(customDimensions.environmentName )
+, EventId = tostring(iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )
+| summarize EventCount=count() by EntraTenantId, EnvironmentName, EnvironmentType, EventId
+;
+traceEvents
+| union pageViewEvents
+| join kind=leftouter signalDefinitionTable
+on
+$left.EventId == $right.EventID
+| project 
+  ["Entra Tenant Id "] = EntraTenantId,
+  ["Environment Type"] = EnvironmentType,
+  ["Environment Name"] = EnvironmentName,
+  ["Event Id"] = EventId,
+  ["Area"] = Area,
+  ["Message"] = Message,
+  ["Event Count"] = EventCount
+| sort by ['Event Count'] desc
