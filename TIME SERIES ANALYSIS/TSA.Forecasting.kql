@@ -1,0 +1,24 @@
+﻿let _entraTenantId = '<yourEntraTenantId>';
+let _environmentType = '<yourEnvironmentType>';
+let _environmentName = '<yourEnvironmentName>';
+let _startTime_Ingestion = datetime(2024-01-02T00:13:00Z);  //Change it with your values
+let _endTime_ingestion = datetime(2024-02-27T23:59:00Z);    //Change it with your values
+let LRAM = (traces
+//Include only 8 to 17 UTC - Change it with your woking hours or wipe these 2 lines out to consider 24h
+| where timestamp between (_startTime_Ingestion .. _endTime_ingestion)
+| where customDimensions.aadTenantId has_any (_entraTenantId)
+| where customDimensions.environmentType has_any (_environmentType)
+| where customDimensions.environmentName has_any (_environmentName)    
+| where customDimensions.eventId == 'RT0018'
+| extend hour = hourofday(timestamp)
+| where hour between (8 .. 17)
+);
+let _interval = 1d;
+let _serieStartTime = datetime(2024-01-02); //Change it with the same date as ingestion start time   
+let _serieEndTime = datetime(2024-03-06);   //Change it with the same date as ingestion end time + 7 days to forecast
+LRAM
+| make-series Count = count() on timestamp from _serieStartTime to _serieEndTime step _interval 
+| extend Forecasted = series_decompose_forecast(Count, 7, -1)  // forecast one week forward
+| render timechart with(title='Long Running AL Methods: FORECAST')
+
+
