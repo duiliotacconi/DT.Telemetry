@@ -1,0 +1,3472 @@
+{
+  "$schema": "https://dataexplorer.azure.com/static/d/schema/60/dashboard.json",
+  "id": "a4adc639-bc1f-45c4-870f-78ab94d46595",
+  "eTag": "ffb76964-98c2-447f-9b7c-1119c5fc8db6",
+  "title": "ISV APPs",
+  "tiles": [
+    {
+      "id": "c618b79b-de37-42af-8657-f788c44c53ae",
+      "title": "Slowest AL Methods (in ms)",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "54dd6244-f609-44e5-8c71-50192e95d219"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [
+          {
+            "id": "11402fde-e050-4e5e-b767-e73f173801d6",
+            "ruleType": "colorByCondition",
+            "applyToColumn": "Avg Duration",
+            "hideText": false,
+            "applyTo": "cells",
+            "conditions": [
+              { "operator": ">", "column": "Avg Duration", "values": ["30000"] }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "Avg Duration > 30000",
+            "visualType": "table"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e28cece8-7858-427e-a00d-001cb911edf5",
+      "title": "Page Usage per Total Duration",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 48, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "9699638f-7e28-40a7-bf5b-6dfa10f3ff24"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": "AL Object Information",
+        "yColumns": ["Total Duration"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "47c5e32b-b2eb-4dd0-b268-4ce48ecbc6a7",
+      "title": "Report Usage by Execution Count",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 60, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a3ea5331-e1cb-4877-a147-ad506cf7a4cc"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "dd772426-c109-465a-9231-826b82fbc4f1",
+      "title": "Page View Count",
+      "visualType": "table",
+      "pageId": "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "68c4f059-5e65-46e7-8e56-2990003f6606"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [
+          {
+            "id": "d1dcd500-3523-4fd9-add1-d17023d53633",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              { "operator": ">", "column": "Avg. Time", "values": ["3500"] },
+              { "operator": "<", "column": "Avg. Time", "values": ["4000"] }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "green",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          },
+          {
+            "id": "558a5ab3-3c97-45af-89f4-1dac6d7dbf6c",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              { "operator": ">", "column": "Avg. Time", "values": ["4000"] },
+              { "operator": "<", "column": "Avg. Time", "values": ["5000"] }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "yellow",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          },
+          {
+            "id": "44450cba-3b6b-4039-913d-a2f17ad9fdfe",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              { "operator": ">", "column": "Avg. Time", "values": ["5000"] }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d1dd2755-b9b9-4d80-bc6f-560a20a489fb",
+      "title": "Codeunit by Execution Count",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 35, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2a16e45d-a842-4f0d-b4f7-dab7c0588f11"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "bcdbed35-53ac-4227-9d48-707a43ff7a03",
+      "title": "Query by Execution Count",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 72, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "19c07d8e-398b-41b0-b071-af30040bd538"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "b22c19cb-1d19-405b-b739-b5e2b1acd4c7",
+      "title": "Period Data Ingestion by Event Id",
+      "visualType": "stackedcolumn",
+      "pageId": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "df441131-1d11-4f11-b5ce-02ece11b6831"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": true,
+        "xColumnTitle": "",
+        "xColumn": "Day",
+        "yColumns": null,
+        "seriesColumns": ["EventId"],
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 },
+        "dataPointsTooltip": { "all": false, "limit": 1 }
+      }
+    },
+    {
+      "id": "a151f9f7-1afa-4ba9-920c-9199cc329a36",
+      "title": "Data Ingestion by Environment and Event Id",
+      "visualType": "table",
+      "pageId": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+      "layout": { "x": 0, "y": 33, "width": 10, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "78a415a3-f897-4b00-adfc-1192c389b6d4"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "886fe569-ef19-4521-bc4e-47ebec9e54db",
+      "title": "No. of Long Running AL Methods",
+      "visualType": "column",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 95, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3ff78530-b9de-4519-ba65-8f7cd8114c57"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "multipleYAxes": {
+          "additional": [],
+          "showMultiplePanels": false,
+          "base": {
+            "horizontalLines": [],
+            "yAxisScale": "linear",
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "columns": [],
+            "label": "",
+            "id": "-1"
+          }
+        },
+        "yColumns": null,
+        "seriesColumns": null,
+        "hideLegend": true,
+        "xColumnTitle": "",
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "selectedDataOnLoad": { "all": true, "limit": 10 },
+        "dataPointsTooltip": { "all": false, "limit": 1 }
+      }
+    },
+    {
+      "id": "edeff75b-3f3e-402a-aa9e-6cf63da97c96",
+      "title": "No. of Long Running AL Methods (weekly)",
+      "visualType": "column",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 95, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "775ed9c8-97e8-4360-82ac-f4abe48ba74e"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "multipleYAxes": {
+          "additional": [],
+          "showMultiplePanels": false,
+          "base": {
+            "horizontalLines": [],
+            "yAxisScale": "linear",
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "columns": [],
+            "label": "",
+            "id": "-1"
+          }
+        },
+        "yColumns": null,
+        "seriesColumns": null,
+        "hideLegend": true,
+        "xColumnTitle": "",
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "selectedDataOnLoad": { "all": true, "limit": 10 },
+        "dataPointsTooltip": { "all": false, "limit": 1 }
+      }
+    },
+    {
+      "id": "5ab24045-9239-450a-bdda-8b2c60f88688",
+      "title": "LRAM Count and Average per Day buckets",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 85, "width": 24, "height": 10 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "8c7a42c5-40e0-4815-8150-e7beff9b71e2"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "table__enableRenderLinks": false,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": true,
+        "crossFilter": [
+          {
+            "interaction": "column",
+            "property": "extensionPublisher",
+            "parameterId": "9cc55dcf-17d4-4829-9340-37c385862cdf",
+            "disabled": false
+          }
+        ],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "9aff8892-39e8-4e24-b94b-ab881639421d",
+      "title": "Platform Updates",
+      "visualType": "table",
+      "pageId": "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+      "layout": { "x": 12, "y": 15, "width": 12, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "11ba2112-b2d3-489e-8af3-01e49bdfabf8"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "4b3d3b00-7c0b-45c7-b1df-41083f198ae8",
+      "title": "Period Data Ingestion per Entra Tenant Id",
+      "visualType": "stackedcolumn",
+      "pageId": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+      "layout": { "x": 0, "y": 12, "width": 24, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "7bdd0cac-f1cc-4b01-a707-389aca1311bf"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": true,
+        "xColumnTitle": "",
+        "xColumn": "Day",
+        "yColumns": null,
+        "seriesColumns": ["AadTenantId"],
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 },
+        "dataPointsTooltip": { "all": false, "limit": 1 }
+      }
+    },
+    {
+      "id": "80b00bfe-f6d6-442f-b9a6-e786ebf6dd43",
+      "title": "Data Ingestion by Entra Tenant Id Top 20",
+      "visualType": "table",
+      "pageId": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+      "layout": { "x": 0, "y": 24, "width": 10, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "7fdb730a-ac8e-40e8-9f6a-e1b4cef29365"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "01f0c162-d1b7-4c90-9341-5be04255a8b7",
+      "title": "Page Usage per Execution Count",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 48, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "5cdfbcde-58e7-4d76-9be6-db8e549f210f"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "2dee4d08-2e17-4f3d-873a-0693937a1dfb",
+      "title": "Codeunit by Total Duration",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 35, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "730af21b-4aac-4139-84fd-a6a8ab5a5dcb"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": ["Total Duration"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "fb09b81a-14eb-4a26-b3db-4166376a47dd",
+      "title": "Report by Total Duration",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 60, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2501b832-d1e5-4dc3-a7db-ed28b0eac1d6"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": ["Total Duration"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "e1dda16d-62a5-4e24-bb3d-535197b22e46",
+      "title": "Query by Total Duration",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 72, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3f60991e-0767-4312-9bd0-80610905555b"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": ["Total Duration"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "7b4a850a-1cc0-4909-8510-8e735b0b832c",
+      "title": "Platform ",
+      "visualType": "pie",
+      "pageId": "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+      "layout": { "x": 12, "y": 0, "width": 12, "height": 15 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "b8f3da3e-5180-4d33-b1bd-9402e5841f28"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "71eae2c2-b625-40a9-993f-1879b411c29f",
+      "title": "Platform by Major Version",
+      "visualType": "pie",
+      "pageId": "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+      "layout": { "x": 0, "y": 0, "width": 12, "height": 15 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "fcf9491e-166c-4fdc-984e-bbff5d98d56e"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "547cb57f-e3cc-4997-b402-b6612676971a",
+      "title": "Page Views by Environment",
+      "visualType": "table",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 12, "y": 18, "width": 12, "height": 10 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ff5d41c0-97fd-4273-8d72-25188a5ffef0"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "bc885bab-1adb-44e3-b1a0-00fdf556ea56",
+      "title": "Page Views by Extension",
+      "visualType": "table",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 0, "y": 0, "width": 12, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "803522b2-7cdb-4927-b5a5-0c52c9d08e44"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "bde22c6d-49f9-4c31-b6cf-fc1b9bd7e18b",
+      "title": "Page Views by Extension and Version",
+      "visualType": "table",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 0, "y": 9, "width": 12, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "c8014d49-8914-4d1d-9c43-8ad65ed0f974"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "b39c8b13-840a-498d-abd3-0eb1aab74629",
+      "title": "Page Views by Extension",
+      "visualType": "pie",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 12, "y": 0, "width": 12, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "99b1ae3d-7cef-4e42-a92e-717abcda26f5"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "52545339-8913-4ecc-b32d-1c888ff4ade9",
+      "title": "Page Views by Extension and Version Top 20",
+      "visualType": "pie",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 12, "y": 9, "width": 12, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "1190ea7d-bb1f-4865-a505-575b0cdf7967"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "extensionNameVersion",
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": 15,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "fbe6461a-2d72-4338-96a7-5cc76877a48e",
+      "title": "Page Views by Browser",
+      "visualType": "table",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 0, "y": 18, "width": 12, "height": 10 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "caf5f2dc-3f1a-461f-a981-cfe7ecd94d87"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "f0580bdc-0035-442c-953e-4d57a36f034f",
+      "title": "Page Views by Browser",
+      "visualType": "heatmap",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 0, "y": 28, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "f22c1015-a288-4c1a-a504-7b53699092f9"
+      },
+      "visualOptions": {
+        "xColumn": null,
+        "xColumnTitle": "",
+        "yColumnTitle": "",
+        "heatMap__dataColumn": null,
+        "heatMap__colorPaletteKey": "blue",
+        "yColumns": null
+      }
+    },
+    {
+      "id": "0d060d3b-8e47-4d61-b7dd-17e4ba60e003",
+      "title": "Page Views by Environment",
+      "visualType": "pie",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 12, "y": 28, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ee935c3e-50d4-4e9a-84eb-05de1749c48c"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "c7e67534-5de9-423e-9c3c-2eed004fe1ea",
+      "title": "Page Views by Screen Resolution",
+      "visualType": "table",
+      "pageId": "879cd588-99c6-48d5-81b0-303fe8e514da",
+      "layout": { "x": 0, "y": 40, "width": 24, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "bc068e3c-0b73-4731-bf12-8342dd02a315"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "0c37217e-dc58-47a3-97e4-5b46959916a5",
+      "title": "PageViews by Extension",
+      "visualType": "table",
+      "pageId": "c4235776-795d-4329-b0b0-25d30b80e5a5",
+      "layout": { "x": 0, "y": 0, "width": 9, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "e8e9bacb-71f5-45e9-8abe-00ec0e27358a"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "b8e8ebc6-1e66-46a7-97e6-5b056fae0e1a",
+      "title": "Page Views by Foreign Country",
+      "visualType": "bar",
+      "pageId": "c4235776-795d-4329-b0b0-25d30b80e5a5",
+      "layout": { "x": 9, "y": 0, "width": 15, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "0eba4be7-81d4-4c97-8ce7-588482c17e74"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "96550a4a-046e-496a-b238-2bbaeabd96aa",
+      "title": "Page Views by Foreign County",
+      "visualType": "pie",
+      "pageId": "c4235776-795d-4329-b0b0-25d30b80e5a5",
+      "layout": { "x": 0, "y": 13, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "8736ee4d-0673-4e0b-9449-0a7f66f6cf02"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "client_StateOrProvince",
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "53283103-bb1e-4e49-9479-192a3bdce609",
+      "title": "Page Views by Foreign City",
+      "visualType": "pie",
+      "pageId": "c4235776-795d-4329-b0b0-25d30b80e5a5",
+      "layout": { "x": 12, "y": 13, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "1da1d778-47a3-4f5c-b9ba-9bfd110cfcee"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "client_City",
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "d204bda7-9fb9-49de-b3b5-e844ab7ad3ff",
+      "title": "Page Views by Italian County",
+      "visualType": "pie",
+      "pageId": "c4235776-795d-4329-b0b0-25d30b80e5a5",
+      "layout": { "x": 0, "y": 25, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3496285f-5219-436a-9193-622093af8de8"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "client_StateOrProvince",
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "c27af0a1-8519-4c56-995f-af92c6d4ebeb",
+      "title": "Page Views by Italian City",
+      "visualType": "pie",
+      "pageId": "c4235776-795d-4329-b0b0-25d30b80e5a5",
+      "layout": { "x": 12, "y": 25, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "323d1790-f60a-43c5-ad3a-051c5071db30"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "client_City",
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "9d76b703-44fd-4a9c-b33b-dd0cc02bf242",
+      "title": "Data Ingestion by Event Id Top 20",
+      "visualType": "pie",
+      "pageId": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+      "layout": { "x": 10, "y": 33, "width": 14, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "bce228b2-b379-4b76-a728-e7da86574656"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "f23329f2-20ae-4616-a93c-6d1615b7c54f",
+      "title": "Data Ingestion by Entra Tenant Id Top 20",
+      "visualType": "pie",
+      "pageId": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+      "layout": { "x": 10, "y": 24, "width": 14, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "0e5a05fb-9445-4cd1-85f1-60aa9f3ae9c0"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "Entra Tenant Id",
+        "yColumns": ["Event Count"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "5d84ae5b-98be-4fe4-a91f-92ae05e55355",
+      "title": "Page performance per Hour",
+      "visualType": "column",
+      "pageId": "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+      "layout": { "x": 0, "y": 11, "width": 24, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "da70267d-ab82-4990-aca7-2b6794ac62da"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "xColumnTitle": "",
+        "xColumn": "timestamp",
+        "yColumns": ["count_"],
+        "seriesColumns": ["perfBucket"],
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 },
+        "dataPointsTooltip": { "all": false, "limit": 1 }
+      }
+    },
+    {
+      "id": "823efa26-57f9-4187-bb9c-7617ff038d6f",
+      "title": "Page performance per Hour",
+      "visualType": "pie",
+      "pageId": "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+      "layout": { "x": 0, "y": 23, "width": 13, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "52641d9b-ed29-478b-8215-6fffd696f9d4"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "perfBucket",
+        "yColumns": ["count_"],
+        "seriesColumns": ["perfBucket"],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "e584e193-e351-4b7a-aa00-dc41cc2a3ffe",
+      "title": "Page performance per Hour",
+      "visualType": "pie",
+      "pageId": "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+      "layout": { "x": 13, "y": 23, "width": 11, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "bf729914-86ce-4484-8bf3-338cc2eaed32"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": "bucketIndex",
+        "yColumns": ["count_"],
+        "seriesColumns": ["perfBucket"],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "ccb51a25-eaee-46e5-8449-5c6b50c9aed7",
+      "title": "AL Method by Total Duration Top 20",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 22, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "540570b3-0fb1-4bc7-bcdf-92fba21d60ff"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": ["Total Duration"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "f543a032-a204-48e5-b235-eea5fb6b5696",
+      "title": "AL Method by Execution Count Top 20",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 22, "width": 12, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "1ec8b9cc-af5f-49e9-9315-1f100f5260cc"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "legendLocation": "bottom",
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "37741d32-9107-44c1-aa46-9285e9b6796d",
+      "title": "Extension by LRAM Occurrance",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 108, "width": 7, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "8da45395-8b37-41df-9f27-47239921984a"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "3c7ee3e9-7451-4e41-b6d7-5bae9fe0e9ab",
+      "title": "Extension by LRAM Duration",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 7, "y": 108, "width": 7, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "4acb939d-04df-4e50-ad1e-863d5b5a4c3c"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "bd05bc6b-85cf-41a0-b855-28392adfe773",
+      "title": "Extension by LRAM SQL Footprint",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 14, "y": 108, "width": 10, "height": 13 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "5e92fee3-142d-464c-84c1-b49a803f7fcb"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "122a9868-9625-4847-85fe-b70849af65f4",
+      "title": "LRAM by environment",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 121, "width": 12, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2c856aad-d64b-4bf6-bd99-ae2f943a6672"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "b0913fd4-0c17-4f54-ac0c-7dcb3bc5b783",
+      "title": "LRAM by environment Top 10",
+      "visualType": "pie",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 12, "y": 121, "width": 12, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "9e18489d-1da6-4630-807c-0021f624d7b4"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": true,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "value"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "crossFilter": [
+          { "interaction": "column", "property": "count_", "disabled": false }
+        ],
+        "drillthrough": [
+          {
+            "pairs": [
+              {
+                "parameterId": "faae011a-19c6-437e-a04c-d7de238ed7ad",
+                "property": "timestamp"
+              }
+            ],
+            "destinationPages": ["a1b9eab8-5e92-446b-bdd0-6df8160c9c54"],
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "96e7918c-5aec-4c95-b438-ee4248b0579c",
+      "title": "AL Method : SQL Footprint",
+      "visualType": "table",
+      "pageId": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+      "layout": { "x": 0, "y": 11, "width": 24, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "878ceeac-f68c-4791-9595-cd96fadf2d81"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "759cfce4-2644-41bb-bb50-045c28da2933",
+      "title": "Latest Nearby Extensions",
+      "visualType": "table",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 0, "y": 11, "width": 24, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ff98b589-c3c4-4535-b1f2-d3249b336743"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "a676e0e6-20a2-4f30-a045-7a8bd70ba6c1",
+      "title": "Base Application Minor Version",
+      "visualType": "pie",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 6, "y": 0, "width": 9, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "736a993e-7f79-4a5a-9b77-091acca067e5"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "donut",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "4c9572c3-d05d-4531-957a-5d43825aa8b8",
+      "title": "Base Application Revision Version",
+      "visualType": "pie",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 15, "y": 0, "width": 9, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "256083b2-e7fc-4545-bdd8-4615dd6ebd0e"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "donut",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "a9e36888-2cab-4102-b006-e7ea67fdf83a",
+      "title": "Base Application Major Version",
+      "visualType": "pie",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 0, "y": 0, "width": 6, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "aa9465c1-29da-4b08-addb-88495c78d496"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "bottom",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "donut",
+        "pie__topNSlices": null,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "d51c0bb1-72fd-42ec-afce-fd771139a92c",
+      "title": "Publisher by Occurrance ",
+      "visualType": "table",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 0, "y": 19, "width": 6, "height": 15 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a8f69f65-8d98-47e0-9c3d-4a60d422d325"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "8585d37c-b2cb-47e0-9248-9f4cfdd35fec",
+      "title": "Extensions by Occurrance",
+      "visualType": "table",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 6, "y": 19, "width": 9, "height": 15 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "54b85297-56f5-46c8-bf59-487d018f87f2"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    },
+    {
+      "id": "b3a9ef04-f3cc-4f77-8e2a-827e68c6de09",
+      "title": "Extensions by Occurrance Top 10",
+      "visualType": "bar",
+      "pageId": "f5744426-b860-4444-8d7e-a5017a484342",
+      "layout": { "x": 15, "y": 19, "width": 9, "height": 15 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a0e681b5-7969-4035-925b-ac87bb740703"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "f5f056ad-bbea-424d-95a0-f68726629682",
+      "title": "Environment List",
+      "visualType": "table",
+      "pageId": "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+      "layout": { "x": 0, "y": 15, "width": 12, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "f833d245-8dc4-485f-98db-f95babd2da3a"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "colorStyle": "light",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": []
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "99a3b70c-8819-4cce-844b-3c83734afb29",
+      "kind": "manual-kusto",
+      "scopeId": "kusto",
+      "name": "bcinsight",
+      "clusterUri": "https://ade.applicationinsights.io/subscriptions/YourISVSubscriptionHere",
+      "database": "eosapps"
+    }
+  ],
+  "schema_version": "60",
+  "autoRefresh": {
+    "enabled": true,
+    "defaultInterval": "30m",
+    "minInterval": "1m"
+  },
+  "baseQueries": [
+    {
+      "id": "e659a76d-4249-4d98-af8b-88cd8fa0c8b7",
+      "queryId": "de6744ba-af86-46a4-8dc3-eba07834e3fb",
+      "variableName": "bctraces"
+    },
+    {
+      "id": "c9bbae0c-e8d3-438d-88bc-11f00e92f8e3",
+      "queryId": "72898c5b-5162-48a0-bc26-c4d1c582c9a3",
+      "variableName": "bcpageviews"
+    },
+    {
+      "id": "4028af4f-ed69-42b0-97d5-dd6551b6b5a6",
+      "queryId": "29d7ce37-70e6-46aa-b243-937afa345e5e",
+      "variableName": "nearbyTraces"
+    },
+    {
+      "id": "286c2e46-0ef1-4b86-9548-f937a0c4194e",
+      "queryId": "e4eb7c80-a02b-4f10-a637-868bce013151",
+      "variableName": "nearbyEnvironments"
+    },
+    {
+      "id": "f382ac2c-8a1e-4e7d-bee6-a8f00bb615ec",
+      "queryId": "9955ab7c-67a3-4f07-bdf8-4acdc6a27d3a",
+      "variableName": "insiderTraces"
+    },
+    {
+      "id": "56de905c-df86-41fb-b3f1-40d1ba68c9e6",
+      "queryId": "2d56294f-b1b5-476f-855a-746e458391d5",
+      "variableName": "insiderEnvironments"
+    }
+  ],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "14f4fdfe-2079-4e7d-b5fd-a649cdba5516",
+      "displayName": "Time Window",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": { "kind": "dynamic", "count": 1, "unit": "hours" },
+      "showOnPages": { "kind": "all" }
+    },
+    {
+      "kind": "string",
+      "id": "b770529f-e09c-40f1-90ab-1fbdd49cc088",
+      "displayName": "App Name",
+      "description": "",
+      "variableName": "_appName",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "App Name", "label": "App Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "38d7d112-c817-497f-9180-2de511afebb7"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "55b35065-233d-4c7a-b293-42e21d637215",
+      "displayName": "Entra Tenant Id",
+      "description": "",
+      "variableName": "_entraTenantId",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Entra Tenant Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "34b27374-ed1e-41fd-9f49-0e8a02b3a60a"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "4c124c10-b4d3-4eb7-b0f6-327aace8932b",
+      "displayName": "Environment Type",
+      "description": "",
+      "variableName": "_environmentType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Type" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "19cce425-86e6-48e7-8010-aedf8deaeaea"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "e90e4713-5c88-446c-b71a-216cbf050b2b",
+      "displayName": "Environment Name",
+      "description": "",
+      "variableName": "_environmentName",
+      "selectionType": "scalar",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "678e5cde-e77f-4682-be2e-568cb7bd03b5"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "b70bde5b-1300-48e1-95c9-1f8f1519fc67",
+      "displayName": "Client Type",
+      "description": "",
+      "variableName": "_clientType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Client Type" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "6b394b72-66d0-4ee2-b924-84b8c11281d3"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "259fd688-b8d5-4c58-b087-bcf3d95c042c",
+      "displayName": "Object Type",
+      "description": "",
+      "variableName": "_ObjectType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "ObjectType" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "4dc324e5-dd28-445e-9aec-bfb43345f39f"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "real",
+      "id": "373dbe29-1441-456c-9db1-78429b4a74fe",
+      "displayName": "Object Id",
+      "description": "",
+      "variableName": "_objectID",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "AL Object ID", "label": "AL Object ID" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "c7d1f045-43bc-4b64-9ba0-22f497bc70d1"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "b11d8163-c8dd-4f83-bbd3-705da109bdee",
+      "displayName": "Session Id",
+      "description": "",
+      "variableName": "_sessionId",
+      "selectionType": "scalar",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Session Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "783e503b-3127-4304-88f5-702a7f19189a"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "5add3598-f2d1-4d8e-962d-000c203ceeab",
+      "displayName": "Event Id",
+      "description": "",
+      "variableName": "_eventId",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Event Id", "label": "Event Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "53e671be-1389-472a-bfc8-f1af47551426"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "462b1eec-47e6-422e-8e2a-a5e6b6bdcd34",
+      "displayName": "Country",
+      "description": "",
+      "variableName": "_country",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Country", "label": "Country" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "49a95f69-8e79-4be8-85ea-1002fb4697e5"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "57c46549-a9d5-40fd-a027-8f09d3c724f3",
+      "displayName": "App Publisher",
+      "description": "",
+      "variableName": "_AppPublisher",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "App Publisher", "label": "App Publisher" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "2a96cb51-190d-460b-a982-3f0e1540e0f0"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f3b5741f-2f9e-4867-a3ef-190bc64d34d8",
+          "1a9f99e5-2026-4f32-a914-3ee9e64ce31e",
+          "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4",
+          "e6b3a051-ba9e-4db5-912d-c63987fd1fb8",
+          "41c2b22e-69f3-4513-9227-26c3c42e9a08",
+          "879cd588-99c6-48d5-81b0-303fe8e514da",
+          "c4235776-795d-4329-b0b0-25d30b80e5a5",
+          "e2cdc758-aae4-4ae5-841a-913795931b77"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "5ad179a0-0224-4dd2-bcac-b375dd51a3d4",
+      "displayName": "Nearby Entra Tenant Id",
+      "description": "",
+      "variableName": "_NearbyEntraTenantId",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Entra Tenant Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "8c65ce6f-ffdf-4ba9-be23-c6f0586163ca"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["f5744426-b860-4444-8d7e-a5017a484342"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "fe9a907c-4cdb-468c-a310-a12773b55d0f",
+      "displayName": "Nearby Environment Type",
+      "description": "",
+      "variableName": "_NearbyEnvironmentType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Type" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "feefe654-6d8d-49bf-9060-642051b2e552"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["f5744426-b860-4444-8d7e-a5017a484342"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "fc06b6c2-6282-44c1-87ce-d4b3ad6b8a22",
+      "displayName": "Nearby Environment Name",
+      "description": "",
+      "variableName": "_NearbyEnvironmentName",
+      "selectionType": "scalar",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "b037080b-36ea-4404-bc12-8345c29f5b47"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["f5744426-b860-4444-8d7e-a5017a484342"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "d25e707f-a081-494a-a62a-1d4038eda6d5",
+      "displayName": "Nearby Publisher",
+      "description": "",
+      "variableName": "_NearbyPublisher",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Publisher", "label": "Publisher" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "b94eccbf-f029-4ada-a323-dd28b2acea51"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["f5744426-b860-4444-8d7e-a5017a484342"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "c12d469f-deea-4f79-89fc-9f7dd45f722c",
+      "displayName": "Nearby App Name",
+      "description": "",
+      "variableName": "_NearbyAppName",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "App Name", "label": "App Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "3a7142b7-08d8-4384-a805-c13dd6f80d51"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["f5744426-b860-4444-8d7e-a5017a484342"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "bd6d7437-1080-4a24-8563-56920128a1eb",
+      "displayName": "Insider Entra Tenant Id",
+      "description": "",
+      "variableName": "_InsiderEntraTenantId",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Entra Tenant Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "cd9c66aa-578a-4810-a458-012da74315d1"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["963c347a-6751-4bf7-891f-9886905eb1be"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "4d7029d4-00c0-45d6-b555-aad70f439ef2",
+      "displayName": "Insider Environment Type",
+      "description": "",
+      "variableName": "_InsiderEnvironmentType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Type" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "47a8ebbf-62ba-4184-87dc-0b78fbe1d46c"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["963c347a-6751-4bf7-891f-9886905eb1be"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "71d70038-dd10-45a4-8a0c-71a7c87937f9",
+      "displayName": "Insider Environment Name",
+      "description": "",
+      "variableName": "_InsiderEnvironmentName",
+      "selectionType": "scalar",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "028e8f81-ab8f-4f95-b9bd-3efe0b4fd1cf"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["963c347a-6751-4bf7-891f-9886905eb1be"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "6364ba4d-7eb4-4d5b-ba69-7e2395351a32",
+      "displayName": "Insider Publisher",
+      "description": "",
+      "variableName": "_InsiderPublisher",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Publisher", "label": "Publisher" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "7322f53f-0b4a-47cb-a8ff-be2177ed8fe2"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["963c347a-6751-4bf7-891f-9886905eb1be"]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "03dc0e92-1dcf-43cd-8933-bb0b56383f64",
+      "displayName": "Insider App Name",
+      "description": "",
+      "variableName": "_InsiderAppName",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "App Name", "label": "App Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "7849288e-3559-451d-9fda-f7f0ff8733ff"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["963c347a-6751-4bf7-891f-9886905eb1be"]
+      }
+    },
+    {
+      "kind": "bool",
+      "id": "dca6d82a-1932-4924-a389-455d20eebfde",
+      "displayName": "Exclude EOS Apps",
+      "description": "",
+      "variableName": "_ExcludeEOS",
+      "selectionType": "scalar",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "value", "value": false },
+      "dataSource": {
+        "kind": "static",
+        "values": [{ "value": true }, { "value": false }]
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "f5744426-b860-4444-8d7e-a5017a484342",
+          "963c347a-6751-4bf7-891f-9886905eb1be"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "545ed56a-e83f-49fb-bf31-a04e8d5f47d3",
+      "displayName": "Domain Name",
+      "description": "",
+      "variableName": "_DomainName",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "entraTenantId", "label": "Domain Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "a5d343ad-dc81-4c85-9f32-c1267ab2345c"
+        }
+      },
+      "showOnPages": { "kind": "all" }
+    },
+    {
+      "kind": "string",
+      "id": "b2d713d9-4b1e-48d8-a297-541d7b2e21fc",
+      "displayName": "Localization",
+      "description": "",
+      "variableName": "_Localization",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Localization", "label": "Localization" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "3fcd4e5b-3d76-4882-8536-f532cd025681"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": ["963c347a-6751-4bf7-891f-9886905eb1be"]
+      }
+    }
+  ],
+  "pages": [
+    { "name": "Start", "id": "f3b5741f-2f9e-4867-a3ef-190bc64d34d8" },
+    { "name": "Data Ingestion", "id": "1a9f99e5-2026-4f32-a914-3ee9e64ce31e" },
+    { "name": "Environment", "id": "2951304b-62f3-4b7b-98c0-8c31c6d7ecd4" },
+    { "name": "AL Usage", "id": "e6b3a051-ba9e-4db5-912d-c63987fd1fb8" },
+    { "name": "Nearby APPs", "id": "f5744426-b860-4444-8d7e-a5017a484342" },
+    {
+      "name": "Page Performance",
+      "id": "41c2b22e-69f3-4513-9227-26c3c42e9a08"
+    },
+    { "name": "Clients", "id": "879cd588-99c6-48d5-81b0-303fe8e514da" },
+    { "id": "c4235776-795d-4329-b0b0-25d30b80e5a5", "name": "Locations" }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend environmentName = tostring(customDimensions.environmentName)\n, alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n, suspendedTime = customDimensions.suspendedTime // will come on 22.x\n, extensionInfo = strcat( extensionName, ' ', customDimensions.extensionVersion)\n, clientType = tostring(customDimensions.clientType)\n, exclusiveTime = customDimensions.exclusiveTime // This dimension was introduced in Business Central 2023 release wave 1, version 22.1. Backported to version 21.6\n, exclusiveTimeInMS = toreal(totimespan(customDimensions.exclusiveTime))/10000 //the datatype for exclusiveTime is timespan \n, alStackTrace = tostring(customDimensions.alStackTrace)\n, longRunningThreshold = tostring(customDimensions.longRunningThreshold)\n, longRunningThresholdInMS = toreal(totimespan(customDimensions.longRunningThreshold))/10000 //the datatype for executionTime is timespan \n, sqlExecutes = toint(customDimensions.sqlExecutes) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n, sqlRowsRead = toint(customDimensions.sqlRowsRead) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n, usertelemetryId = case(\n  // user telemetry id was introduced in the platform in version 20.0\n  toint( substring(customDimensions.componentVersion,0,2)) >= 20, user_Id\n, 'N/A')\n| summarize count(), sum( executionTimeInMS ), avg( executionTimeInMS ), sum(exclusiveTimeInMS), avg(exclusiveTimeInMS) by alObjectInfo, alMethod, extensionName, clientType\n| order by sum_executionTimeInMS \n| project \n    ['AL Extension'] = extensionName,\n    [\"AL Object Information\"] = alObjectInfo,\n    [\"AL Method\"] = alMethod,\n    [\"Client Type\"] = clientType,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInMS, 0),\n    [\"Total Duration\"] = round(sum_executionTimeInMS,0),\n    [\"Avg Exclusive Time\"] = round(avg_exclusiveTimeInMS,0),\n    [\"Total Exclusive Time\"] = round(sum_exclusiveTimeInMS,0)\n| sort by ['Total Duration'] desc ",
+      "id": "54dd6244-f609-44e5-8c71-50192e95d219",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = toupper('PAGE');\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by sum_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = toint(round(sum_executionTimeInSec,2))\n| sort by ['Total Duration'] desc",
+      "id": "9699638f-7e28-40a7-bf5b-6dfa10f3ff24",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = toupper('REPORT');\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod)\n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by avg_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by Ocurrance desc\n",
+      "id": "a3ea5331-e1cb-4877-a147-ad506cf7a4cc",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| extend alObjectName = tostring(customDimensions.alObjectName)\n| extend alObjectId = tostring(customDimensions.alObjectId)\n    , extensionName = tostring(customDimensions.appName)\n    , eventId = tostring(customDimensions.eventID) // note that this is different from other signal\n    , pageMode = tostring(customDimensions.pageMode)\n    , pageType = tostring(customDimensions.pageType)\n| summarize \n    ExecutionCount = count(),\n    minTime = toint(min(duration)),\n    avgTime = toint(avg(duration)),\n    maxTime = toint(max(duration)),\n    stdDev = stdev(duration)\n    by\n    extensionName,\n    alObjectId,\n    alObjectName,\n    eventId,\n    pageType\n| project\n    [\"App Name\"] = extensionName,\n    [\"AL Object ID\"] = alObjectId,\n    [\"AL Object Name\"] = alObjectName,\n    [\"Page Type\"] = pageType,\n    [\"Execution Count\"] = ExecutionCount,\n    [\"Min. Time\"] = minTime,\n    [\"Avg. Time\"] = avgTime,\n    [\"Max. Time\"] = maxTime,\n    [\"Std Dev\"] = round(stdDev,0)\n| order by ['Execution Count'] desc ",
+      "id": "68c4f059-5e65-46e7-8e56-2990003f6606",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = toupper('CODEUNIT');\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod)\n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by avg_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by Ocurrance desc\n",
+      "id": "2a16e45d-a842-4f0d-b4f7-dab7c0588f11",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = 'QUERY';\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by sum_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by Ocurrance desc",
+      "id": "19c07d8e-398b-41b0-b071-af30040bd538",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let traceEvents = bctraces\n| extend \n  AadTenantId = tostring( customDimensions.aadTenantId )\n, EnvironmentName = tostring( customDimensions.environmentName )\n| extend TenantId = strcat( toupper(AadTenantId), toupper(EnvironmentName) )\n| project timestamp\n, AadTenantId, EnvironmentName\n, EnvironmentType = tostring( customDimensions.environmentType )\n, TenantId\n, EventId = tostring( customDimensions.eventId )\n| summarize EventCount=count() by AadTenantId, EnvironmentName, EnvironmentType, TenantId, EventId, Day=bin(timestamp, 1d)\n;\nlet pageViewEvents = \nbcpageviews\n| extend AadTenantId = tostring( customDimensions.aadTenantId )\n, EnvironmentName = tostring( customDimensions.environmentName )\n| extend TenantId = strcat( toupper(AadTenantId), toupper(EnvironmentName) )\n| project timestamp\n, AadTenantId, EnvironmentName\n, EnvironmentType = tostring( customDimensions.environmentType )\n, TenantId\n, EventId = tostring( iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )\n| summarize EventCount=count() by AadTenantId, EnvironmentName, EnvironmentType, TenantId, EventId, Day=bin(timestamp, 1d)\n;\ntraceEvents\n| union pageViewEvents",
+      "id": "df441131-1d11-4f11-b5ce-02ece11b6831",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "// EventStatistics\nlet traceEvents = bctraces\n| project timestamp\n,  EntraTenantId = tostring(customDimensions.aadTenantId)\n,  EnvironmentName = tostring( customDimensions.environmentName )\n, EnvironmentType = tostring( customDimensions.environmentType )\n, EventId = tostring( iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )\n| summarize EventCount=count() by EntraTenantId, EnvironmentName, EnvironmentType, EventId\n;\nlet pageViewEvents = \nbcpageviews\n| project timestamp\n,  EntraTenantId = tostring(customDimensions.aadTenantId)\n,  EnvironmentName = tostring( customDimensions.environmentName )\n, EnvironmentType = tostring( customDimensions.environmentType )\n, EventId = tostring( iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )\n| summarize EventCount=count() by EntraTenantId, EnvironmentName, EnvironmentType, EventId\n;\ntraceEvents\n| union pageViewEvents\n| project \n  EntraTenantId,\n  [\"Environment Name\"] = EnvironmentName,\n  [\"Event Id\"] = EventId,\n  [\"Event Count\"] = EventCount\n| sort by ['Event Count'] desc  ",
+      "id": "78a415a3-f897-4b00-adfc-1192c389b6d4",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| summarize count() by bin(timestamp, 1d)\n| render columnchart  title= 'Number of long running AL Methods'",
+      "id": "3ff78530-b9de-4519-ba65-8f7cd8114c57",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| summarize count() by bin(timestamp, 7d)\n| render columnchart  title= 'Number of long running AL Methods'",
+      "id": "775ed9c8-97e8-4360-82ac-f4abe48ba74e",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let TableCount = (\nbctraces\n| where customDimensions.eventId == 'RT0018' // starting from version 16.1, the eventId is used to identity signal types\n| where customDimensions.alObjectId > 0 // filter out internal server calls\n| project \ntimestamp\n, extensionId = tostring(customDimensions.extensionId)\n, extensionPublisher = tostring(customDimensions.extensionPublisher)\n, extensionName = tostring(customDimensions.extensionName)\n, alObjectId = tostring(customDimensions.alObjectId)\n, alObjectType = tostring(customDimensions.alObjectType)\n, alObjectName = tostring(customDimensions.alObjectName)\n, alObjectMethod = tostring(customDimensions.alMethod)\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n, dayBin = bin(timestamp,1d)\n| extend day = strcat(strcat(format_datetime(dayBin, \"yyyy-MM-dd\")),\" (Count)\") \n| project-away timestamp, dayBin, executionTimeInMS\n| sort by day asc \n| evaluate pivot(day, count())\n);\nTableCount\n| join\n(bctraces\n| where customDimensions.eventId == 'RT0018' // starting from version 16.1, the eventId is used to identity signal types\n| where customDimensions.alObjectId > 0 // filter out internal server calls\n| project \ntimestamp\n, extensionId = tostring(customDimensions.extensionId)\n, extensionPublisher = tostring(customDimensions.extensionPublisher)\n, extensionName = tostring(customDimensions.extensionName)\n, alObjectId = tostring(customDimensions.alObjectId)\n, alObjectType = tostring(customDimensions.alObjectType)\n, alObjectName = tostring(customDimensions.alObjectName)\n, alObjectMethod = tostring(customDimensions.alMethod)\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n// this part of the query derives various insights from the SQL statement\n, dayBin = bin(timestamp,1d)\n| extend day = strcat(strcat(format_datetime(dayBin, \"yyyy-MM-dd\")), \" (avg)\")\n| project-away timestamp, dayBin\n| summarize Average = round(avg(executionTimeInMS),0) by extensionId, extensionPublisher, extensionName, alObjectType, alObjectId, alObjectName, alObjectMethod, day\n| sort by day asc \n| evaluate pivot(day,sum(Average))\n)\non\n$left.extensionId == $right.extensionId,\n$left.extensionPublisher == $right.extensionPublisher,\n$left.extensionName == $right.extensionName,\n$left.alObjectType == $right.alObjectType,\n$left.alObjectId == $right.alObjectId,\n$left.alObjectName == $right.alObjectName,\n$left.alObjectMethod == $right.alObjectMethod\n| project-away extensionId, extensionId1, extensionPublisher1, extensionName1, alObjectType1, alObjectId1, alObjectName1, alObjectMethod1 ",
+      "id": "8c7a42c5-40e0-4815-8150-e7beff9b71e2",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| extend environmentName = tostring(customDimensions.environmentName )\n    , environmentType = tostring(customDimensions.environmentType)\n    , entraTenantId = tostring(customDimensions.aadTenantId)\n    , componentVersion = tostring(customDimensions.componentVersion)\n| where componentVersion <> \"\"\n| summarize max(bin(timestamp,1min)) by entraTenantId, environmentName, environmentType, componentVersion\n| sort by max_timestamp desc \n\n\n",
+      "id": "11ba2112-b2d3-489e-8af3-01e49bdfabf8",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "// change lookback, limit, ... as needed \n// EventStatistics\nlet traceEvents = bctraces\n| extend \n  AadTenantId = tostring( customDimensions.aadTenantId )\n, EnvironmentName = tostring( customDimensions.environmentName )\n| extend TenantId = strcat( toupper(AadTenantId), toupper(EnvironmentName) )\n| project timestamp\n, AadTenantId, EnvironmentName\n, EnvironmentType = tostring( customDimensions.environmentType )\n, TenantId\n, EventId = tostring( customDimensions.eventId )\n| summarize EventCount=count() by AadTenantId, Day=bin(timestamp, 1d)\n;\nlet pageViewEvents = \nbcpageviews\n| extend \n  AadTenantId = tostring( customDimensions.aadTenantId )\n, EnvironmentName = tostring( customDimensions.environmentName )\n| extend TenantId = strcat( toupper(AadTenantId), toupper(EnvironmentName) )\n| project timestamp\n, AadTenantId, EnvironmentName\n, EnvironmentType = tostring( customDimensions.environmentType )\n, TenantId\n, EventId = tostring( iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )\n| summarize EventCount=count() by AadTenantId, Day=bin(timestamp, 1d)\n;\ntraceEvents\n| union pageViewEvents",
+      "id": "7bdd0cac-f1cc-4b01-a707-389aca1311bf",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "// EventStatistics\nlet traceEvents = bctraces\n| project timestamp\n, aadTenantId = tostring( customDimensions.aadTenantId)\n, type = \"traces\"\n| summarize EventCount=count() by aadTenantId, type\n;\nlet pageViewEvents = \nbcpageviews\n| project timestamp\n, aadTenantId = tostring( customDimensions.aadTenantId)\n, type = \"pageViews\"\n| summarize EventCount=count() by aadTenantId, type\n;\ntraceEvents\n| union pageViewEvents\n| project \n  [\"Entra Tenant Id\"] = aadTenantId,\n  [\"Type\"] = type,\n  [\"Event Count\"] = EventCount\n| sort by ['Event Count'] desc  ",
+      "id": "7fdb730a-ac8e-40e8-9f6a-e1b4cef29365",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = toupper('PAGE');\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by count_ desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by Ocurrance desc",
+      "id": "5cdfbcde-58e7-4d76-9be6-db8e549f210f",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = toupper('CODEUNIT');\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod)\n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by sum_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by ['Total Duration'] desc\n",
+      "id": "730af21b-4aac-4139-84fd-a6a8ab5a5dcb",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = toupper('REPORT');\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod)\n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by avg_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by ['Total Duration'] desc\n",
+      "id": "2501b832-d1e5-4dc3-a7db-ed28b0eac1d6",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "let _searchType = 'QUERY';\nbctraces\n| where customDimensions.eventId == 'RT0018'\n| where toupper(customDimensions.alObjectType) == _searchType\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo\n| order by sum_executionTimeInSec desc \n| project [\"AL Object Information\"] = alObjectInfo,\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by ['Total Duration'] desc\n",
+      "id": "3f60991e-0767-4312-9bd0-80610905555b",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| extend environmentName = tostring(customDimensions.environmentName )\n    , environmentType = tostring(customDimensions.environmentType)\n    , entraTenantId = tostring(customDimensions.aadTenantId)\n    , componentVersion = tostring(customDimensions.componentVersion)\n| where componentVersion <> \"\"\n| summarize arg_max(timestamp,componentVersion) by entraTenantId, environmentName, environmentType\n| summarize Count = count() by componentVersion\n| sort by Count desc \n\n\n",
+      "id": "b8f3da3e-5180-4d33-b1bd-9402e5841f28",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| extend environmentName = tostring(customDimensions.environmentName )\n    , environmentType = tostring(customDimensions.environmentType)\n    , entraTenantId = tostring(customDimensions.aadTenantId)\n    , componentVersion = tostring(customDimensions.componentVersion)\n| where componentVersion <> \"\"\n| extend majorVersion = substring(componentVersion,0,2)\n| summarize arg_max(timestamp,majorVersion) by entraTenantId, environmentName, environmentType\n| summarize Count = count() by majorVersion\n| sort by Count desc \n\n\n",
+      "id": "fcf9491e-166c-4fdc-984e-bbff5d98d56e",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| summarize Occurrance = count() by [\"Entra Tenant Id\"] = tostring(customDimensions.aadTenantId)\n    , [\"Environment Type\"] = tostring(customDimensions.environmentType)\n    , [\"Environment Name\"] = tostring(customDimensions.environmentName)\n| sort by Occurrance desc ",
+      "id": "ff5d41c0-97fd-4273-8d72-25188a5ffef0",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| extend extensionId = tostring(customDimensions.appId)\n    , extensionName = tostring(customDimensions.appName)\n    , extensionVersion = tostring(customDimensions.appVersion)\n| where customDimensions.appName != \"null\"\n| summarize Occurrance = count() by extensionName, extensionId\n| sort by Occurrance desc \n\n\n",
+      "id": "803522b2-7cdb-4927-b5a5-0c52c9d08e44",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| extend extensionId = tostring(customDimensions.appId)\n    , extensionName = tostring(customDimensions.appName)\n    , extensionVersion = tostring(customDimensions.appVersion)\n| where customDimensions.appName != \"null\"\n| summarize Occurrance = count() by extensionName, extensionVersion, extensionId\n| sort by Occurrance desc \n\n\n",
+      "id": "c8014d49-8914-4d1d-9c43-8ad65ed0f974",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| extend extensionId = tostring(customDimensions.appId)\n    , extensionName = tostring(customDimensions.appName)\n    , extensionVersion = tostring(customDimensions.appVersion)\n| where customDimensions.appName != \"null\"\n| summarize Occurrance = count() by extensionName, extensionId\n| sort by Occurrance desc \n\n\n",
+      "id": "99b1ae3d-7cef-4e42-a92e-717abcda26f5",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| extend extensionId = tostring(customDimensions.appId)\n    , extensionName = tostring(customDimensions.appName)\n    , extensionVersion = tostring(customDimensions.appVersion)\n| extend extensionNameVersion = strcat(extensionName, ' ', extensionVersion)\n| where customDimensions.appName != \"null\"\n| summarize Occurrance = count() by extensionNameVersion, extensionId\n| sort by Occurrance desc \n| top 20 by Occurrance\n\n\n",
+      "id": "1190ea7d-bb1f-4865-a505-575b0cdf7967",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| summarize Occurrance = count() by Browser = client_Browser, OS =  client_OS, Model = client_Model, Type = tostring(customDimensions.clientType) \n| sort by Occurrance desc \n",
+      "id": "caf5f2dc-3f1a-461f-a981-cfe7ecd94d87",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| summarize Occurrance = count() by Browser = client_Browser, OS =  client_OS, Model = client_Model, Type = tostring(customDimensions.clientType) \n| sort by Occurrance desc \n| top 20 by Occurrance\n",
+      "id": "f22c1015-a288-4c1a-a504-7b53699092f9",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| summarize Occurrance = count() by [\"Entra Tenant Id\"] = tostring(customDimensions.aadTenantId)\n| sort by Occurrance desc ",
+      "id": "ee935c3e-50d4-4e9a-84eb-05de1749c48c",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| parse kind=regex client_Browser with browserName:string ' ' browserVersion:string\n| extend ClientType = tostring( customDimensions.clientType )\n, DeviceScreenResolution = tostring( customDimensions.deviceScreenResolution )\n, DeviceLocale = tostring( customDimensions.deviceLocale )\n, HostType = tostring( customDimensions.hostType )\n, Location = client_CountryOrRegion\n, ClientBrowser = client_Browser\n, BrowserName = iff(browserName=='Edg', 'Edge', browserName)\n, BrowserVersion = browserVersion\n, ClientOS = client_OS\n| summarize Count=count()\nby ClientType \n, DeviceScreenResolution\n, DeviceLocale \n, HostType \n, Location \n, ClientBrowser \n, BrowserName \n, BrowserVersion\n, ClientOS\n| sort by Count desc \n\n\n\n\n",
+      "id": "bc068e3c-0b73-4731-bf12-8342dd02a315",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| extend extensionId = tostring(customDimensions.appId)\n    , extensionName = tostring(customDimensions.appName)\n    , extensionVersion = tostring(customDimensions.appVersion)\n| where customDimensions.appName != \"null\"\n| summarize Occurrance = count() by extensionName, extensionId\n| sort by Occurrance desc \n\n\n",
+      "id": "e8e9bacb-71f5-45e9-8abe-00ec0e27358a",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| summarize Count=count() by client_CountryOrRegion //, client_StateOrProvince, client_City\n| where client_CountryOrRegion !in (\"\",\"Italy\")\n| sort by Count desc \n",
+      "id": "0eba4be7-81d4-4c97-8ce7-588482c17e74",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where client_CountryOrRegion != \"Italy\"\n| summarize Count=count() by client_CountryOrRegion, client_StateOrProvince //, client_StateOrProvince, client_City\n| where client_StateOrProvince != \"\"\n| project client_StateOrProvince, Count\n| sort by Count desc \n| top 20 by Count",
+      "id": "8736ee4d-0673-4e0b-9449-0a7f66f6cf02",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where client_CountryOrRegion != \"Italy\"\n| summarize Count=count() by client_CountryOrRegion, client_StateOrProvince, client_City //, client_StateOrProvince, client_City\n| where client_City != \"\"\n| project client_City, Count\n| sort by Count desc \n| top 20 by Count",
+      "id": "1da1d778-47a3-4f5c-b9ba-9bfd110cfcee",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where client_CountryOrRegion == \"Italy\"\n| summarize Count=count() by client_CountryOrRegion, client_StateOrProvince //, client_StateOrProvince, client_City\n| project client_StateOrProvince, Count\n| sort by Count desc \n| top 20 by Count",
+      "id": "3496285f-5219-436a-9193-622093af8de8",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where client_CountryOrRegion == \"Italy\"\n| summarize Count=count() by client_CountryOrRegion, client_StateOrProvince, client_City //, client_StateOrProvince, client_City\n| project client_City, Count\n| sort by Count desc \n| top 20 by Count",
+      "id": "323d1790-f60a-43c5-ad3a-051c5071db30",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "// EventStatistics\nlet traceEvents = bctraces\n| project timestamp\n,  EntraTenantId = tostring(customDimensions.aadTenantId)\n,  EnvironmentName = tostring( customDimensions.environmentName )\n, EnvironmentType = tostring( customDimensions.environmentType )\n, EventId = tostring( iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )\n| summarize EventCount=count() by EntraTenantId, EnvironmentName, EnvironmentType, EventId\n;\nlet pageViewEvents = \nbcpageviews\n| project timestamp\n,  EntraTenantId = tostring(customDimensions.aadTenantId)\n,  EnvironmentName = tostring( customDimensions.environmentName )\n, EnvironmentType = tostring( customDimensions.environmentType )\n, EventId = tostring( iff(isempty(customDimensions.eventId), customDimensions.eventID, customDimensions.eventId) )\n| summarize EventCount=count() by EntraTenantId, EnvironmentName, EnvironmentType, EventId\n;\ntraceEvents\n| union pageViewEvents\n| project \n  [\"Event Id\"] = strcat(EntraTenantId, ' ', EnvironmentName, ' ', EventId),\n  [\"Event Count\"] = EventCount\n| sort by ['Event Count'] desc  \n| top 20 by ['Event Count']",
+      "id": "bce228b2-b379-4b76-a728-e7da86574656",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "// EventStatistics\nlet traceEvents = bctraces\n| project timestamp\n, aadTenantId = tostring( customDimensions.aadTenantId)\n, type = \"traces\"\n| summarize EventCount=count() by aadTenantId, type\n;\nlet pageViewEvents = \nbcpageviews\n| project timestamp\n, aadTenantId = tostring( customDimensions.aadTenantId)\n, type = \"pageViews\"\n| summarize EventCount=count() by aadTenantId, type\n;\ntraceEvents\n| union pageViewEvents\n| project \n  [\"Entra Tenant Id\"] = strcat(aadTenantId, \" \", type),\n  [\"Event Count\"] = EventCount\n| sort by ['Event Count'] desc  ",
+      "id": "0e5a05fb-9445-4cd1-85f1-60aa9f3ae9c0",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where toint(customDimensions.alObjectId) > 0\n| where customDimensions.pageType !contains \"eport\"\n//| where customDimensions.designerLevel == \"None\"\n| extend bucketIndex = case(\n    performanceBucket == \">=5min\", \"11\"\n    , performanceBucket == \"2min-5min\", \"10\"\n    , performanceBucket == \"1min-2min\", \"09\"\n    , performanceBucket == \"30sec-1min\", \"08\"\n    , performanceBucket == \"15sec-30sec\", \"07\"\n    , performanceBucket == \"7sec-15sec\", \"06\"\n    , performanceBucket == \"3sec-7sec\", \"05\"\n    , performanceBucket == \"1sec-3sec\", \"04\"\n    , performanceBucket == \"500ms-1sec\", \"03\"\n    , performanceBucket == \"250ms-500ms\", \"02\"\n    , performanceBucket == \"<250ms\", \"01\"\n    , \"00\")\n| extend perfBucket = strcat(bucketIndex, ': ', performanceBucket)\n| summarize count() by perfBucket, bin(timestamp,1h)\n| sort by perfBucket asc ",
+      "id": "da70267d-ab82-4990-aca7-2b6794ac62da",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where toint(customDimensions.alObjectId) > 0\n| where customDimensions.pageType !contains \"eport\"\n//| where customDimensions.designerLevel == \"None\"\n| extend bucketIndex = case(\n    performanceBucket == \">=5min\", \"11\"\n    , performanceBucket == \"2min-5min\", \"10\"\n    , performanceBucket == \"1min-2min\", \"09\"\n    , performanceBucket == \"30sec-1min\", \"08\"\n    , performanceBucket == \"15sec-30sec\", \"07\"\n    , performanceBucket == \"7sec-15sec\", \"06\"\n    , performanceBucket == \"3sec-7sec\", \"05\"\n    , performanceBucket == \"1sec-3sec\", \"04\"\n    , performanceBucket == \"500ms-1sec\", \"03\"\n    , performanceBucket == \"250ms-500ms\", \"02\"\n    , performanceBucket == \"<250ms\", \"01\"\n    , \"00\")\n| extend perfBucket = strcat(bucketIndex, ': ', performanceBucket)\n| summarize count() by perfBucket\n| sort by perfBucket asc ",
+      "id": "52641d9b-ed29-478b-8215-6fffd696f9d4",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bcpageviews\n| where customDimensions.pageType !contains \"eport\"\n| extend bucketIndex = case(\n    performanceBucket == \">=5min\", \"VERY BAD (> 7)\"\n    , performanceBucket == \"2min-5min\", \"VERY BAD (> 7)\"\n    , performanceBucket == \"1min-2min\", \"VERY BAD (> 7)\"\n    , performanceBucket == \"30sec-1min\", \"VERY BAD (> 7)\"\n    , performanceBucket == \"15sec-30sec\", \"VERY BAD (> 7)\"\n    , performanceBucket == \"7sec-15sec\", \"VERY BAD (> 7)\"\n    , performanceBucket == \"3sec-7sec\", \"BAD (3 -7)\"\n    , performanceBucket == \"1sec-3sec\", \"GOOD (1-3)\"\n    , performanceBucket == \"500ms-1sec\", \"VERY GOOD (< 1)\"\n    , performanceBucket == \"250ms-500ms\", \"VERY GOOD (< 1)\"\n    , performanceBucket == \"<250ms\", \"VERY GOOD (< 1)\"\n    , \"00\")\n| summarize count() by bucketIndex\n| sort by bucketIndex asc ",
+      "id": "bf729914-86ce-4484-8bf3-338cc2eaed32",
+      "usedVariables": ["bcpageviews"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod)\n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo, alMethod\n| order by sum_executionTimeInSec desc \n| project [\"AL Object Information\"] = strcat(alObjectInfo, ' - ', alMethod),\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by ['Total Duration'] desc\n| top 20 by ['Total Duration']",
+      "id": "540570b3-0fb1-4bc7-bcdf-92fba21d60ff",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod)\n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTime = customDimensions.executionTime\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n| extend executionTimeInSec = executionTimeInMS / 1000\n| summarize count(), sum( executionTimeInSec ), avg( executionTimeInSec ) by alObjectInfo, alMethod\n| order by count_ desc \n| project [\"AL Object Information\"] = strcat(alObjectInfo, ' - ', alMethod),\n    [\"Ocurrance\"] = count_,\n    [\"Avg Duration\"] = round(avg_executionTimeInSec, 2),\n    [\"Total Duration\"] = round(sum_executionTimeInSec,2)\n| sort by Ocurrance desc\n| top 20 by Ocurrance\n",
+      "id": "1ec8b9cc-af5f-49e9-9315-1f100f5260cc",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionId = tostring(customDimensions.extensionId)\n    , extensionName = tostring(customDimensions.extensionName)\n    , extensionVersion = tostring(customDimensions.extensionVersion)\n| where customDimensions.extensionName != \"null\"\n| summarize Occurrance = count() by extensionName\n| sort by Occurrance desc \n\n\n",
+      "id": "8da45395-8b37-41df-9f27-47239921984a",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n, extensionInfo = strcat( extensionName, ' ', customDimensions.extensionVersion)\n, sqlExecutes = toint(customDimensions.sqlExecutes) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n, sqlRowsRead = toint(customDimensions.sqlRowsRead) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n| summarize sum( executionTimeInMS ) by extensionName\n| order by sum_executionTimeInMS \n| project \n    ['AL Extension'] = extensionName,\n    [\"Total Duration\"] = round(sum_executionTimeInMS,0)\n| sort by ['Total Duration'] desc ",
+      "id": "4acb939d-04df-4e50-ad1e-863d5b5a4c3c",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n, extensionInfo = strcat( extensionName, ' ', customDimensions.extensionVersion)\n, sqlExecutes = toint(customDimensions.sqlExecutes) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n, sqlRowsRead = toint(customDimensions.sqlRowsRead) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n| summarize SqlRowsRead = sum( sqlRowsRead ), SqlExecutes = sum( sqlExecutes) by extensionName\n| order by SqlRowsRead desc \n| project \n    ['AL Extension'] = extensionName,\n    [\"SQL Rows Read\"] = SqlRowsRead,\n    [\"SQL Executes\"] = SqlExecutes\n| sort by ['SQL Rows Read'] desc ",
+      "id": "5e92fee3-142d-464c-84c1-b49a803f7fcb",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend entraTenantId = tostring(customDimensions.aadTenantId)\n    , environmentType = tostring(customDimensions.environmentType)\n    , environmentName = tostring(customDimensions.environmentName)\n| summarize Occurance = count() by entraTenantId, environmentType, environmentName\n| sort by Occurance desc \n\n\n\n\n",
+      "id": "2c856aad-d64b-4bf6-bd99-ae2f943a6672",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend entraTenantId = tostring(customDimensions.aadTenantId)\n    , environmentType = tostring(customDimensions.environmentType)\n    , environmentName = tostring(customDimensions.environmentName)\n| summarize Occurance = count() by entraTenantId, environmentType, environmentName\n| sort by Occurance desc \n| project environment = strcat(entraTenantId, ' - ', environmentType, ' - ', environmentName)\n    , Occurance\n| top 10 by Occurance\n\n\n\n\n",
+      "id": "9e18489d-1da6-4630-807c-0021f624d7b4",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| where customDimensions.eventId == 'RT0018'\n| extend extensionName = tostring(customDimensions.extensionName)\n  , alObjectName = tostring(customDimensions.alObjectName)\n  , alMethod = tostring( customDimensions.alMethod) \n| extend environmentName = tostring(customDimensions.environmentName)\n, alObjectInfo = strcat(customDimensions.alObjectType, ' ', customDimensions.alObjectId, ' - ', alObjectName)\n, executionTimeInMS = toreal(totimespan(customDimensions.executionTime))/10000 //the datatype for executionTime is timespan \n, suspendedTime = customDimensions.suspendedTime // will come on 22.x\n, extensionInfo = strcat( extensionName, ' ', customDimensions.extensionVersion)\n, clientType = tostring(customDimensions.clientType)\n, exclusiveTime = customDimensions.exclusiveTime // This dimension was introduced in Business Central 2023 release wave 1, version 22.1. Backported to version 21.6\n, exclusiveTimeInMS = toreal(totimespan(customDimensions.exclusiveTime))/10000 //the datatype for exclusiveTime is timespan \n, alStackTrace = tostring(customDimensions.alStackTrace)\n, longRunningThreshold = tostring(customDimensions.longRunningThreshold)\n, longRunningThresholdInMS = toreal(totimespan(customDimensions.longRunningThreshold))/10000 //the datatype for executionTime is timespan \n, sqlExecutes = toint(customDimensions.sqlExecutes) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n, sqlRowsRead = toint(customDimensions.sqlRowsRead) // This dimension was introduced in Business Central 2023 release wave 1, version 22.0\n, usertelemetryId = case(\n  // user telemetry id was introduced in the platform in version 20.0\n  toint( substring(customDimensions.componentVersion,0,2)) >= 20, user_Id\n, 'N/A')\n| summarize count(), sum( sqlRowsRead ), avg( sqlRowsRead ), sum(sqlExecutes), avg(sqlExecutes) by alObjectInfo, alMethod, extensionName, clientType\n| order by sum_sqlRowsRead desc  \n| project \n    ['AL Extension'] = extensionName,\n    [\"AL Object Information\"] = alObjectInfo,\n    [\"AL Method\"] = alMethod,\n    [\"Client Type\"] = clientType,\n    [\"Ocurrance\"] = count_,\n    [\"Avg SQL Rows Read\"] = round(avg_sqlRowsRead, 0),\n    [\"Total SQL Rows Read\"] = round(sum_sqlRowsRead,0),\n    [\"Avg SQL Executes\"] = round(avg_sqlExecutes,0),\n    [\"Total SQL Executes\"] = round(avg_sqlExecutes,0)\n| sort by ['Total SQL Rows Read'] desc ",
+      "id": "878ceeac-f68c-4791-9595-cd96fadf2d81",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where extensionPublisher has_any (_NearbyPublisher)\n| where extensionName has_any (_NearbyAppName)\n| summarize arg_max(extensionVersion,*) by EntraTenantId, environmentName, environnmentType, id, extensionName, extensionPublisher",
+      "id": "ff98b589-c3c4-4535-b1f2-d3249b336743",
+      "usedVariables": ["_NearbyAppName", "_NearbyPublisher", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where id == \"437dbf0e-84ff-417a-965d-ed2bb9650972\" \n| extend minorVersion = substring(extensionVersion,0,4)\n| join kind=rightouter nearbyEnvironments on\n    $left.EntraTenantId == $right.EntraTenantId,\n    $left.environnmentType == $right.environnmentType,\n    $left.environmentName == $right.environmentName\n| summarize arg_max(minorVersion,subscriberExecutionCount, executionTime) by EntraTenantId, environmentName, environnmentType\n| summarize Occurrance = count() by minorVersion\n\n",
+      "id": "736a993e-7f79-4a5a-9b77-091acca067e5",
+      "usedVariables": ["nearbyEnvironments", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where id == \"437dbf0e-84ff-417a-965d-ed2bb9650972\" \n| join kind=rightouter nearbyEnvironments on\n    $left.EntraTenantId == $right.EntraTenantId,\n    $left.environnmentType == $right.environnmentType,\n    $left.environmentName == $right.environmentName\n| summarize arg_max(extensionVersion,subscriberExecutionCount, executionTime) by EntraTenantId, environmentName, environnmentType\n| summarize Occurrance = count() by extensionVersion\n\n",
+      "id": "256083b2-e7fc-4545-bdd8-4615dd6ebd0e",
+      "usedVariables": ["nearbyEnvironments", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where id == \"437dbf0e-84ff-417a-965d-ed2bb9650972\" \n| extend majorVersion = substring(extensionVersion,0,2)\n| join kind=rightouter nearbyEnvironments on\n    $left.EntraTenantId == $right.EntraTenantId,\n    $left.environnmentType == $right.environnmentType,\n    $left.environmentName == $right.environmentName\n| summarize arg_max(majorVersion,subscriberExecutionCount, executionTime) by EntraTenantId, environmentName, environnmentType\n| summarize Occurrance = count() by majorVersion\n\n",
+      "id": "aa9465c1-29da-4b08-addb-88495c78d496",
+      "usedVariables": ["nearbyEnvironments", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where extensionPublisher !in (\"\", \"Microsoft\")\n| where id !in (\"\", \"00000000-0000-0000-0000-000000000000\")\n| where extensionPublisher has_any (_NearbyPublisher)\n| where extensionName has_any (_NearbyAppName)\n| summarize arg_max(extensionVersion,*) by EntraTenantId, environmentName, environnmentType, id, extensionName, extensionPublisher\n| summarize Occurrance = count() by extensionPublisher\n| sort by Occurrance desc ",
+      "id": "a8f69f65-8d98-47e0-9c3d-4a60d422d325",
+      "usedVariables": ["_NearbyAppName", "_NearbyPublisher", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where extensionPublisher !in (\"\", \"Microsoft\")\n| where id !in (\"\", \"00000000-0000-0000-0000-000000000000\")\n| where extensionPublisher has_any (_NearbyPublisher)\n| where extensionName has_any (_NearbyAppName)\n| summarize arg_max(extensionVersion,*) by EntraTenantId, environmentName, environnmentType, id, extensionName, extensionPublisher\n| summarize Occurrance = count() by extensionPublisher, extensionName \n| sort by Occurrance desc ",
+      "id": "54b85297-56f5-46c8-bf59-487d018f87f2",
+      "usedVariables": ["_NearbyAppName", "_NearbyPublisher", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where extensionPublisher !in (\"\", \"Microsoft\")\n| where id !in (\"\", \"00000000-0000-0000-0000-000000000000\")\n| where extensionPublisher has_any (_NearbyPublisher)\n| where extensionName has_any (_NearbyAppName)\n| summarize arg_max(extensionVersion,*) by EntraTenantId, environmentName, environnmentType, id, extensionName, extensionPublisher\n| summarize Occurrance = count() by extensionInfo = strcat(extensionName, ' by ', extensionPublisher) \n| sort by Occurrance desc \n| top 10 by Occurrance",
+      "id": "a0e681b5-7969-4035-925b-ac87bb740703",
+      "usedVariables": ["_NearbyAppName", "_NearbyPublisher", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "bctraces\n| extend environmentName = tostring(customDimensions.environmentName )\n    , environmentType = tostring(customDimensions.environmentType)\n    , entraTenantId = tostring(customDimensions.aadTenantId)\n    , componentVersion = tostring(customDimensions.componentVersion)\n| where componentVersion <> \"\"\n| sort by timestamp desc\n| summarize arg_max(timestamp,*) by entraTenantId, environmentName, environmentType\n| sort by timestamp desc \n| project entraTenantId, environmentType, environmentName, [\"Last Seen\"] = timestamp\n\n\n\n\n",
+      "id": "f833d245-8dc4-485f-98db-f95babd2da3a",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "id": "de6744ba-af86-46a4-8dc3-eba07834e3fb",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher == \"EOS Solutions\"\n| where customDimensions.alObjectId >= 100000\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.aadTenantId has_any (_DomainName)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.eventId has_any (_eventId)\n| where customDimensions.extensionName has_any (_appName)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where session_Id has_any (_sessionId)",
+      "usedVariables": [
+        "_DomainName",
+        "_ObjectType",
+        "_appName",
+        "_clientType",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_eventId",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "id": "72898c5b-5162-48a0-bc26-c4d1c582c9a3",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "pageViews\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.appPublisher == \"EOS Solutions\"\n| where customDimensions.alObjectId >= 100000\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.aadTenantId has_any (_DomainName)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.eventId has_any (_eventId)\n| where customDimensions.appName has_any (_appName)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| where customDimensions.pageType !contains \"Dialog\"\n| where customDimensions.pageType !contains \"Report\"",
+      "usedVariables": [
+        "_DomainName",
+        "_ObjectType",
+        "_appName",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_eventId",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "id": "29d7ce37-70e6-46aa-b243-937afa345e5e",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.eventId == 'RT0018'\n| where customDimensions.aadTenantId has_any (_NearbyEntraTenantId)\n| where customDimensions.aadTenantId has_any (_DomainName)\n| where customDimensions.environmentType has_any (_NearbyEnvironmentType)\n| where customDimensions.environmentName has_any (_NearbyEnvironmentName)\n| project EntraTenantId = tostring(customDimensions.aadTenantId)\n    , environmentName = tostring(customDimensions.environmentName)\n    , environnmentType = tostring(customDimensions.environmentType)\n    , extensionInfo = parse_json(tostring(customDimensions.extensionInfo))\n| mv-expand extensionInfo\n| where extensionInfo.id !in (\"\", \"00000000-0000-0000-0000-000000000000\")\n| extend id = tostring(extensionInfo.id)\n\t, extensionName = tostring(extensionInfo.extensionName)\n    , extensionVersion = tostring(extensionInfo.extensionVersion)\n\t, extensionPublisher = tostring(extensionInfo.extensionPublisher)\n\t, subscriberExecutionCount = toint(extensionInfo.subscriberExecutionCount) \n\t, executionTime = toint(extensionInfo.executionTime)\n| extend isEOS = iif(_ExcludeEOS == true, iif(extensionPublisher startswith \"EOS\", true, false), false)\n| where isEOS == false\n| project-away extensionInfo",
+      "usedVariables": [
+        "_DomainName",
+        "_ExcludeEOS",
+        "_NearbyEntraTenantId",
+        "_NearbyEnvironmentName",
+        "_NearbyEnvironmentType",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "id": "e4eb7c80-a02b-4f10-a637-868bce013151",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.eventId == 'RT0018'\n| where customDimensions.aadTenantId has_any (_NearbyEntraTenantId)\n| where customDimensions.aadTenantId has_any (_DomainName)\n| where customDimensions.environmentType has_any (_NearbyEnvironmentType)\n| where customDimensions.environmentName has_any (_NearbyEnvironmentName)\n| project EntraTenantId = tostring(customDimensions.aadTenantId)\n    , environmentName = tostring(customDimensions.environmentName)\n    , environnmentType = tostring(customDimensions.environmentType)\n    , extensionInfo = parse_json(tostring(customDimensions.extensionInfo))\n| mv-expand extensionInfo\n| extend id = tostring(extensionInfo.id)\n    , extensionName = tostring(extensionInfo.extensionName)\n    , extensionPublisher = tostring(extensionInfo.extensionPublisher)\n    , extensionVersion = tostring(extensionInfo.extensionVersion)\n| extend isEOS = iif(_ExcludeEOS == true, iif(extensionPublisher startswith \"EOS\", true, false), false)\n| where isEOS == false\n| project-away extensionInfo\n| where extensionPublisher has_any (_NearbyPublisher)\n| where extensionName  has_any (_NearbyAppName)\n| distinct EntraTenantId, environmentName, environnmentType",
+      "usedVariables": [
+        "_DomainName",
+        "_ExcludeEOS",
+        "_NearbyAppName",
+        "_NearbyEntraTenantId",
+        "_NearbyEnvironmentName",
+        "_NearbyEnvironmentType",
+        "_NearbyPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "id": "9955ab7c-67a3-4f07-bdf8-4acdc6a27d3a",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.eventId == \"ALEOS004-0011\" //EAL - 14 Feature Flag, 13 come feat flag std.\n| where customDimensions.aadTenantId has_any (_InsiderEntraTenantId)\n| where customDimensions.environmentType has_any (_InsiderEnvironmentType)\n| where customDimensions.environmentName has_any (_InsiderEnvironmentName)\n| project timestamp       \n        , entraTenantId = tostring(customDimensions.alAadTenantId)\n        , environmentType = tostring(iif(customDimensions.alSandbox == \"false\", \"Production\", \"Sandbox\")) \n        , environmentName = tostring(customDimensions.environmentName)\n        , environmentDeployment = iif(customDimensions.alSaaS == \"true\", \"Online\", \"On-Prem\")\n        , onlineDomainName = replace_string(tostring(customDimensions.alSaaSDomainName),\".onmicrosoft.com\",\"\")\n        , databaseName = tostring(customDimensions.alDatabaseName)\n        , appServerName = tostring(customDimensions.alServerName)\n        , serviceInstanceId = tostring(customDimensions.alServiceInstanceId)\n        , serviceInstanceName = tostring(customDimensions.alServiceInstanceName)\n        , componentVersion = tostring(customDimensions.componentVersion)\n        , platformVersion = tostring(customDimensions.alPlatformVersion)        \n        , appVersion = tostring(customDimensions.alApplicationVersion)\n        , appLocalization = substring(tostring(customDimensions.alApplicationVersion),0,2)\n        , appsCount = toint(customDimensions.alAppCount)\n        , totalUserCount = toint(customDimensions.alTotalUserCount)\n        , fullUserCount = toint(customDimensions.alFullUserCount)\n        , limitedUserCount = toint(customDimensions.alLimitedUserCount)\n        , licenseNo = tostring(customDimensions.alLicenseSerialNo)\n        , customerId = tostring(customDimensions.alCustomerId)\n        , extensionInfo = parse_json(strcat(\"[\",\n                iif(isnotempty(customDimensions.alInstalledApps_1),\n                        substring(customDimensions.alInstalledApps_1,1,strlen(customDimensions.alInstalledApps_1)-2),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_2), strcat(\",\",\n                        substring(customDimensions.alInstalledApps_2,1,strlen(customDimensions.alInstalledApps_2)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_3),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_3,1,strlen(customDimensions.alInstalledApps_3)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_4),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_4,1,strlen(customDimensions.alInstalledApps_4)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_5),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_5,1,strlen(customDimensions.alInstalledApps_5)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_6),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_6,1,strlen(customDimensions.alInstalledApps_6)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_7),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_7,1,strlen(customDimensions.alInstalledApps_7)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_8),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_8,1,strlen(customDimensions.alInstalledApps_8)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_9),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_9,1,strlen(customDimensions.alInstalledApps_9)-2)),\"\")  \n                ,\"]\"      \n        ))\n| mv-expand extensionInfo \n| extend id = substring(tolower(tostring(extensionInfo.Id)),1,strlen(extensionInfo.Id)-2)\n    \t, extensionName = tostring(extensionInfo.Name)\n        , extensionVersion = tostring(extensionInfo.Version)\n    \t, extensionPublisher = tostring(extensionInfo.Publisher)\n        , databaseRegion = iif(environmentDeployment == \"Online\", replace_string(tostring(split(databaseName,\"_\")[1]),\"bcprod\",\"\") ,\"\")\n        , databaseTenantId = iif(environmentDeployment == \"Online\", toupper(replace_string(tostring(split(databaseName,\"_\")[2]),\"bcprod\",\"\")) ,\"\")\n| project-away extensionInfo\n| extend isEOS = iif(_ExcludeEOS == true, iif(extensionPublisher startswith \"EOS\", true, false), false)\n| where isEOS == false",
+      "usedVariables": [
+        "_ExcludeEOS",
+        "_InsiderEntraTenantId",
+        "_InsiderEnvironmentName",
+        "_InsiderEnvironmentType",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "id": "2d56294f-b1b5-476f-855a-746e458391d5",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.eventId == \"ALEOS004-0011\" //EAL - 14 Feature Flag, 13 come feat flag std.\n| where customDimensions.aadTenantId has_any (_InsiderEntraTenantId)\n| where customDimensions.environmentType has_any (_InsiderEnvironmentType)\n| where customDimensions.environmentName has_any (_InsiderEnvironmentName)\n| project timestamp       \n        , entraTenantId = tostring(customDimensions.alAadTenantId)\n        , environmentType = tostring(iif(customDimensions.alSandbox == \"false\", \"Production\", \"Sandbox\")) \n        , environmentName = tostring(customDimensions.environmentName)\n        , environmentDeployment = iif(customDimensions.alSaaS == \"true\", \"Online\", \"On-Prem\")\n        , onlineDomainName = replace_string(tostring(customDimensions.alSaaSDomainName),\".onmicrosoft.com\",\"\")\n        , databaseName = tostring(customDimensions.alDatabaseName)\n        , appServerName = tostring(customDimensions.alServerName)\n        , serviceInstanceId = tostring(customDimensions.alServiceInstanceId)\n        , serviceInstanceName = tostring(customDimensions.alServiceInstanceName)\n        , componentVersion = tostring(customDimensions.componentVersion)\n        , platformVersion = tostring(customDimensions.alPlatformVersion)        \n        , appVersion = tostring(customDimensions.alApplicationVersion)\n        , appLocalization = substring(tostring(customDimensions.alApplicationVersion),0,2)\n        , appsCount = toint(customDimensions.alAppCount)\n        , totalUserCount = toint(customDimensions.alTotalUserCount)\n        , fullUserCount = toint(customDimensions.alFullUserCount)\n        , limitedUserCount = toint(customDimensions.alLimitedUserCount)\n        , licenseNo = tostring(customDimensions.alLicenseSerialNo)\n        , customerId = tostring(customDimensions.alCustomerId)\n        , extensionInfo = parse_json(strcat(\"[\",\n                iif(isnotempty(customDimensions.alInstalledApps_1),\n                        substring(customDimensions.alInstalledApps_1,1,strlen(customDimensions.alInstalledApps_1)-2),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_2), strcat(\",\",\n                        substring(customDimensions.alInstalledApps_2,1,strlen(customDimensions.alInstalledApps_2)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_3),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_3,1,strlen(customDimensions.alInstalledApps_3)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_4),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_4,1,strlen(customDimensions.alInstalledApps_4)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_5),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_5,1,strlen(customDimensions.alInstalledApps_5)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_6),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_6,1,strlen(customDimensions.alInstalledApps_6)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_7),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_7,1,strlen(customDimensions.alInstalledApps_7)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_8),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_8,1,strlen(customDimensions.alInstalledApps_8)-2)),\"\"),\n                iif(isnotempty(customDimensions.alInstalledApps_9),strcat(\",\",\n                        substring(customDimensions.alInstalledApps_9,1,strlen(customDimensions.alInstalledApps_9)-2)),\"\")  \n                ,\"]\"      \n        ))\n| mv-expand extensionInfo \n| extend id = substring(tolower(tostring(extensionInfo.Id)),1,strlen(extensionInfo.Id)-2)\n    \t, extensionName = tostring(extensionInfo.Name)\n        , extensionVersion = tostring(extensionInfo.Version)\n    \t, extensionPublisher = tostring(extensionInfo.Publisher)\n        , databaseRegion = iif(environmentDeployment == \"Online\", replace_string(tostring(split(databaseName,\"_\")[1]),\"bcprod\",\"\") ,\"\")\n        , databaseTenantId = iif(environmentDeployment == \"Online\", toupper(replace_string(tostring(split(databaseName,\"_\")[2]),\"bcprod\",\"\")) ,\"\")\n| extend isEOS = iif(_ExcludeEOS == true, iif(extensionPublisher startswith \"EOS\", true, false), false)\n| where isEOS == false\n| project-away extensionInfo\n| where extensionPublisher has_any (_NearbyPublisher)\n| where extensionName  has_any (_NearbyAppName)\n| distinct entraTenantId, environmentName, environmentType",
+      "usedVariables": [
+        "_ExcludeEOS",
+        "_InsiderEntraTenantId",
+        "_InsiderEnvironmentName",
+        "_InsiderEnvironmentType",
+        "_NearbyAppName",
+        "_NearbyPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where customDimensions.extensionPublisher == \"EOS Solutions\"\r\n| where customDimensions.aadTenantId has_any (_entraTenantId)\r\n| where customDimensions.environmentType has_any (_environmentType)\r\n| where customDimensions.environmentName has_any (_environmentName)\r\n| where customDimensions.clientType has_any (_clientType)\r\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\r\n| where customDimensions.alObjectType has_any (_ObjectType)\r\n| where customDimensions.alObjectId has_any (_objectID)\r\n| where client_CountryOrRegion has_any (_country)\r\n| where session_Id has_any (_sessionId)\r\n| project [\"App Name\"] = tostring(customDimensions.extensionName)\r\n| distinct ['App Name']\r\n| sort by ['App Name'] asc",
+      "id": "38d7d112-c817-497f-9180-2de511afebb7",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.aadTenantId)\n| project [\"Entra Tenant Id\"] = tostring(customDimensions.aadTenantId)\n",
+      "id": "34b27374-ed1e-41fd-9f49-0e8a02b3a60a",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_environmentName",
+        "_environmentType",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentType)\n| project [\"Environment Type\"] = tostring(customDimensions.environmentType)\n| sort by ['Environment Type'] asc ",
+      "id": "19cce425-86e6-48e7-8010-aedf8deaeaea",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentName)\n| project [\"Environment Name\"] = tostring(customDimensions.environmentName)\n| sort by ['Environment Name'] asc ",
+      "id": "678e5cde-e77f-4682-be2e-568cb7bd03b5",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.clientType)\n| project [\"Client Type\"] = tostring(customDimensions.clientType)\n| sort by ['Client Type'] asc \n",
+      "id": "6b394b72-66d0-4ee2-b924-84b8c11281d3",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| extend [\"ObjectType\"] = tostring(customDimensions.alObjectType)\n| summarize by ObjectType\n",
+      "id": "4dc324e5-dd28-445e-9aec-bfb43345f39f",
+      "usedVariables": [
+        "_AppPublisher",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| project [\"AL Object ID\"] = toreal(customDimensions.alObjectId)\n| distinct [\"AL Object ID\"]\n| order by [\"AL Object ID\"] asc",
+      "id": "c7d1f045-43bc-4b64-9ba0-22f497bc70d1",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| summarize arg_max(timestamp,*) by tostring(session_Id)\n| project [\"Session Id\"] = tostring(session_Id)\n| where ['Session Id'] != \"\"\n| sort by ['Session Id'] asc \n",
+      "id": "783e503b-3127-4304-88f5-702a7f19189a",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_objectID",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces | union pageViews\r\n| where timestamp between (_startTime .. _endTime)\r\n| where customDimensions.appPublisher has_any (_AppPublisher) or \r\n    customDimensions.extensionPublisher has_any (_AppPublisher)\r\n| where customDimensions.aadTenantId has_any (_entraTenantId)\r\n| where customDimensions.environmentName has_any (_environmentName)\r\n| where customDimensions.clientType has_any (_clientType)\r\n| where customDimensions.extensionPublisher has_any (_AppPublisher)\r\n| where customDimensions.alObjectType has_any (_ObjectType)\r\n| where customDimensions.alObjectId has_any (_objectID)\r\n| where client_CountryOrRegion has_any (_country)\r\n| where session_Id has_any (_sessionId)\r\n| project [\"Event Id\"] = tostring(customDimensions.eventId)\r\n| distinct ['Event Id']\r\n| where ['Event Id'] != \"\"\r\n| sort by ['Event Id'] asc",
+      "id": "53e671be-1389-472a-bfc8-f1af47551426",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "pageViews\r\n| where timestamp between (_startTime .. _endTime)\r\n| where timestamp between (_startTime .. _endTime)\r\n| where customDimensions.appPublisher has_any (_AppPublisher)\r\n| where customDimensions.aadTenantId has_any (_entraTenantId)\r\n| where customDimensions.environmentName has_any (_environmentName)\r\n| where customDimensions.clientType has_any (_clientType)\r\n| where customDimensions.appName has_any (_appName)\r\n| where customDimensions.alObjectType has_any (_ObjectType)\r\n| where customDimensions.alObjectId has_any (_objectID)\r\n| where session_Id has_any (_sessionId)\r\n| project [\"Country\"] = client_CountryOrRegion\r\n| distinct ['Country']\r\n| where Country != \"\"\r\n| sort by ['Country'] asc",
+      "id": "49a95f69-8e79-4be8-85ea-1002fb4697e5",
+      "usedVariables": [
+        "_AppPublisher",
+        "_ObjectType",
+        "_appName",
+        "_clientType",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionName has_any (_appName)\n| where customDimensions.alObjectType has_any (_ObjectType)\n| where customDimensions.alObjectId has_any (_objectID)\n| where client_CountryOrRegion has_any (_country)\n| where session_Id has_any (_sessionId)\n| project [\"App Publisher\"] = tostring(customDimensions.extensionPublisher)\n| distinct ['App Publisher']\n| sort by ['App Publisher'] asc",
+      "id": "2a96cb51-190d-460b-a982-3f0e1540e0f0",
+      "usedVariables": [
+        "_ObjectType",
+        "_appName",
+        "_clientType",
+        "_country",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_objectID",
+        "_sessionId",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.environmentType has_any (_NearbyEnvironmentType)\n| where customDimensions.environmentName has_any (_NearbyEnvironmentName)\n| where customDimensions.extensionPublisher has_any (_NearbyPublisher)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.aadTenantId)\n| project [\"Entra Tenant Id\"] = tostring(customDimensions.aadTenantId)\n",
+      "id": "8c65ce6f-ffdf-4ba9-be23-c6f0586163ca",
+      "usedVariables": [
+        "_NearbyEnvironmentName",
+        "_NearbyEnvironmentType",
+        "_NearbyPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_NearbyEntraTenantId)\n| where customDimensions.environmentName has_any (_NearbyEnvironmentName)\n| where customDimensions.extensionPublisher has_any (_NearbyPublisher)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentType)\n| project [\"Environment Type\"] = tostring(customDimensions.environmentType)\n| sort by ['Environment Type'] asc ",
+      "id": "feefe654-6d8d-49bf-9060-642051b2e552",
+      "usedVariables": [
+        "_NearbyEntraTenantId",
+        "_NearbyEnvironmentName",
+        "_NearbyPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_NearbyEntraTenantId)\n| where customDimensions.environmentType has_any (_NearbyEnvironmentType)\n| where customDimensions.extensionPublisher has_any (_NearbyPublisher)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentName)\n| project [\"Environment Name\"] = tostring(customDimensions.environmentName)\n| sort by ['Environment Name'] asc ",
+      "id": "b037080b-36ea-4404-bc12-8345c29f5b47",
+      "usedVariables": [
+        "_NearbyEntraTenantId",
+        "_NearbyEnvironmentType",
+        "_NearbyPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\n| where extensionName has_any (_NearbyAppName)\n| where extensionPublisher != \"\"\n| project [\"Publisher\"] = tostring(extensionPublisher)\n| distinct ['Publisher']\n| sort by ['Publisher'] asc\n",
+      "id": "b94eccbf-f029-4ada-a323-dd28b2acea51",
+      "usedVariables": ["_NearbyAppName", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "nearbyTraces\r\n| where extensionPublisher has_any (_NearbyPublisher)\r\n| where extensionName != \"\"\r\n| project [\"App Name\"] = tostring(extensionName)\r\n| distinct ['App Name']\r\n| sort by ['App Name'] asc",
+      "id": "3a7142b7-08d8-4384-a805-c13dd6f80d51",
+      "usedVariables": ["_NearbyPublisher", "nearbyTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.environmentType has_any (_InsiderEnvironmentType)\n| where customDimensions.environmentName has_any (_InsiderEnvironmentName)\n| where customDimensions.extensionPublisher has_any (_InsiderPublisher)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.aadTenantId)\n| project [\"Entra Tenant Id\"] = tostring(customDimensions.aadTenantId)\n",
+      "id": "cd9c66aa-578a-4810-a458-012da74315d1",
+      "usedVariables": [
+        "_InsiderEnvironmentName",
+        "_InsiderEnvironmentType",
+        "_InsiderPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_InsiderEntraTenantId)\n| where customDimensions.environmentName has_any (_InsiderEnvironmentName)\n| where customDimensions.extensionPublisher has_any (_InsiderPublisher)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentType)\n| project [\"Environment Type\"] = tostring(customDimensions.environmentType)\n| sort by ['Environment Type'] asc ",
+      "id": "47a8ebbf-62ba-4184-87dc-0b78fbe1d46c",
+      "usedVariables": [
+        "_InsiderEntraTenantId",
+        "_InsiderEnvironmentName",
+        "_InsiderPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_InsiderEntraTenantId)\n| where customDimensions.environmentType has_any (_InsiderEnvironmentType)\n| where customDimensions.extensionPublisher has_any (_InsiderPublisher)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentName)\n| project [\"Environment Name\"] = tostring(customDimensions.environmentName)\n| sort by ['Environment Name'] asc \n",
+      "id": "028e8f81-ab8f-4f95-b9bd-3efe0b4fd1cf",
+      "usedVariables": [
+        "_InsiderEntraTenantId",
+        "_InsiderEnvironmentType",
+        "_InsiderPublisher",
+        "_endTime",
+        "_startTime"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "insiderTraces\n| where extensionName has_any (_InsiderAppName)\n| where extensionPublisher != \"\"\n| project [\"Publisher\"] = tostring(extensionPublisher)\n| distinct ['Publisher']\n| sort by ['Publisher'] asc\n",
+      "id": "7322f53f-0b4a-47cb-a8ff-be2177ed8fe2",
+      "usedVariables": ["_InsiderAppName", "insiderTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "insiderTraces\r\n| where extensionPublisher has_any (_InsiderPublisher)\r\n| where extensionName != \"\"\r\n| project [\"App Name\"] = tostring(extensionName)\r\n| distinct ['App Name']\r\n| sort by ['App Name'] asc",
+      "id": "7849288e-3559-451d-9fda-f7f0ff8733ff",
+      "usedVariables": ["_InsiderPublisher", "insiderTraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.eventId == \"ALEOS004-0011\" //EAL - 14 Feature Flag, 13 come feat flag std.\n| where customDimensions.alSaaSDomainName != \"\"\n| project timestamp       \n        , entraTenantId = tostring(customDimensions.alAadTenantId)\n        , environmentName = tostring(customDimensions.environmentName)\n        , onlineDomainName = replace_string(tostring(customDimensions.alSaaSDomainName),\".onmicrosoft.com\",\"\")\n| summarize arg_max(timestamp,*) by onlineDomainName, entraTenantId\n| project [\"Domain Name\"] = onlineDomainName, entraTenantId\n| sort by ['Domain Name'] asc\n\n",
+      "id": "a5d343ad-dc81-4c85-9f32-c1267ab2345c",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.eventId == \"ALEOS004-0011\" \n| extend appLocalization = substring(tostring(customDimensions.alApplicationVersion),0,2)\n| where appLocalization !in (\"\",\"  \")\n| distinct appLocalization\n| project [\"Localization\"] = appLocalization\n| sort by ['Localization'] asc\n\n",
+      "id": "3fcd4e5b-3d76-4882-8536-f532cd025681",
+      "usedVariables": ["_endTime", "_startTime"]
+    }
+  ]
+}
