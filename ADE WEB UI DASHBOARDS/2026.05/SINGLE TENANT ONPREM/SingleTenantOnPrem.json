@@ -2,7 +2,7 @@
   "$schema": "https://dataexplorer.azure.com/static/d/schema/75/dashboard.json",
   "id": "722de015-5fc7-4e39-914c-896635090ec5",
   "eTag": "7978a0b3-67c7-4510-ab32-ce2a7e2de070",
-  "title": "DAIKIN: Business Central Insights Performance Support",
+  "title": "Business Central Insights Performance Support",
   "schema_version": 75,
   "pagesNavWidth": 207.59999084472656,
   "autoRefresh": {
