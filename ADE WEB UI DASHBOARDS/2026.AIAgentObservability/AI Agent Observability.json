@@ -1,0 +1,2652 @@
+{
+  "$schema": "https://dataexplorer.azure.com/static/d/schema/87/dashboard.json",
+  "id": "beab982f-02a0-43f7-bb52-d4433855b5ef",
+  "eTag": "a80f75c7-8b17-4aa0-9901-507f154d0266",
+  "title": "AI Agent Observability",
+  "schema_version": 87,
+  "pagesNavWidth": 210.79998779296875,
+  "autoRefresh": {
+    "enabled": true,
+    "defaultInterval": "30m",
+    "minInterval": "1m"
+  },
+  "changeDetection": {
+    "kind": "liveUpdates",
+    "minRefreshRate": "1m",
+    "fallbackRefreshRate": "30m"
+  },
+  "tiles": [
+    {
+      "id": "fbb6dad7-5061-468b-977e-a59665c5ec5b",
+      "title": "Tables",
+      "visualType": "table",
+      "pageId": "b7cbe405-8397-4e84-8b4e-26734deb9c97",
+      "layout": { "x": 0, "y": 0, "width": 6, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "4d76c26b-df87-4e98-8ed3-bf2fab862790"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "71c4a01e-2078-41a8-97de-63e92d12eda4",
+      "title": "Agent Foundry",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 5, "width": 24, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2c593993-7de3-45bd-9b1d-9252c7adbc3d"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "9c388325-d6e7-4cf0-9c0c-635ec985f260",
+      "title": "Tool Calls",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 13, "width": 24, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "54978903-e830-4a19-aabf-201708f39356"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "b6b1875a-14c1-4e5d-9daa-92d035c638c6",
+      "title": "Token Usage",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 21, "width": 24, "height": 9 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2b52e94d-0a4b-4fee-b98f-b73576654b41"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "7ef789e5-3c0d-40a7-aca6-bcd556daa22b",
+      "title": "Custom Reservation Signals and BC Invoice",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 33, "width": 24, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "763db80f-2975-480b-9842-7b397644c1e9"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "91919d24-4192-4f3b-b88a-64d7cae524f6",
+      "title": "Confirmed custom bookings",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 40, "width": 24, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "75e1ff70-375c-4ea6-bfb9-a5dde4d943bc"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "aa44b67c-efb2-4451-8c8d-280d2eb14466",
+      "title": "Overview",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "b7cbe405-8397-4e84-8b4e-26734deb9c97",
+      "layout": { "x": 6, "y": 0, "width": 18, "height": 12 },
+      "markdownText": "# Glass Box Dashboard - AI Agent Observability & Cost Governance\r\n\r\nMonitoring blueprint for **four agent types** that interact with **Dynamics 365 Business Central**, built on Application Insights telemetry. **All timestamps are UTC.**\r\n\r\n| Page | Agent(s) | Platform | Telemetry source |\r\n|---|---|---|---|\r\n| **Logic Apps Agent** | Customer Service / Sales / Refund (multi-agent) | Azure Logic Apps Standard | `traces`, `dependencies`, `requests` (role `multiagentpatterns`) |\r\n| **MCS Agent** | Inventory Agent | Microsoft Copilot Studio | `customEvents`, `dependencies` (role `Microsoft Copilot Studio`) |\r\n| **Foundry Agent** | Hotel Concierge (hotel search + booking + BC invoice) | Azure AI Foundry (OpenTelemetry) | `dependencies`, `requests`, `traces`, `genAIContent` (role `DirectionsEMEAConciergeAgent`) |\r\n| **BC Agent** | MTG Agent (agent tasks + Scryfall card lookup) | Dynamics 365 Business Central (in-app agent) | `traces` component `Dynamics 365 Business Central Server`; events `LC0068/LC0043/RT0055/RT0019/LC0066` |\r\n| **Cost & Governance** | All agents | Cross-platform | Cumulative tokens, credits, cost, activity & coverage |\r\n\r\nThe left *Tables* tile shows the raw telemetry item types ingested for the period.",
+      "visualOptions": {}
+    },
+    {
+      "id": "05a05cf1-6383-49ea-af0e-a12b36645e59",
+      "title": "Overview",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 6 },
+      "markdownText": "# Logic Apps Agent - Multi-Agent Customer Service\r\n\r\nA 3-agent handoff system running on **Azure Logic Apps Standard** (`HandoffCustomerServiceWorkflow`, cloud role `multiagentpatterns`) powered by **Azure OpenAI gpt-4.1**.\r\n\r\n- **Customer_Service_Agent** - front door; triages every customer request.\r\n- **Sales_Specialist** - handles product / purchase questions (handoff from Customer Service).\r\n- **Refund_Specialist** - handles refunds (handoff from Customer Service).\r\n\r\nToken usage is emitted per agent turn through the `WorkflowAgentLoopExecutionCompleted` event (`prompt`/`completionTokenCount`); tool calls and agent handoffs are captured in `toolResults`.\r\n\r\n> **Cost model** (editable in each query): gpt-4.1 input **$2.00 / 1M** tokens, output **$8.00 / 1M** tokens.",
+      "visualOptions": {}
+    },
+    {
+      "id": "6e7fdfb0-60e7-4b57-b6d6-7c9d39636f2b",
+      "title": "Activity",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 6, "width": 24, "height": 3 },
+      "markdownText": "## What each agent did - activity log\r\nEvery agent turn (LLM loop) with prompt / completion tokens, number of tool calls and the tool / handoff result. Read top-down to follow the *Customer Service -> Sales / Refund* handoff flow.",
+      "visualOptions": {}
+    },
+    {
+      "id": "01e1387f-5d1a-42c3-8a10-7bf389dfec11",
+      "title": "Agent Activity Log",
+      "visualType": "table",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 9, "width": 24, "height": 10 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "26057448-e366-4b14-9747-8ef32999360d"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "a3b5527c-e5ba-4330-aa36-7cdbb3719f72",
+      "title": "Tokens",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 19, "width": 24, "height": 3 },
+      "markdownText": "## Token consumption per agent (summarized)\r\nLLM calls, prompt / completion / total tokens and **estimated USD cost** aggregated per agent. The column chart (left) compares total token volume; the table (right) breaks down tokens and cost. `Sales_Specialist` is typically the most expensive specialist here.",
+      "visualOptions": {}
+    },
+    {
+      "id": "08a6a4a6-1f2f-4d23-a5f8-07422d8dff33",
+      "title": "Total Tokens per Agent",
+      "visualType": "column",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 22, "width": 12, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ca2aa9af-3840-4cb0-a19c-f300f3fc8eba"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "Agent",
+        "xColumnTitle": "",
+        "yColumns": ["TotalTokens"],
+        "yColumnTitle": "",
+        "seriesColumns": null,
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "c2ec7c33-eb16-4c76-8929-39db9d632d00",
+      "title": "Token Cost per Agent",
+      "visualType": "table",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 12, "y": 22, "width": 12, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "927706e3-455a-40ad-9055-cd08fbb7b3e7"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "627b971b-9fcc-4f24-a387-4f4465106d85",
+      "title": "TokensTime",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 30, "width": 24, "height": 4 },
+      "markdownText": "## Token usage over time\r\nTotal tokens per 10-second bin, split by agent. Shows the burst pattern and how prompt size grows along the handoff chain (context accumulates from ~1.3k to ~3.5k tokens per call).",
+      "visualOptions": {}
+    },
+    {
+      "id": "4c3609db-f0cd-47ba-97c8-b71dc94474ac",
+      "title": "Token Usage Over Time",
+      "visualType": "timechart",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 34, "width": 24, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "0f522866-4981-427d-853f-80a67cf5089a"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "timestamp",
+        "xColumnTitle": "",
+        "yColumns": ["TotalTokens"],
+        "yColumnTitle": "",
+        "seriesColumns": ["Agent"],
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "57395c29-a034-4c7a-a168-96e33c666917",
+      "title": "Tools",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 42, "width": 24, "height": 3 },
+      "markdownText": "## Agent handoffs & tool calls\r\nOnly turns that produced a tool result. Values such as `CustomerServiceHandoff -> HandedOff` and `RefundSpecialistHandoff -> HandedOff` are **orchestration handoffs** between agents; `execute_refund -> Succeeded` is a **business action** executed against the backend.",
+      "visualOptions": {}
+    },
+    {
+      "id": "dfe993ed-eb7a-4db8-8cad-ebe546b7a209",
+      "title": "Handoffs & Tool Calls",
+      "visualType": "table",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 45, "width": 24, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "b158cb5e-e0b1-4ed2-bd55-1417a4da376c"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "41ce8251-5b95-43ad-a789-371b22fd0473",
+      "title": "Latency",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 52, "width": 24, "height": 4 },
+      "markdownText": "## Model duration - Azure OpenAI gpt-4.1\r\nDuration of every `chat/completions` dependency call. Table (left) = call count and P50 / P95 / Max latency; chart (right) = per-call duration over time. Model duration is the main driver of end-user response time.",
+      "visualOptions": {}
+    },
+    {
+      "id": "824e0758-cbdf-4a4a-b2c0-9dd159ade6eb",
+      "title": "gpt-4.1 Duration Summary",
+      "visualType": "table",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 56, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "ef54174d-28f7-4075-b804-0888f6ff98cf"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "d61e8cd5-6cb1-46e8-bf9a-72b1138cd179",
+      "title": "Model Duration Over Time",
+      "visualType": "timechart",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 12, "y": 56, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "111414ba-fecf-4eae-8010-43d085e46dd1"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "timestamp",
+        "xColumnTitle": "",
+        "yColumns": ["DurationMs"],
+        "yColumnTitle": "",
+        "seriesColumns": null,
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "20a468f0-f2c1-4e53-a976-cb2717fe5cd3",
+      "title": "Errors",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 63, "width": 24, "height": 3 },
+      "markdownText": "## Errors & reliability\r\nFunction timeouts (`exceptions`) and workflow `EdgeError` events. Use this to catch cascading failures and runs that exceeded the 30-minute Azure Functions timeout (`Functions.AgentsVersioned`).",
+      "visualOptions": {}
+    },
+    {
+      "id": "6fb3767b-b147-4666-a00b-605664aeb618",
+      "title": "Errors & Throttling",
+      "visualType": "table",
+      "pageId": "d21b1205-e1be-451f-a278-dccfc8e8b35b",
+      "layout": { "x": 0, "y": 66, "width": 24, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "1ffafc58-2ac6-46bb-99b3-6badd907e784"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "874bc8f7-f1f3-4e21-acf1-3e60c7b35fcf",
+      "title": "Overview",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 5 },
+      "markdownText": "# Copilot Studio Agent - Inventory Agent\r\n\r\nA **Microsoft Copilot Studio** agent (cloud role `Microsoft Copilot Studio`) answering inventory questions against **Dynamics 365 Business Central** through the BC connector.\r\n\r\nTelemetry here is conversation-centric: `BotMessageReceived` / `BotMessageSend` events (with message text), topic events, and `dependency` calls to the Business Central connector.\r\n\r\n> **Note - observability gap:** Copilot Studio does **not** emit LLM token counts in this telemetry, so per-token cost cannot be computed from App Insights. Govern cost by **messages / sessions / connector calls** instead, and reconcile spend with Copilot Studio capacity / billing reports.",
+      "visualOptions": {}
+    },
+    {
+      "id": "ef618533-1b7d-43e4-ad90-414db5c640d9",
+      "title": "Transcript",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 5, "width": 24, "height": 3 },
+      "markdownText": "## Conversation transcript - what the agent did\r\nFull turn-by-turn transcript for the session. `User -> Agent` rows are the questions asked (items under stock, lowest / highest stock, most costly item, reorder point); `Agent -> User` rows are the answers returned from Business Central data.",
+      "visualOptions": {}
+    },
+    {
+      "id": "172ab12b-a690-4d16-92a4-79c8b0edf42f",
+      "title": "Conversation Transcript",
+      "visualType": "table",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 8, "width": 24, "height": 10 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "b652f90b-cb20-45b2-bb3b-4f49f3175b78"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [
+          {
+            "id": "115045d1-8bec-4d1a-b8df-ca9bc97bba2b",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              {
+                "operator": "==",
+                "column": "Direction",
+                "values": ["User -> Agent"]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "blue",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          },
+          {
+            "id": "b1b10abe-78bf-4384-b2db-8afd3e6e8acf",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              {
+                "operator": "==",
+                "column": "Direction",
+                "values": ["Agent -> User"]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "yellow",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          }
+        ],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "33a31b07-abe9-4953-a659-96cf7fc70438",
+      "title": "Summary",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 18, "width": 24, "height": 3 },
+      "markdownText": "## Activity summary\r\nConversation volume at a glance: user messages, agent messages, distinct topics and conversations (left), plus Business Central connector call statistics (right).",
+      "visualOptions": {}
+    },
+    {
+      "id": "a677662b-812e-47cf-a719-26c1f14a049a",
+      "title": "Activity Summary",
+      "visualType": "table",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 21, "width": 12, "height": 5 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "395bf154-ec39-4dae-bc44-e79242e156f7"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "48d84951-c6a0-4309-abae-a80240dcd4b4",
+      "title": "BC Connector Stats",
+      "visualType": "table",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 12, "y": 21, "width": 12, "height": 5 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "6ab74455-d1c4-4941-aa03-6979c23d16d7"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "8430ecb3-e099-4fd8-b3f3-1861f024e172",
+      "title": "BC",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 26, "width": 12, "height": 8 },
+      "markdownText": "## Business Central connector performance\r\nEvery `Dynamics 365 Business Central` connector dependency with duration, success flag and result code. \r\nThese calls are the agent's data-retrieval latency against BC - watch the slow outliers, if any -.",
+      "visualOptions": {}
+    },
+    {
+      "id": "aace2531-b2c8-4498-8aa1-4b0291a1fff6",
+      "title": "BC Connector Calls",
+      "visualType": "table",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 12, "y": 26, "width": 12, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "0a364385-2b53-45dc-b844-561d77deacc9"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [
+          {
+            "id": "38cf85c7-2b99-434a-b78b-b977b482f4c5",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              { "operator": ">", "column": "Duration ms", "values": ["5000"] }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "red",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          }
+        ],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "9abf7d14-2005-4c27-ae39-f8a65d172b42",
+      "title": "LatencyTurn",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 34, "width": 24, "height": 3 },
+      "markdownText": "## Response duration per turn\r\nTime between each user question and the agent's reply, in seconds. Tall bars = slow answers; correlate with the connector calls above to find the cause.",
+      "visualOptions": {}
+    },
+    {
+      "id": "38281a9e-8b3a-4bdb-b16e-d75951a78e00",
+      "title": "Response Duration per Turn",
+      "visualType": "column",
+      "pageId": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01",
+      "layout": { "x": 0, "y": 37, "width": 24, "height": 11 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "d85eeae2-a460-424a-9854-84861527333d"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "timestamp",
+        "xColumnTitle": "",
+        "yColumns": ["ResponseSeconds"],
+        "yColumnTitle": "",
+        "seriesColumns": null,
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "586a9bae-c582-4b9b-b9c0-7a0e985c903f",
+      "title": "Overview",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 7 },
+      "markdownText": "# Cost & Governance - All Agents (Cumulative)\r\n\r\nCross-agent rollup for financial governance and observability coverage. Cards show cumulative LLM usage and estimated spend; charts compare cost, tokens and activity across agent platforms.\r\n\r\n**Scope:** Measure workloads across **four agents**:\r\n- **Logic Apps** multi-agent (gpt-4.1) - full token + cost telemetry.\r\n- **Foundry** hotel concierge (gpt-5.4-mini) - full token + cost telemetry, **with prompt caching**.\r\n- **Copilot Studio** Inventory Agent - activity only, **no token telemetry**.\r\n- **BC Agent** MTG Agent (GPT-5.5 Chat) - runs **inside Business Central**, billed in **Copilot credits** (`RT0055`).\r\n\r\n> **Cost model** (editable in queries): gpt-4.1 **$2 / $8** per 1M (in/out); gpt-5.4-mini **$0.25 / $0.025 / $2** per 1M (input / cached input / output); BC agent **$0.01 / Copilot credit** (placeholder - edit to contract).",
+      "visualOptions": {}
+    },
+    {
+      "id": "b03fa9d9-d6f1-4dc4-b507-1be0c2bd7614",
+      "title": "Total LLM Calls",
+      "visualType": "card",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 7, "width": 6, "height": 3 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "49cbd03f-e0d4-42ca-9cd9-610762b0032e"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "58464a34-3ee4-4ea0-ab7b-13f0f501c93d",
+      "title": "Total Prompt Tokens",
+      "visualType": "card",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 6, "y": 7, "width": 6, "height": 3 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "3e7b63df-ddf5-4c23-941f-78003ab85574"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "c1d1b3a7-b5d4-46c8-8566-4aad16f423be",
+      "title": "Total Completion Tokens",
+      "visualType": "card",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 12, "y": 7, "width": 6, "height": 3 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "cc75d735-20c3-41be-9c3a-e2f87e25205a"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "8232b9e9-fda7-4911-a566-5c6dea9f601f",
+      "title": "Est. Total Cost (USD)",
+      "visualType": "card",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 18, "y": 7, "width": 6, "height": 3 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "e44a90bc-6e08-4600-912c-dafead9182e0"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "6ed85fec-7fd3-46bb-9019-36c1473cd8d0",
+      "title": "Exec",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 10, "width": 24, "height": 3 },
+      "markdownText": "## Executions per agent type\r\nShare of agent executions by platform - Logic Apps agent turns, Copilot Studio user turns, Foundry chat completions, and **BC agent tasks** (`LC0068`). Pie (left) = distribution; table (right) = counts.",
+      "visualOptions": {}
+    },
+    {
+      "id": "9366a1cd-1e9d-4d85-9cc6-15024dd6084e",
+      "title": "Executions by Agent Type",
+      "visualType": "pie",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 13, "width": 15, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "e3f1405e-b34a-453e-bd8f-9e77e978a1ea"
+      },
+      "visualOptions": {
+        "xColumn": "AgentType",
+        "yColumns": ["Executions"],
+        "pie__kind": "donut",
+        "pie__label": ["name", "percentage"],
+        "pie__tooltip": ["name", "value"],
+        "pie__orderBy": "size",
+        "hideLegend": false,
+        "legendLocation": "right",
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "tooltipDisabled": false,
+        "pie__topNSlices": null,
+        "seriesColors": {},
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 20 }
+      }
+    },
+    {
+      "id": "315aa679-766a-4f23-a796-7de1cbb36285",
+      "title": "Executions by Agent Type (table)",
+      "visualType": "table",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 15, "y": 13, "width": 9, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2afed80d-bdf3-409b-b865-335421662760"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "1de174a2-94f0-4ad3-a8c2-728d5f35f793",
+      "title": "Cost",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 21, "width": 24, "height": 3 },
+      "markdownText": "## Cumulative token consumption & cost\r\nPer-agent breakdown (left) and grand total (right) of prompt / completion / total tokens with estimated USD cost (gpt-4.1). This is the detailed + summarized cumulative view for budgeting.",
+      "visualOptions": {}
+    },
+    {
+      "id": "c804d991-c037-4015-9bd6-5311db0fc0e5",
+      "title": "Tokens & Cost per Agent",
+      "visualType": "table",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 24, "width": 12, "height": 6 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2c944ef5-76b4-4503-8f67-a5bb127dba03"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "6baa6768-2159-44fe-8e64-29007b9225d3",
+      "title": "Cumulative Total",
+      "visualType": "table",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 30, "width": 12, "height": 6 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "61093e8d-2af8-4f85-bc62-12d88442ee8e"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": false,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [
+          {
+            "id": "6421037e-c1c0-4ee5-84ee-fbc596aca67c",
+            "ruleType": "colorByCondition",
+            "applyToColumn": null,
+            "hideText": false,
+            "applyTo": "rows",
+            "conditions": [
+              {
+                "operator": "==",
+                "column": "Platform",
+                "values": ["TOTAL (all agents)"]
+              }
+            ],
+            "chainingOperator": "and",
+            "colorStyle": "bold",
+            "color": "yellow",
+            "tag": "",
+            "icon": null,
+            "ruleName": "",
+            "visualType": "table"
+          }
+        ],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "46c7a5d5-11f8-4caf-bc66-2c01e9e7b1a1",
+      "title": "Timeline",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 36, "width": 24, "height": 3 },
+      "markdownText": "## Activity timeline - all agents\r\nTelemetry events per minute by cloud role. Four separated agents: Logic Apps, Copilot Studio , Foundry and the BC Agent.",
+      "visualOptions": {}
+    },
+    {
+      "id": "7a094d7e-2660-4517-ad33-fbc65e612385",
+      "title": "Activity Timeline (All Agents)",
+      "visualType": "timechart",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 39, "width": 24, "height": 8 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "47e6fb77-fd83-4226-9b50-b62078e8fe3a"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "timestamp",
+        "xColumnTitle": "",
+        "yColumns": ["Events"],
+        "yColumnTitle": "",
+        "seriesColumns": ["cloud_RoleName"],
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "dafad2e9-f4e0-4315-bac1-2e101c5c1181",
+      "title": "Checklist",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 47, "width": 24, "height": 14 },
+      "markdownText": "## Observability coverage & governance checklist\r\n\r\n| Signal | Logic Apps (gpt-4.1) | Copilot Studio | Foundry (gpt-5.4-mini) | BC Agent (GPT-5.5 Chat) |\r\n|---|---|---|---|---|\r\n| Request / turn visibility | Yes - loop events, `requests` | Yes - `BotMessage*` | Yes - `requests`, `invoke_agent` | Yes - agent tasks `LC0068`/`LC0043` |\r\n| Token usage | **Yes** | **No** - not in telemetry | **Yes** - OTel `gen_ai.usage.*` | **No** - credit-based (`copilotCredits`) |\r\n| Prompt caching visibility | No | n/a | **Yes** - `cache_read.input_tokens` | n/a |\r\n| Cost unit | Per-token | Messages / sessions | Per-token | **Per Copilot credit** (`RT0055`) |\r\n| Tool / handoff tracing | Yes - `toolResults` | Partial - topic events | Yes - `execute_tool` deps | Yes - external API `RT0019`, OData `RT0008` |\r\n| Model latency | Yes - OpenAI dep duration | n/a (managed) | Yes - dep duration + TTFC | Partial - task duration `LC0043` |\r\n| Backend (BC) action | n/a | Yes - connector dependency | Yes - reservation + invoice sim | **Native** - runs inside BC |\r\n| Errors / throttling | Yes - exceptions, EdgeError | Dependency `success` flag | Yes - dep `success`, exceptions | Yes - task `result`, `failureCodeunit` |\r\n| Config / prompt audit | Partial | Partial | Partial | **Yes** - `LC0066` (state, model, instructions hash) |\r\n\r\n**Governance recommendations**\r\n1. Set **budget alerts** on cumulative estimated cost, prompt-token growth (Logic Apps / Foundry) **and Copilot-credit consumption** (BC agent `RT0055`).\r\n2. Exploit **prompt caching** (Foundry): cached input is ~10x cheaper - track cache hit rate as a cost KPI.\r\n3. Alert on **function timeouts** / `EdgeError` (Logic Apps), failed `execute_tool` / reservation events (Foundry), and **failed agent tasks** / `failureCodeunit` (BC agent).\r\n4. Track **P95 model latency**, **time-to-first-chunk** (Foundry) and **agent-task duration** (BC) as responsiveness SLOs.\r\n5. For Copilot Studio, govern by **messages / sessions / connector latency**; for BC agents, reconcile spend via **Copilot credits**.\r\n6. Keep **per-agent attribution** to spot the most expensive agent (Logic Apps `Sales_Specialist`; Foundry concierge; BC MTG Agent credits).\r\n7. For autonomous in-BC agents, monitor **config changes** (`LC0066` enable/disable + instructions hash) as a compliance trail.",
+      "visualOptions": {}
+    },
+    {
+      "id": "f351a0c9-ae4c-4cbb-b3a4-5312a25f53e1",
+      "title": "Overview",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 5 },
+      "markdownText": "# Foundry Agent - Hotel Concierge (DirectionsEMEAConciergeAgent)\r\n\r\nAn **Azure AI Foundry** agent (cloud role `DirectionsEMEAConciergeAgent`, model **gpt-5.4-mini**) instrumented with **OpenTelemetry GenAI** semantic conventions. It simulates a **hotel search in Paris**, **reserves a room**, and triggers a **simulated posted invoice in Business Central**.\r\n\r\n- **LLM calls:** `dependencies` where `gen_ai.operation.name == \"chat\"` - tokens in `gen_ai.usage.*` (input / output / **cache_read** / reasoning).\r\n- **Tools:** `execute_tool GetAvailableHotels`, `execute_tool ReserveHotel`; agent orchestration via `invoke_agent hotel-concierge`.\r\n- **Business action:** `reservation.confirmation.*` trace events carry the BC invoice simulation (`is_simulated`, `duration_ms`).\r\n\r\nThe tables below (existing) show raw agent traces, tool calls, token usage and confirmed bookings; the governance section adds **cost, caching, latency and tool/reservation** views.",
+      "visualOptions": {}
+    },
+    {
+      "id": "490e06fd-f0c6-4da1-8261-31dafc76ee2c",
+      "title": "f_tokhdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 47, "width": 24, "height": 3 },
+      "markdownText": "## Token usage & cost (gpt-5.4-mini)\r\nLeft: token totals and **estimated cost** per model, separating **billable** input from **cached** input. Right: per-call token breakdown over time - the large cached-input band shows prompt caching keeping cost low.",
+      "visualOptions": {}
+    },
+    {
+      "id": "68b102e1-c208-40b1-a2e0-eda5e6fc018f",
+      "title": "Token Usage & Cost",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 50, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "efd62350-df65-4fce-b80e-44711a94e518"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "d86576a4-40da-459c-950e-f99249d1bad2",
+      "title": "Token Breakdown per Call",
+      "visualType": "stackedcolumn",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 12, "y": 50, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "5465244a-3f04-4e6f-b8b5-f80ed773cd80"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "timestamp",
+        "xColumnTitle": "",
+        "yColumns": ["BillableInput", "CachedInput", "OutputTokens"],
+        "yColumnTitle": "",
+        "seriesColumns": null,
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "828eeff3-4d96-4ff9-8e2a-8076c89edff3",
+      "title": "f_cachehdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 57, "width": 24, "height": 3 },
+      "markdownText": "## Prompt caching efficiency\r\ngpt-5.4-mini reuses large system/tool context across turns. Cached input tokens are billed ~10x cheaper, so a high cache-hit rate is a direct cost lever.",
+      "visualOptions": {}
+    },
+    {
+      "id": "93d13570-dfb7-48f7-afa4-65fe03520e8b",
+      "title": "Cache Hit Rate %",
+      "visualType": "card",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 60, "width": 8, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2aa385ab-4764-41cc-a356-2b15e28064b3"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "fde0460d-cda2-42e9-aa93-5f96e65d247e",
+      "title": "Cached Tokens",
+      "visualType": "card",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 8, "y": 60, "width": 8, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "6dba4470-a152-4b26-93a5-e68b2228c5c3"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "4eb9c33d-d32b-4f89-b4d2-ba78e0af523c",
+      "title": "Est. Caching Savings (USD)",
+      "visualType": "card",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 16, "y": 60, "width": 8, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "b4ae72fc-d6d4-47fb-9ab7-011e1b25e669"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "0bd2593e-cfdc-4f56-a9fe-cdf37b92ff40",
+      "title": "f_lathdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 64, "width": 24, "height": 3 },
+      "markdownText": "## Model duration & streaming performance\r\nLeft: call count with P50 / P95 / Max latency and average time-to-first-chunk (streaming responsiveness). Right: per-call duration over time.",
+      "visualOptions": {}
+    },
+    {
+      "id": "399a1540-fa63-4a0e-8ea7-3b5da4f6be32",
+      "title": "Duration Summary",
+      "visualType": "table",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 67, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "683b7324-d7f2-4fd7-be22-0dc2e6620ae1"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "26f96a2c-7004-4b99-b68e-cec52020b779",
+      "title": "Duration Over Time",
+      "visualType": "timechart",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 12, "y": 67, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "f4afe473-4714-432b-8117-1faeae82b02b"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "timestamp",
+        "xColumnTitle": "",
+        "yColumns": ["DurationMs"],
+        "yColumnTitle": "",
+        "seriesColumns": null,
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "e62d5acc-9f68-4087-95c3-621449b27d1f",
+      "title": "f_toolhdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "a869946d-70d1-4fda-9453-b1d2c37a0db0",
+      "layout": { "x": 0, "y": 30, "width": 24, "height": 3 },
+      "markdownText": "## Tool calls & hotel reservations (with BC invoice simulation)\r\nEvery `execute_tool` call (GetAvailableHotels / ReserveHotel) with duration and success and reservation lifecycle events, including the **simulated Business Central posted invoice** (`Simulated`, duration).",
+      "visualOptions": {}
+    },
+    {
+      "id": "b7f5ba06-b7a7-45b6-871a-5953ae46f573",
+      "title": "g_catchy",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 61, "width": 24, "height": 3 },
+      "markdownText": "## Cost & token distribution (at a glance)\r\nLeft: **estimated cost share** by agent (donut) - who drives spend (BC agent cost derived from Copilot credits). Right: **token mix** by agent - billable input vs cached input vs output; Foundry's tall cached band visualises caching savings, while Copilot Studio and the **BC agent** show zero (credit-based, no token telemetry).",
+      "visualOptions": {}
+    },
+    {
+      "id": "2a1c3aaa-ec67-40c3-a076-9e71f3aaa39a",
+      "title": "Estimated Cost Share by Agent",
+      "visualType": "pie",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 0, "y": 64, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2040db98-f441-4925-a75a-c90d80548007"
+      },
+      "visualOptions": {
+        "xColumn": "AgentType",
+        "yColumns": ["Est. Cost (USD)"],
+        "pie__kind": "donut",
+        "pie__label": ["name", "percentage"],
+        "pie__tooltip": ["name", "value"],
+        "pie__orderBy": "size",
+        "hideLegend": false,
+        "legendLocation": "right",
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "tooltipDisabled": false,
+        "pie__topNSlices": null,
+        "seriesColors": {},
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 20 }
+      }
+    },
+    {
+      "id": "1bcc39bb-c80e-4e24-a4a5-ed475fc7f36c",
+      "title": "Token Mix by Agent",
+      "visualType": "stackedcolumn",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 12, "y": 64, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "340ba30c-0369-4b2a-bfe5-85bd419d85d2"
+      },
+      "visualOptions": {
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumn": "AgentType",
+        "xColumnTitle": "",
+        "yColumns": ["BillableInput", "CachedInput", "OutputTokens"],
+        "yColumnTitle": "",
+        "seriesColumns": null,
+        "yAxisRight": false,
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "778b9c1e-62c2-4044-9354-da9b3506c01f",
+      "title": "bc_overview",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 0, "width": 24, "height": 7 },
+      "markdownText": "# BC Agent - MTG Agent (in Business Central)\r\n\r\nAn **autonomous agent running inside Dynamics 365 Business Central** (environment `GlassBox`, company `CRONUS IT`). Extension **DT.MTGAgent**, agent user **MTG AGENT - CRONUS IT**, model **GPT-5.5 Chat** (`GPT-55-CHAT-LATEST`, default). Unlike the cloud agents, it is **billed in Copilot credits** (not tokens) and runs natively on the BC Server.\r\n\r\n- **Agent tasks:** `traces` eventId `LC0068` (task created, model) -> `LC0040` (scheduled) -> `LC0043` (completed, result + duration).\r\n- **AI consumption / cost:** eventId `RT0055` *\"AI Consumption Recorded\"* carries `copilotCredits`, `featureName`, `agentTaskId`.\r\n- **Copilot capability:** eventId `AL0000LLW` *\"Action invoked on Copilot Capability\"* (success, user role, license).\r\n- **External tools:** eventId `RT0019` outgoing web service (e.g. **Scryfall** card API via `DTM Scryfall Mgt.`) + `RT0008` OData.\r\n- **Governance & audit:** `LC0066` agent config changes (enable/disable, model, instructions hash), `AL0000CTE` sensitive-field changes.\r\n\r\n> **Cost model (editable in queries):** BC agents consume **Copilot credits**; `creditUsd` placeholder = **$0.01 / credit** - edit to your contract. All timestamps are UTC.",
+      "visualOptions": {}
+    },
+    {
+      "id": "b866c2c2-696c-469b-b6df-c5d14489259a",
+      "title": "bc_kpihdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 7, "width": 24, "height": 3 },
+      "markdownText": "## Key metrics\r\nAgent throughput, Copilot-credit consumption and estimated spend, task reliability, Copilot capability usage, and external API activity for the in-BC agent.",
+      "visualOptions": {}
+    },
+    {
+      "id": "7dd81330-c798-4c8e-b032-688100966730",
+      "title": "Agent Tasks",
+      "visualType": "card",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 10, "width": 5, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "fc8148f0-b223-45bf-9a4e-8403c410543e"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "4d9082e7-1eae-4a33-a222-e05767927d18",
+      "title": "Copilot Credits",
+      "visualType": "card",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 10, "y": 10, "width": 7, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "08c6fcba-afb6-4c66-bb64-c43fdce475d0"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "c4b36483-c227-450e-8ec7-3b58e1aaca3b",
+      "title": "Est. Cost (USD)",
+      "visualType": "card",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 17, "y": 10, "width": 7, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "38cd578e-10a2-49f0-8812-a9acf38ee9b3"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "0a563adc-da91-4f15-9985-8e887265b534",
+      "title": "Copilot Actions",
+      "visualType": "card",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 5, "y": 10, "width": 5, "height": 4 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "43fd1b24-621d-40a4-93a8-9bda689469d4"
+      },
+      "visualOptions": {
+        "colorStyle": "light",
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "multiStat__textSize": "auto",
+        "multiStat__valueColumn": null,
+        "crossFilter": [],
+        "drillthrough": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 10 }
+      }
+    },
+    {
+      "id": "c42dc079-d783-49a8-befd-c500a09e4101",
+      "title": "bc_taskhdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 14, "width": 24, "height": 3 },
+      "markdownText": "## Agent tasks\r\nLeft: tasks created with the selected model. Middle: task executions with result, duration and SQL load. Right: outcome split (success vs failure) - the core reliability signal for an unattended agent.",
+      "visualOptions": {}
+    },
+    {
+      "id": "32b518fd-4e4d-4898-8577-e74b38ffed4a",
+      "title": "Agent Tasks Created",
+      "visualType": "table",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 17, "width": 24, "height": 6 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "aa6d6b12-c42b-4b9c-a3d8-f24e8aae57dc"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "ccd393d0-03ab-4b88-895d-aff1c7aa3e4e",
+      "title": "bc_costhdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 23, "width": 24, "height": 3 },
+      "markdownText": "## AI consumption & cost (Copilot credits)\r\nBusiness Central meters agent AI usage as **Copilot credits** (`RT0055`). Left: credits by billed feature / extension. Right: credit consumption over time - the primary cost-governance signal for BC agents.",
+      "visualOptions": {}
+    },
+    {
+      "id": "d671b43f-d2fe-4f5e-bf36-0a41d1e42562",
+      "title": "Credits by Feature",
+      "visualType": "table",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 26, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "29d139f5-49e1-4a55-86fb-1bf7e53545ba"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "3a367184-e600-4b4f-9821-597ca4a83422",
+      "title": "Credits Over Time",
+      "visualType": "column",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 12, "y": 26, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "47f6f9e3-5421-4f40-b07d-5f927eea550a"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumnTitle": "",
+        "xColumn": "timestamp",
+        "yColumns": ["Credits"],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "8e513021-7bbd-478f-aeae-7fb4f67de376",
+      "title": "bc_toolhdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 33, "width": 24, "height": 3 },
+      "markdownText": "## Copilot capability & external tools\r\nLeft: every Copilot capability invocation (success, user role, license state). Right: outgoing API calls the agent makes (e.g. the **Scryfall** card API via `DTM Scryfall Mgt.`) with HTTP status and duration.",
+      "visualOptions": {}
+    },
+    {
+      "id": "773948d3-bd3e-4968-b6fe-8b04adc1a6aa",
+      "title": "Copilot Capability Usage",
+      "visualType": "table",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 36, "width": 12, "height": 6 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "26fce04c-ac29-41f9-beba-a1dd36ac4007"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "006cc573-7bc1-4d4f-b9d7-6e5386f88b03",
+      "title": "External API Calls",
+      "visualType": "table",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 12, "y": 36, "width": 12, "height": 6 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "72668010-e1e7-4a53-923c-c0b7b0c9f8ac"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "c1cde897-9933-40af-94ec-c3d259305b56",
+      "title": "bc_govhdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 42, "width": 12, "height": 5 },
+      "markdownText": "## Governance & audit\r\nAgent configuration changes - enable/disable, model switches and the **instructions hash** (prompt integrity). ",
+      "visualOptions": {}
+    },
+    {
+      "id": "34f13cdc-59ac-4be4-af3e-849b11493330",
+      "title": "Agent Config Changes",
+      "visualType": "table",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 12, "y": 42, "width": 12, "height": 5 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "dfd554c2-d819-4396-a7fe-394ceeeab00f"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    },
+    {
+      "id": "b8a180a4-0e75-4f4c-ae68-9f566dd0be10",
+      "title": "bc_glancehdr",
+      "hideTitle": true,
+      "visualType": "markdownCard",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 47, "width": 24, "height": 3 },
+      "markdownText": "## Activity at a glance\r\nLeft: share of agent telemetry by category (tasks, AI consumption, Copilot actions, external API, governance). Right: BC agent activity per minute - the execution burst for the run window.",
+      "visualOptions": {}
+    },
+    {
+      "id": "5a45557f-2f6f-49c8-b8c2-b446dd986a0b",
+      "title": "Activity by Category",
+      "visualType": "pie",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 50, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "7d89e2e8-734b-4cf9-93db-50239f66320d"
+      },
+      "visualOptions": {
+        "xColumn": "Category",
+        "yColumns": ["Events"],
+        "pie__kind": "donut",
+        "pie__label": ["name", "percentage"],
+        "pie__tooltip": ["name", "value"],
+        "pie__orderBy": "size",
+        "hideLegend": false,
+        "legendLocation": "right",
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "tooltipDisabled": false,
+        "pie__topNSlices": null,
+        "seriesColors": {},
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 20 }
+      }
+    },
+    {
+      "id": "0d0ae83c-852f-40ac-9a1a-490b77ff4d5b",
+      "title": "BC Agent Activity Timeline",
+      "visualType": "column",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 12, "y": 50, "width": 12, "height": 7 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "2967981f-a9f7-4808-bb99-88701eeb858b"
+      },
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "columns": [],
+            "label": "",
+            "yAxisMinimumValue": null,
+            "yAxisMaximumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "right",
+        "xColumnTitle": "",
+        "xColumn": "timestamp",
+        "yColumns": ["count_"],
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "selectedDataOnLoad": { "all": true, "limit": 100 }
+      }
+    },
+    {
+      "id": "9224419f-de15-41c1-8ee8-1407f9767758",
+      "title": "Tokens & Cost per Agent",
+      "visualType": "pie",
+      "pageId": "676a1638-5db1-4880-9241-e83efccb43e4",
+      "layout": { "x": 12, "y": 24, "width": 12, "height": 12 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "a3d075bf-34a2-4cc8-a844-a74bd6fcdde3"
+      },
+      "visualOptions": {
+        "hideLegend": true,
+        "legendLocation": "right",
+        "xColumn": null,
+        "yColumns": ["Est. Cost (USD)"],
+        "seriesColumns": null,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "labelDisabled": false,
+        "pie__label": ["name", "percentage"],
+        "tooltipDisabled": false,
+        "pie__tooltip": ["name", "percentage", "value"],
+        "pie__orderBy": "size",
+        "pie__kind": "pie",
+        "pie__topNSlices": null,
+        "seriesColors": {},
+        "crossFilter": [],
+        "drillthrough": []
+      }
+    },
+    {
+      "id": "a57007ad-0eb4-4e7f-b882-0384926f0beb",
+      "title": "Agent Tasks and Workflow",
+      "visualType": "table",
+      "pageId": "83fd66ef-38a5-429f-b152-48f2232d6af3",
+      "layout": { "x": 0, "y": 57, "width": 24, "height": 17 },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "f96f2e9a-c4b6-4ea0-8a2e-76adea77860d"
+      },
+      "visualOptions": {
+        "table__enableRenderLinks": true,
+        "colorRulesDisabled": true,
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "crossFilter": [],
+        "drillthrough": [],
+        "table__renderLinks": [],
+        "colorRules": [],
+        "selectedDataOnLoad": { "all": true, "limit": 50 }
+      }
+    }
+  ],
+  "baseQueries": [
+    {
+      "id": "e659a76d-4249-4d98-af8b-88cd8fa0c8b7",
+      "queryId": "de6744ba-af86-46a4-8dc3-eba07834e3fb",
+      "variableName": "bctraces"
+    },
+    {
+      "id": "c9bbae0c-e8d3-438d-88bc-11f00e92f8e3",
+      "queryId": "72898c5b-5162-48a0-bc26-c4d1c582c9a3",
+      "variableName": "bcpageviews"
+    }
+  ],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "14f4fdfe-2079-4e7d-b5fd-a649cdba5516",
+      "displayName": "Time Window",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": { "kind": "dynamic", "count": 1, "unit": "hours" },
+      "showOnPages": { "kind": "all" }
+    },
+    {
+      "kind": "string",
+      "id": "b70bde5b-1300-48e1-95c9-1f8f1519fc67",
+      "displayName": "Client Type",
+      "description": "",
+      "variableName": "_clientType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Client Type" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "6b394b72-66d0-4ee2-b924-84b8c11281d3"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "9afff05d-ae00-4050-8ade-5fede3b5648e",
+      "displayName": "Company Name",
+      "description": "",
+      "variableName": "_companyName",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Company Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "6e5245dc-e98d-4669-bd80-c0d4438b1dcd"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "9cc55dcf-17d4-4829-9340-37c385862cdf",
+      "displayName": "Publisher",
+      "description": "",
+      "variableName": "_publisher",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Publisher" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "f356a791-55f7-40f1-8657-e9bbcdb9a054"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "4c124c10-b4d3-4eb7-b0f6-327aace8932b",
+      "displayName": "Environment Type",
+      "description": "",
+      "variableName": "_environmentType",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Type" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "19cce425-86e6-48e7-8010-aedf8deaeaea"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "b7cbe405-8397-4e84-8b4e-26734deb9c97",
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "e90e4713-5c88-446c-b71a-216cbf050b2b",
+      "displayName": "Environment Name",
+      "description": "",
+      "variableName": "_environmentName",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Environment Name" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "678e5cde-e77f-4682-be2e-568cb7bd03b5"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "b7cbe405-8397-4e84-8b4e-26734deb9c97",
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "b11d8163-c8dd-4f83-bbd3-705da109bdee",
+      "displayName": "Session Id",
+      "description": "",
+      "variableName": "_sessionId",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "Session Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "783e503b-3127-4304-88f5-702a7f19189a"
+        }
+      },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "selectionType": "freetext",
+      "id": "55b35065-233d-4c7a-b293-42e21d637215",
+      "displayName": "Entra Tenant Id",
+      "variableName": "_entraTenantId",
+      "description": "",
+      "defaultValue": { "kind": "all" },
+      "showOnPages": {
+        "kind": "selection",
+        "pageIds": [
+          "b7cbe405-8397-4e84-8b4e-26734deb9c97",
+          "83fd66ef-38a5-429f-b152-48f2232d6af3",
+          "676a1638-5db1-4880-9241-e83efccb43e4"
+        ]
+      }
+    },
+    {
+      "kind": "string",
+      "id": "d55c2559-d898-4ea9-b5ba-c281fe7109fb",
+      "displayName": "User Id",
+      "description": "",
+      "variableName": "_userId",
+      "selectionType": "array",
+      "includeAllOption": true,
+      "defaultValue": { "kind": "all" },
+      "dataSource": {
+        "kind": "query",
+        "columns": { "value": "User Id" },
+        "queryRef": {
+          "kind": "query",
+          "queryId": "357c1cba-4b42-4104-b045-bd1c3c113473"
+        }
+      },
+      "showOnPages": { "kind": "all" }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "99a3b70c-8819-4cce-844b-3c83734afb29",
+      "kind": "manual-kusto",
+      "name": "bcinsight",
+      "clusterUri": "https://ade.applicationinsights.io/subscriptions/xxxxxxxxxx",
+      "database": "MultiAgentPatterns"
+    },
+    {
+      "id": "f57efb94-ace1-422e-b0a2-96bb06999026",
+      "kind": "manual-kusto",
+      "name": "MultiAgentPatterns",
+      "clusterUri": "https://ade.applicationinsights.io/subscriptions/xxxxxxxxxxx",
+      "database": "MultiAgentPatterns"
+    }
+  ],
+  "pages": [
+    { "name": "General", "id": "b7cbe405-8397-4e84-8b4e-26734deb9c97" },
+    { "name": "BC Agent", "id": "83fd66ef-38a5-429f-b152-48f2232d6af3" },
+    { "name": "MCS Agent", "id": "c9832ecb-bff0-4f79-acc1-6dbd49e2be01" },
+    {
+      "name": "Logic Apps Agent",
+      "id": "d21b1205-e1be-451f-a278-dccfc8e8b35b"
+    },
+    { "name": "Foundry Agent", "id": "a869946d-70d1-4fda-9453-b1d2c37a0db0" },
+    {
+      "name": "Cost & Governance",
+      "id": "676a1638-5db1-4880-9241-e83efccb43e4"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "union *\n| where timestamp between (_startTime .. _endTime)\n| summarize count() by itemType\n//| summarize count() by name, category, counter\n\n",
+      "id": "4d76c26b-df87-4e98-8ed3-bf2fab862790",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "traces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| project timestamp, severityLevel, message, operation_Id\r\n| order by timestamp desc",
+      "id": "2c593993-7de3-45bd-9b1d-9252c7adbc3d",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Tool calls:\nunion requests, dependencies\n| where timestamp between (_startTime .. _endTime)\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"execute_tool\"\n| extend description = tostring(customDimensions.[\"gen_ai.tool.description\"])\n| project timestamp, name, description, duration = round(duration,1), success, operation_Id, customDimensions\n| order by timestamp desc",
+      "id": "54978903-e830-4a19-aabf-201708f39356",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Token usage\nunion requests, dependencies\n| where timestamp between (_startTime .. _endTime)\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \n| extend inputTokens = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]),\n         outputTokens = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\n| where isnotnull(inputTokens) or isnotnull(outputTokens)\n| project timestamp, name, inputTokens, outputTokens, operation_Id",
+      "id": "2b52e94d-0a4b-4fee-b98f-b73576654b41",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Custom reservation signals\ntraces\n| where timestamp between (_startTime .. _endTime)\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \n| where tostring(customDimensions[\"event_name\"]) startswith \"reservation.confirmation.\"\n| extend eventName = tostring(customDimensions[\"event_name\"]),\n         phase = tostring(customDimensions[\"phase\"]),\n         outcome = tostring(customDimensions[\"outcome\"]),\n         durationMs = round(toreal(customDimensions[\"duration_ms\"]),0),\n         isSimulated = tobool(customDimensions[\"is_simulated\"]),\n         tool = tostring(customDimensions.tool_name),\n         reservationId = tostring(customDimensions.simulation_id)\n| project timestamp, eventName, phase, tool, outcome, durationMs,  \n          isSimulated, reservationId, operation_Id, operation_ParentId\n| order by timestamp asc\n",
+      "id": "763db80f-2975-480b-9842-7b397644c1e9",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "//Prenotazioni albergo confermate\ntraces\n| where timestamp between (_startTime .. _endTime)\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \n| where tostring(customDimensions[\"event_name\"]) == \"reservation.confirmation.completed\"\n| where tostring(customDimensions[\"outcome\"]) == \"success\"\n| project\n    timestamp,\n    agentName = cloud_RoleName,\n    reservationId = tostring(customDimensions[\"simulation_id\"]),\n    durationMs = round(toreal(customDimensions[\"duration_ms\"]),0),\n    isConfirmed = true,\n    operation_Id,\n    operation_ParentId\n| order by timestamp desc",
+      "id": "75e1ff70-375c-4ea6-bfb9-a5dde4d943bc",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Logic Apps multi-agent: one row per agent turn (LLM loop)\r\ntraces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n| extend Agent = tostring(customDimensions.prop__actionName)\r\n| extend PromptTokens = tolong(customDimensions.prop__promptTokenCount)\r\n| extend CompletionTokens = tolong(customDimensions.prop__completionTokenCount)\r\n| extend ToolCount = tolong(customDimensions.prop__toolCount)\r\n| extend ToolResults = tostring(customDimensions.prop__toolResults)\r\n| extend RunId = tostring(customDimensions.prop__flowRunSequenceId)\r\n| extend TotalTokens = PromptTokens + CompletionTokens\r\n| project timestamp, Agent, PromptTokens, CompletionTokens, TotalTokens, ToolCount, ToolResults, RunId, operation_Id\r\n| order by timestamp asc",
+      "id": "26057448-e366-4b14-9747-8ef32999360d",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Total tokens consumed per agent\r\ntraces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n| extend Agent = tostring(customDimensions.prop__actionName)\r\n| extend TotalTokens = tolong(customDimensions.prop__promptTokenCount) + tolong(customDimensions.prop__completionTokenCount)\r\n| summarize TotalTokens = sum(TotalTokens) by Agent\r\n| order by TotalTokens desc",
+      "id": "ca2aa9af-3840-4cb0-a19c-f300f3fc8eba",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Token consumption and estimated cost per agent (gpt-4.1)\r\nlet inputPricePer1M = 2.0;    // USD per 1M input tokens - edit to your contract\r\nlet outputPricePer1M = 8.0;   // USD per 1M output tokens - edit to your contract\r\ntraces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n| extend Agent = tostring(customDimensions.prop__actionName)\r\n| extend PromptTokens = tolong(customDimensions.prop__promptTokenCount)\r\n| extend CompletionTokens = tolong(customDimensions.prop__completionTokenCount)\r\n| summarize ['LLM Calls'] = count(), ['Prompt Tokens'] = sum(PromptTokens), ['Completion Tokens'] = sum(CompletionTokens) by Agent\r\n| extend ['Total Tokens'] = ['Prompt Tokens'] + ['Completion Tokens']\r\n| extend ['Est. Cost (USD)'] = round(['Prompt Tokens'] / 1000000.0 * inputPricePer1M + ['Completion Tokens'] / 1000000.0 * outputPricePer1M, 4)\r\n| order by ['Total Tokens'] desc",
+      "id": "927706e3-455a-40ad-9055-cd08fbb7b3e7",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Tokens over time, split by agent\r\ntraces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n| extend Agent = tostring(customDimensions.prop__actionName)\r\n| extend TotalTokens = tolong(customDimensions.prop__promptTokenCount) + tolong(customDimensions.prop__completionTokenCount)\r\n| summarize TotalTokens = sum(TotalTokens) by bin(timestamp, 10s), Agent\r\n| order by timestamp asc",
+      "id": "0f522866-4981-427d-853f-80a67cf5089a",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Agent handoffs and business tool calls\r\ntraces\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n| extend Agent = tostring(customDimensions.prop__actionName)\r\n| extend ToolCount = tolong(customDimensions.prop__toolCount)\r\n| extend ToolResults = tostring(customDimensions.prop__toolResults)\r\n| where ToolCount > 0 and ToolResults != \"{}\"\r\n| project timestamp, Agent, ToolResults, operation_Id\r\n| order by timestamp asc",
+      "id": "b158cb5e-e0b1-4ed2-bd55-1417a4da376c",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Azure OpenAI gpt-4.1 latency summary\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where name has \"openai\" and name has \"chat/completions\"\r\n| extend Model = extract(@\"deployments/([^/]+)/\", 1, name)\r\n| summarize ['Calls'] = count(), ['Avg ms'] = round(avg(duration), 1), ['P50 ms'] = round(percentile(duration, 50), 1), ['P95 ms'] = round(percentile(duration, 95), 1), ['Max ms'] = round(max(duration), 1) by Model, ['Endpoint'] = target",
+      "id": "ef54174d-28f7-4075-b804-0888f6ff98cf",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Per-call model latency over time\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"multiagentpatterns\"\r\n| where name has \"openai\" and name has \"chat/completions\"\r\n| project timestamp, DurationMs = duration\r\n| order by timestamp asc",
+      "id": "111414ba-fecf-4eae-8010-43d085e46dd1",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Errors, timeouts and workflow edge errors\r\nunion\r\n  (exceptions\r\n   | where timestamp between (_startTime .. _endTime)\r\n   | where cloud_RoleName == \"multiagentpatterns\"\r\n   | project timestamp, Kind = \"Exception\", Detail = outerMessage, operation_Id),\r\n  (traces\r\n   | where timestamp between (_startTime .. _endTime)\r\n   | where cloud_RoleName == \"multiagentpatterns\"\r\n   | where tostring(customDimensions.EventName) == \"EdgeError\"\r\n   | project timestamp, Kind = \"EdgeError\", Detail = message, operation_Id)\r\n| order by timestamp desc",
+      "id": "1ffafc58-2ac6-46bb-99b3-6badd907e784",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot Studio Inventory Agent - conversation transcript\r\ncustomEvents\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"Microsoft Copilot Studio\"\r\n| where name in (\"BotMessageReceived\", \"BotMessageSend\")\r\n| extend Direction = iff(name == \"BotMessageReceived\", \"User -> Agent\", \"Agent -> User\")\r\n| extend Message = tostring(customDimensions.text)\r\n| extend ConversationId = tostring(customDimensions.conversationId)\r\n| project timestamp, Direction, Message, ConversationId\r\n| order by timestamp asc",
+      "id": "b652f90b-cb20-45b2-bb3b-4f49f3175b78",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot Studio activity summary\r\ncustomEvents\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"Microsoft Copilot Studio\"\r\n| summarize ['User Messages'] = countif(name == \"BotMessageReceived\"),\r\n            ['Agent Messages'] = countif(name == \"BotMessageSend\"),\r\n            ['Topics Started'] = countif(name == \"TopicStart\"),\r\n            ['Conversations'] = dcount(tostring(customDimensions.conversationId))",
+      "id": "395bf154-ec39-4dae-bc44-e79242e156f7",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Business Central connector call statistics\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"Microsoft Copilot Studio\"\r\n| where type == \"Connector\"\r\n| summarize ['BC Calls'] = count(), ['Avg ms'] = round(avg(duration), 0), ['P95 ms'] = round(percentile(duration, 95), 0), ['Max ms'] = round(max(duration), 0), ['Failures'] = countif(success == false)",
+      "id": "6ab74455-d1c4-4941-aa03-6979c23d16d7",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Business Central connector calls detail\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"Microsoft Copilot Studio\"\r\n| where name == \"Dynamics 365 Business Central\"\r\n| project timestamp, Target = target, ['Duration ms'] = duration, Success = success, ResultCode = resultCode\r\n| order by timestamp asc",
+      "id": "0a364385-2b53-45dc-b844-561d77deacc9",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Response latency per conversation turn (user question -> agent reply)\r\ncustomEvents\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == \"Microsoft Copilot Studio\"\r\n| where name in (\"BotMessageReceived\", \"BotMessageSend\")\r\n| extend Text = tostring(customDimensions.text)\r\n| order by timestamp asc\r\n| extend PrevTime = prev(timestamp), PrevName = prev(name), PrevText = prev(Text)\r\n| where name == \"BotMessageSend\" and PrevName == \"BotMessageReceived\"\r\n| extend ResponseSeconds = round(datetime_diff('millisecond', timestamp, PrevTime) / 1000.0, 1)\r\n| project timestamp, UserQuestion = PrevText, ResponseSeconds\r\n| order by timestamp asc",
+      "id": "d85eeae2-a460-424a-9854-84861527333d",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Cumulative LLM / model calls across all agents (incl. BC Copilot actions)\r\nunion\r\n  (traces      \r\n    | where timestamp between (_startTime .. _endTime) \r\n    | where cloud_RoleName == \"multiagentpatterns\" \r\n    | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"),\r\n  (dependencies\r\n    | where timestamp between (_startTime .. _endTime) \r\n    | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n      or cloud_RoleName contains \"FoundryAgent\" \r\n    | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"),\r\n  (traces\r\n    | where timestamp between (_startTime .. _endTime) \r\n    | where tostring(customDimensions.eventId) == \"AL0000LLW\")\r\n| summarize ['LLM Calls'] = count()",
+      "id": "49cbd03f-e0d4-42ca-9cd9-610762b0032e",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Cumulative input/prompt tokens (Logic Apps gpt-4.1 + Foundry gpt-5.4-mini)\r\nlet la = toscalar(traces \r\n    | where timestamp between (_startTime .. _endTime) \r\n    | where cloud_RoleName == \"multiagentpatterns\" \r\n    | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\" \r\n    | summarize sum(tolong(customDimensions.prop__promptTokenCount)));\r\nlet fnd = toscalar(dependencies \r\n    | where timestamp between (_startTime .. _endTime) \r\n    | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n        or cloud_RoleName contains \"FoundryAgent\" \r\n    | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\" \r\n    | summarize sum(tolong(customDimensions[\"gen_ai.usage.input_tokens\"])));\r\nprint ['Input / Prompt Tokens'] = la + fnd",
+      "id": "3e7b63df-ddf5-4c23-941f-78003ab85574",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Cumulative output/completion tokens (Logic Apps + Foundry)\r\nlet la = toscalar(\r\n    traces \r\n    | where timestamp between (_startTime .. _endTime)   \r\n    | where cloud_RoleName == \"multiagentpatterns\" \r\n    | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\" \r\n    | summarize sum(tolong(customDimensions.prop__completionTokenCount)));\r\nlet fnd = toscalar(\r\n    dependencies \r\n    | where timestamp between (_startTime .. _endTime)  \r\n    | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n        or cloud_RoleName contains \"FoundryAgent\" \r\n    | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\" \r\n    | summarize sum(tolong(customDimensions[\"gen_ai.usage.output_tokens\"])));\r\nprint ['Output / Completion Tokens'] = la + fnd",
+      "id": "cc75d735-20c3-41be-9c3a-e2f87e25205a",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Cumulative estimated cost across agents (tokens for cloud agents + BC Copilot credits)\r\nlet laIn = 2.0; let laOut = 8.0;             // gpt-4.1  $/1M\r\nlet fIn = 0.25; let fCached = 0.025; let fOut = 2.0;  // gpt-5.4-mini $/1M (input / cached / output)\r\nlet creditUsd = 0.01;                        // BC Copilot credit $/credit - edit to contract\r\nlet laCost = toscalar(\r\n    traces \r\n    | where timestamp between (_startTime .. _endTime)  \r\n    | where cloud_RoleName == \"multiagentpatterns\"\r\n    | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n    | summarize round(sum(tolong(customDimensions.prop__promptTokenCount))/1000000.0*laIn + sum(tolong(customDimensions.prop__completionTokenCount))/1000000.0*laOut, 4));\r\nlet fndCost = toscalar(\r\n    dependencies \r\n    | where timestamp between (_startTime .. _endTime)  \r\n    | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n        or cloud_RoleName contains \"FoundryAgent\" \r\n    | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n    | extend i = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]), c = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]), o = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\r\n    | summarize round(sum(i - c)/1000000.0*fIn + sum(c)/1000000.0*fCached + sum(o)/1000000.0*fOut, 4));\r\nlet bcCost = toscalar(\r\n    traces \r\n    | where timestamp between (_startTime .. _endTime)  \r\n    | where tostring(customDimensions.eventId) == \"RT0055\"\r\n    | summarize round(sum(toreal(customDimensions.copilotCredits)) * creditUsd, 4));\r\nprint ['Est. Cost (USD)'] = round(laCost + fndCost + bcCost, 4)",
+      "id": "e44a90bc-6e08-4600-912c-dafead9182e0",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Executions per agent type (cross-platform, incl. BC agent tasks)\r\nunion\r\n  (traces       \r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where cloud_RoleName == \"multiagentpatterns\" \r\n    | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\" \r\n    | extend AgentType = \"Logic Apps (gpt-4.1)\"),\r\n  (customEvents \r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where cloud_RoleName == \"Microsoft Copilot Studio\" \r\n    | where name == \"BotMessageReceived\" \r\n    | extend AgentType = \"Copilot Studio (Inventory)\"),\r\n  (dependencies \r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n        or cloud_RoleName contains \"FoundryAgent\" \r\n    | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\" \r\n    | extend AgentType = \"Foundry (gpt-5.4-mini)\"),\r\n  (traces\r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where tostring(customDimensions.eventId) == \"LC0068\" \r\n    | extend AgentType = \"BC Agent (GPT-5.5 Chat)\")\r\n| summarize Executions = count() by AgentType\r\n| order by Executions desc",
+      "id": "e3f1405e-b34a-453e-bd8f-9e77e978a1ea",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Executions per agent type (cross-platform, incl. BC agent tasks)\r\nunion\r\n  (traces       \r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where cloud_RoleName == \"multiagentpatterns\" \r\n    | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\" \r\n    | extend AgentType = \"Logic Apps (gpt-4.1)\"),\r\n  (customEvents \r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where cloud_RoleName == \"Microsoft Copilot Studio\" \r\n    | where name == \"BotMessageReceived\" \r\n    | extend AgentType = \"Copilot Studio (Inventory)\"),\r\n  (dependencies \r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n        or cloud_RoleName contains \"FoundryAgent\" \r\n    | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\" \r\n    | extend AgentType = \"Foundry (gpt-5.4-mini)\"),\r\n  (traces\r\n    | where timestamp between (_startTime .. _endTime)\r\n    | where tostring(customDimensions.eventId) == \"LC0068\" \r\n    | extend AgentType = \"BC Agent (GPT-5.5 Chat)\")\r\n| summarize Executions = count() by AgentType\r\n| order by Executions desc",
+      "id": "2afed80d-bdf3-409b-b865-335421662760",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Per-agent token consumption & estimated cost (all platforms; BC billed in credits)\r\nlet laIn = 2.0; let laOut = 8.0;\r\nlet fIn = 0.25; let fCached = 0.025; let fOut = 2.0;\r\nlet creditUsd = 0.01;\r\nlet la = traces\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where cloud_RoleName == \"multiagentpatterns\"\r\n  | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n  | extend Agent = tostring(customDimensions.prop__actionName), i = tolong(customDimensions.prop__promptTokenCount), o = tolong(customDimensions.prop__completionTokenCount)\r\n  | summarize Calls = count(), InputTokens = sum(i), OutputTokens = sum(o) by Agent\r\n  | extend Platform = \"Logic Apps (gpt-4.1)\", CachedInput = long(0), EstCost = round(InputTokens/1000000.0*laIn + OutputTokens/1000000.0*laOut, 4);\r\nlet fnd = dependencies\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n    or cloud_RoleName contains \"FoundryAgent\"\r\n  | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n  | extend Agent = tostring(customDimensions[\"gen_ai.agent.name\"]), i = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]), c = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]), o = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\r\n  | summarize Calls = count(), InputTokens = sum(i), CachedInput = sum(c), OutputTokens = sum(o) by Agent\r\n  | extend Platform = \"Foundry (gpt-5.4-mini)\", EstCost = round((InputTokens - CachedInput)/1000000.0*fIn + CachedInput/1000000.0*fCached + OutputTokens/1000000.0*fOut, 4);\r\nlet bc = traces\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where tostring(customDimensions.eventId) == \"RT0055\"\r\n  | summarize Calls = dcount(tostring(customDimensions.agentTaskId)), Credits = sum(toreal(customDimensions.copilotCredits)) by Agent = tostring(customDimensions.featureName)\r\n  | extend Platform = \"BC Agent (credits)\", InputTokens = long(0), CachedInput = long(0), OutputTokens = long(0), EstCost = round(Credits * creditUsd, 4)\r\n  | project Agent, Platform, Calls, InputTokens, CachedInput, OutputTokens, EstCost;\r\nunion la, fnd, bc\r\n| project Agent, Platform, ['LLM Calls'] = Calls, ['Input Tokens'] = InputTokens, ['Cached Input'] = CachedInput, ['Output Tokens'] = OutputTokens, ['Est. Cost (USD)'] = EstCost\r\n| order by ['Est. Cost (USD)'] desc",
+      "id": "2c944ef5-76b4-4503-8f67-a5bb127dba03",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Summarized cumulative cost & tokens per agent platform (+ grand TOTAL)\r\nlet laIn = 2.0; let laOut = 8.0;\r\nlet fIn = 0.25; let fCached = 0.025; let fOut = 2.0;\r\nlet creditUsd = 0.01;\r\nlet la = traces\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where cloud_RoleName == \"multiagentpatterns\"\r\n  | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n  | summarize Calls = count(), InputTokens = sum(tolong(customDimensions.prop__promptTokenCount)), CachedInput = long(0), OutputTokens = sum(tolong(customDimensions.prop__completionTokenCount))\r\n  | extend Platform = \"Logic Apps (gpt-4.1)\", EstCost = round(InputTokens/1000000.0*laIn + OutputTokens/1000000.0*laOut, 4);\r\nlet fnd = dependencies\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where cloud_RoleName == \"DirectionsEMEAConciergeAgent\"\r\n    or cloud_RoleName contains \"FoundryAgent\"\r\n  | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n  | extend i = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]), c = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]), o = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\r\n  | summarize Calls = count(), InputTokens = sum(i), CachedInput = sum(c), OutputTokens = sum(o)\r\n  | extend Platform = \"Foundry (gpt-5.4-mini)\", EstCost = round((InputTokens - CachedInput)/1000000.0*fIn + CachedInput/1000000.0*fCached + OutputTokens/1000000.0*fOut, 4);\r\nlet bc = traces\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where tostring(customDimensions.eventId) == \"RT0055\"\r\n  | summarize Calls = dcount(tostring(customDimensions.agentTaskId)), InputTokens = long(0), CachedInput = long(0), OutputTokens = long(0), Credits = sum(toreal(customDimensions.copilotCredits))\r\n  | extend Platform = \"BC Agent (credits)\", EstCost = round(Credits * creditUsd, 4) | project Platform, Calls, InputTokens, CachedInput, OutputTokens, EstCost;\r\nlet combined = union la, fnd, bc | project Platform, Calls, InputTokens, CachedInput, OutputTokens, EstCost;\r\ncombined\r\n| union (combined | summarize Calls = sum(Calls), InputTokens = sum(InputTokens), CachedInput = sum(CachedInput), OutputTokens = sum(OutputTokens), EstCost = round(sum(EstCost), 4) | extend Platform = \"TOTAL (all agents)\")\r\n| project Platform, ['LLM Calls'] = Calls, ['Input Tokens'] = InputTokens, ['Cached Input'] = CachedInput, ['Output Tokens'] = OutputTokens, ['Total Tokens'] = InputTokens + OutputTokens, ['Est. Cost (USD)'] = EstCost\r\n| order by ['Est. Cost (USD)'] desc",
+      "id": "61093e8d-2af8-4f85-bc62-12d88442ee8e",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Activity timeline across all agents (incl. BC agent)\r\nunion\r\n  (traces       | where cloud_RoleName in (\"multiagentpatterns\", \"Microsoft Copilot Studio\", \"DirectionsEMEAConciergeAgent\")),\r\n  (dependencies | where cloud_RoleName in (\"multiagentpatterns\", \"Microsoft Copilot Studio\", \"DirectionsEMEAConciergeAgent\")),\r\n  (requests     | where cloud_RoleName in (\"multiagentpatterns\", \"Microsoft Copilot Studio\", \"DirectionsEMEAConciergeAgent\")),\r\n  (customEvents | where cloud_RoleName in (\"multiagentpatterns\", \"Microsoft Copilot Studio\", \"DirectionsEMEAConciergeAgent\")),\r\n  (traces       | where customDimensions.eventId == \"RT0055\" | extend cloud_RoleName = \"Business Central (BC Agent)\")\r\n| where timestamp between (_startTime .. _endTime)\r\n| summarize Events = count() by bin(timestamp, 1m), cloud_RoleName\r\n| order by timestamp asc",
+      "id": "47e6fb77-fd83-4226-9b50-b62078e8fe3a",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Foundry token usage & estimated cost by model (gpt-5.4-mini)\r\nlet fIn = 0.25; let fCached = 0.025; let fOut = 2.0;   // $/1M input / cached input / output - edit to contract\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| extend i = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]), c = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]), o = tolong(customDimensions[\"gen_ai.usage.output_tokens\"]), r = tolong(customDimensions[\"gen_ai.usage.reasoning.output_tokens\"])\r\n| summarize ['Chat Calls'] = count(), ['Input Tokens'] = sum(i), ['Cached Input'] = sum(c), ['Output Tokens'] = sum(o), ['Reasoning Tokens'] = sum(r) by ['Model'] = tostring(customDimensions[\"gen_ai.request.model\"])\r\n| extend ['Billable Input'] = ['Input Tokens'] - ['Cached Input']\r\n| extend ['Est. Cost (USD)'] = round(['Billable Input']/1000000.0*fIn + ['Cached Input']/1000000.0*fCached + ['Output Tokens']/1000000.0*fOut, 4)",
+      "id": "efd62350-df65-4fce-b80e-44711a94e518",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Tokens per chat call over time - billable input vs cached input vs output\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| extend BillableInput = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]) - tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]),\r\n         CachedInput = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]),\r\n         OutputTokens = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\r\n| project timestamp, BillableInput, CachedInput, OutputTokens\r\n| order by timestamp asc",
+      "id": "5465244a-3f04-4e6f-b8b5-f80ed773cd80",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "dependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| summarize ['Cache Hit Rate %'] = round(100.0 * sum(tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"])) / sum(tolong(customDimensions[\"gen_ai.usage.input_tokens\"])), 1)",
+      "id": "2aa385ab-4764-41cc-a356-2b15e28064b3",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "dependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| summarize ['Cached Tokens'] = sum(tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]))",
+      "id": "6dba4470-a152-4b26-93a5-e68b2228c5c3",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Estimated savings from prompt caching (full input price minus cached price)\r\nlet fIn = 0.25; let fCached = 0.025;\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| summarize c = sum(tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]))\r\n| extend ['Est. Caching Savings (USD)'] = round(c/1000000.0*(fIn - fCached), 4)\r\n| project ['Est. Caching Savings (USD)']",
+      "id": "b4ae72fc-d6d4-47fb-9ab7-011e1b25e669",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Foundry model latency & streaming\r\ndependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| extend ttfc = toreal(customDimensions[\"gen_ai.response.time_to_first_chunk\"])\r\n| summarize ['Chat Calls'] = count(), ['Avg ms'] = round(avg(duration), 1), ['P50 ms'] = round(percentile(duration, 50), 1), ['P95 ms'] = round(percentile(duration, 95), 1), ['Max ms'] = round(max(duration), 1), ['Avg TTFC (s)'] = round(avg(ttfc), 2)",
+      "id": "683b7324-d7f2-4fd7-be22-0dc2e6620ae1",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "dependencies\r\n| where timestamp between (_startTime .. _endTime)\r\n| where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") or cloud_RoleName contains \"FoundryAgent\" \r\n| where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n| project timestamp, DurationMs = duration\r\n| order by timestamp asc",
+      "id": "f4afe473-4714-432b-8117-1faeae82b02b",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Estimated cost share by agent (donut) - tokens for cloud agents, credits for BC\r\nlet laIn = 2.0; let laOut = 8.0;\r\nlet fIn = 0.25; let fCached = 0.025; let fOut = 2.0;\r\nlet creditUsd = 0.01;\r\nlet la = traces | where timestamp > ago(30d) | where cloud_RoleName == \"multiagentpatterns\"\r\n  | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n  | summarize InTok = sum(tolong(customDimensions.prop__promptTokenCount)), OutTok = sum(tolong(customDimensions.prop__completionTokenCount))\r\n  | extend AgentType = \"Logic Apps (gpt-4.1)\", Cost = round(InTok/1000000.0*laIn + OutTok/1000000.0*laOut, 4) | project AgentType, Cost;\r\nlet fnd = dependencies | where timestamp > ago(30d) | where cloud_RoleName == \"DirectionsEMEAConciergeAgent\"\r\n  | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n  | extend i = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]), c = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]), o = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\r\n  | summarize i = sum(i), c = sum(c), o = sum(o)\r\n  | extend AgentType = \"Foundry (gpt-5.4-mini)\", Cost = round((i - c)/1000000.0*fIn + c/1000000.0*fCached + o/1000000.0*fOut, 4) | project AgentType, Cost;\r\nlet bc = traces | where timestamp > ago(30d) | where tostring(customDimensions.eventId) == \"RT0055\"\r\n  | summarize cr = sum(toreal(customDimensions.copilotCredits))\r\n  | extend AgentType = \"BC Agent (credits)\", Cost = round(cr * creditUsd, 4) | project AgentType, Cost;\r\nunion la, fnd, bc\r\n| project AgentType, ['Est. Cost (USD)'] = Cost\r\n| order by ['Est. Cost (USD)'] desc",
+      "id": "2040db98-f441-4925-a75a-c90d80548007",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Token mix by agent (billable input vs cached input vs output); BC & MCS have no token telemetry\r\nlet la = traces | where timestamp > ago(30d) | where cloud_RoleName == \"multiagentpatterns\"\r\n  | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n  | summarize BillableInput = sum(tolong(customDimensions.prop__promptTokenCount)), CachedInput = long(0), OutputTokens = sum(tolong(customDimensions.prop__completionTokenCount))\r\n  | extend AgentType = \"Logic Apps (gpt-4.1)\" | project AgentType, BillableInput, CachedInput, OutputTokens;\r\nlet fnd = dependencies | where timestamp > ago(30d) | where cloud_RoleName == \"DirectionsEMEAConciergeAgent\"\r\n  | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n  | summarize BillableInput = sum(tolong(customDimensions[\"gen_ai.usage.input_tokens\"]) - tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"])), CachedInput = sum(tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"])), OutputTokens = sum(tolong(customDimensions[\"gen_ai.usage.output_tokens\"]))\r\n  | extend AgentType = \"Foundry (gpt-5.4-mini)\" | project AgentType, BillableInput, CachedInput, OutputTokens;\r\nlet mcs = customEvents | where timestamp > ago(30d) | where cloud_RoleName == \"Microsoft Copilot Studio\" | where name == \"BotMessageReceived\"\r\n  | summarize n = count() | extend AgentType = \"Copilot Studio (no tokens)\", BillableInput = long(0), CachedInput = long(0), OutputTokens = long(0) | project AgentType, BillableInput, CachedInput, OutputTokens;\r\nlet bc = traces | where timestamp > ago(30d) | where tostring(customDimensions.eventId) == \"RT0055\"\r\n  | summarize n = count() | extend AgentType = \"BC Agent (credits, no tokens)\", BillableInput = long(0), CachedInput = long(0), OutputTokens = long(0) | project AgentType, BillableInput, CachedInput, OutputTokens;\r\nunion la, fnd, mcs, bc\r\n| order by BillableInput desc",
+      "id": "340ba30c-0369-4b2a-bfe5-85bd419d85d2",
+      "usedVariables": []
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Agent tasks created in Business Central\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"LC0068\"\r\n| summarize ['Agent Tasks'] = count()",
+      "id": "fc8148f0-b223-45bf-9a4e-8403c410543e",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot credits consumed (AI Consumption Recorded)\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"RT0055\"\r\n| summarize ['Copilot Credits'] = sum(toreal(customDimensions.copilotCredits))",
+      "id": "08c6fcba-afb6-4c66-bb64-c43fdce475d0",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Estimated BC agent cost from Copilot credits (edit creditUsd to your contract)\r\nlet creditUsd = 0.01;\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"RT0055\"\r\n| summarize c = sum(toreal(customDimensions.copilotCredits))\r\n| extend ['Est. Cost (USD)'] = round(c * creditUsd, 4)\r\n| project ['Est. Cost (USD)']",
+      "id": "38cd578e-10a2-49f0-8812-a9acf38ee9b3",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot capability invocations\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"AL0000LLW\"\r\n| summarize ['Copilot Actions'] = count()",
+      "id": "43fd1b24-621d-40a4-93a8-9bda689469d4",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Agent tasks created (model & defaults)\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"LC0068\"\r\n| project timestamp,\r\n          ['Task Id']       = tostring(customDimensions.taskId),\r\n          Agent             = tostring(customDimensions.agentDisplayName),\r\n          Model             = tostring(customDimensions.modelName),\r\n          ['Model Id']      = tostring(customDimensions.modelId),\r\n          ['Default Model'] = tostring(customDimensions.modelIsDefault),\r\n          Availability      = tostring(customDimensions.modelAvailability)\r\n| order by timestamp asc",
+      "id": "aa6d6b12-c42b-4b9c-a3d8-f24e8aae57dc",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot credits by feature / extension\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"RT0055\"\r\n| summarize ['Credits'] = sum(toreal(customDimensions.copilotCredits)),\r\n            ['Billing Entries'] = count(),\r\n            ['Tasks'] = dcount(tostring(customDimensions.agentTaskId))\r\n        by Feature = tostring(customDimensions.featureName),\r\n           ['Copilot Feature'] = tostring(customDimensions.copilotStudioFeature),\r\n           Extension = tostring(customDimensions.extensionName)\r\n| order by ['Credits'] desc",
+      "id": "29d139f5-49e1-4a55-86fb-1bf7e53545ba",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot credits consumed over time\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"RT0055\"\r\n| project timestamp, Credits = toreal(customDimensions.copilotCredits)\r\n| order by timestamp asc",
+      "id": "47f6f9e3-5421-4f40-b07d-5f927eea550a",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Copilot capability invocations\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"AL0000LLW\"\r\n| project timestamp,\r\n          Feature       = tostring(customDimensions.alFeatureName),\r\n          ['User Role'] = tostring(customDimensions.alUserRole),\r\n          Success       = tostring(customDimensions['alCopilot.System.Action.Success']),\r\n          License       = tostring(customDimensions.alTenantLicenseState),\r\n          Caller        = tostring(customDimensions.alCallerAppName)\r\n| order by timestamp asc",
+      "id": "26fce04c-ac29-41f9-beba-a1dd36ac4007",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// External API / web service calls made by the agent\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"RT0019\"\r\n| where tostring(customDimensions.extensionName) == \"DT.MTGAgent\"\r\n| extend d = totimespan(customDimensions.totalTime)\r\n| project timestamp,\r\n          Endpoint        = tostring(customDimensions.endpoint),\r\n          Method          = tostring(customDimensions.httpMethod),\r\n          Status          = tostring(customDimensions.httpStatusCode),\r\n          ['Duration ms'] = round(d / 1ms, 1),\r\n          ['AL Object']   = tostring(customDimensions.alObjectName)\r\n| order by timestamp asc",
+      "id": "72668010-e1e7-4a53-923c-c0b7b0c9f8ac",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Agent configuration changes (governance audit)\r\nbctraces\r\n| where tostring(customDimensions.eventId) == \"LC0066\"\r\n| project timestamp,\r\n          Agent               = tostring(customDimensions.agentDisplayName),\r\n          ['State Change']    = strcat(tostring(customDimensions.statePreviousValue), ' -> ', tostring(customDimensions.state)),\r\n          Model               = tostring(customDimensions.modelName),\r\n          ['Changed Fields']  = tostring(customDimensions.changedFields),\r\n          ['Instructions #']  = substring(tostring(customDimensions.instructionsHash), 0, 12)\r\n| order by timestamp asc",
+      "id": "dfd554c2-d819-4396-a7fe-394ceeeab00f",
+      "usedVariables": ["bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// BC agent activity by category\r\nbctraces\r\n| union bcpageviews\r\n| where customDimensions.extensionName == \"DT.MTGAgent\"\r\n| extend eid = tostring(customDimensions.eventId)\r\n| extend Category = case(\r\n    eid == \"LC0068\", \"Agent Task Created\",\r\n    eid == \"LC0040\", \"Task Scheduled\",\r\n    eid == \"LC0043\", \"Task Completed\",\r\n    eid == \"RT0055\", \"AI Consumption\",\r\n    eid == \"AL0000LLW\", \"Copilot Action\",\r\n    eid == \"RT0019\", \"External API\",\r\n    eid == \"RT0008\", \"OData Web Service\",\r\n    eid == \"LC0066\", \"Agent Config Change\",\r\n    eid == \"AL0000CTE\", \"Sensitive Field Change\",\r\n    eid in (\"RT0003\", \"RT0004\"), \"Authorization\",\r\n    \"Other\")\r\n| summarize Events = count() by Category\r\n| order by Events desc",
+      "id": "7d89e2e8-734b-4cf9-93db-50239f66320d",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// BC agent activity timeline\r\nbctraces\r\n| union bcpageviews\r\n| where customDimensions.extensionName == \"DT.MTGAgent\"\r\n| extend eid = tostring(customDimensions.eventId)\r\n| extend Category = case(\r\n    eid == \"LC0068\", \"Agent Task Created\",\r\n    eid == \"LC0040\", \"Task Scheduled\",\r\n    eid == \"LC0043\", \"Task Completed\",\r\n    eid == \"RT0055\", \"AI Consumption\",\r\n    eid == \"AL0000LLW\", \"Copilot Action\",\r\n    eid == \"RT0019\", \"External API\",\r\n    eid == \"RT0008\", \"OData Web Service\",\r\n    eid == \"LC0066\", \"Agent Config Change\",\r\n    eid == \"AL0000CTE\", \"Sensitive Field Change\",\r\n    eid in (\"RT0003\", \"RT0004\"), \"Authorization\",\r\n    \"Other\")\r\n| summarize count() by Category, bin(timestamp, 1m)",
+      "id": "2967981f-a9f7-4808-bb99-88701eeb858b",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Per-agent token consumption & estimated cost (all platforms; BC billed in credits)\r\nlet laIn = 2.0; let laOut = 8.0;\r\nlet fIn = 0.25; let fCached = 0.025; let fOut = 2.0;\r\nlet creditUsd = 0.01;\r\nlet la = traces\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where cloud_RoleName == \"multiagentpatterns\"\r\n  | where tostring(customDimensions.EventName) == \"WorkflowAgentLoopExecutionCompleted\"\r\n  | extend Agent = tostring(customDimensions.prop__actionName), i = tolong(customDimensions.prop__promptTokenCount), o = tolong(customDimensions.prop__completionTokenCount)\r\n  | summarize Calls = count(), InputTokens = sum(i), OutputTokens = sum(o) by Agent\r\n  | extend Platform = \"Logic Apps (gpt-4.1)\", CachedInput = long(0), EstCost = round(InputTokens/1000000.0*laIn + OutputTokens/1000000.0*laOut, 4);\r\nlet fnd = dependencies\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where cloud_RoleName == (\"DirectionsEMEAConciergeAgent\") \r\n    or cloud_RoleName contains \"FoundryAgent\"\r\n  | where tostring(customDimensions[\"gen_ai.operation.name\"]) == \"chat\"\r\n  | extend Agent = tostring(customDimensions[\"gen_ai.agent.name\"]), i = tolong(customDimensions[\"gen_ai.usage.input_tokens\"]), c = tolong(customDimensions[\"gen_ai.usage.cache_read.input_tokens\"]), o = tolong(customDimensions[\"gen_ai.usage.output_tokens\"])\r\n  | summarize Calls = count(), InputTokens = sum(i), CachedInput = sum(c), OutputTokens = sum(o) by Agent\r\n  | extend Platform = \"Foundry (gpt-5.4-mini)\", EstCost = round((InputTokens - CachedInput)/1000000.0*fIn + CachedInput/1000000.0*fCached + OutputTokens/1000000.0*fOut, 4);\r\nlet bc = traces\r\n  | where timestamp between (_startTime .. _endTime) \r\n  | where tostring(customDimensions.eventId) == \"RT0055\"\r\n  | summarize Calls = dcount(tostring(customDimensions.agentTaskId)), Credits = sum(toreal(customDimensions.copilotCredits)) by Agent = tostring(customDimensions.featureName)\r\n  | extend Platform = \"BC Agent (credits)\", InputTokens = long(0), CachedInput = long(0), OutputTokens = long(0), EstCost = round(Credits * creditUsd, 4)\r\n  | project Agent, Platform, Calls, InputTokens, CachedInput, OutputTokens, EstCost;\r\nunion la, fnd, bc\r\n| project Agent, Platform, ['LLM Calls'] = Calls, ['Input Tokens'] = InputTokens, ['Cached Input'] = CachedInput, ['Output Tokens'] = OutputTokens, ['Est. Cost (USD)'] = EstCost\r\n| order by ['Est. Cost (USD)'] desc",
+      "id": "a3d075bf-34a2-4cc8-a844-a74bd6fcdde3",
+      "usedVariables": ["_endTime", "_startTime"]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "// Agent tasks and workflow\r\nbctraces\r\n| union bcpageviews\r\n| where customDimensions.eventId in (\"RT0055\", \"LC0068\")\r\n    or  customDimensions.clientType in (\"ChildSession\", \"ClientService\")\r\n    or  customDimensions.parentSessionClientType == \"ClientService\"\r\n| project timestamp\r\n    , message\r\n    , eventId = tostring(customDimensions.eventId)\r\n    , clientType = tostring(customDimensions.clientType)\r\n    , parentSessionClientType = tostring(customDimensions.clientType)\r\n    , agent = tostring(customDimensions.agentDisplayName)\r\n    , model = tostring(customDimensions.modelName)\r\n    , taskId = tostring(customDimensions.taskId)\r\n    , duration = round(toreal(totimespan(customDimensions.totalTime))/10000,0)\r\n    , sqlExecutes = toint(customDimensions.sqlExecutes)\r\n    , sqlRowsRead = toint(customDimensions.sqlRowsReads)\r\n    , httpMethod = tostring(customDimensions.httpMethod)\r\n    , endpoint = tostring(customDimensions.endpoint)\r\n    , cardName = tostring(customDimensions.alCardName)\r\n    , itemNo = tostring(customDimensions.alItemNo)\r\n    , copilotCredits = toreal(customDimensions.copilotCredits)\r\n    , featureName = tostring(customDimensions.featureName)\r\n    , featureType = tostring(customDimensions.copilotStudioFeature)\r\n    , consumptionDateTime = tostring(customDimensions.consumptionDateTime)\r\n    , agentUserId = tostring(customDimensions.agentUserId)\r\n    , userId = user_Id\r\n    , sessionId = session_Id\r\n    , customDimensions\r\n",
+      "id": "f96f2e9a-c4b6-4ea0-8a2e-76adea77860d",
+      "usedVariables": ["bcpageviews", "bctraces"]
+    },
+    {
+      "id": "de6744ba-af86-46a4-8dc3-eba07834e3fb",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.companyName has_any (_companyName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)",
+      "usedVariables": [
+        "_clientType",
+        "_companyName",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_publisher",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "id": "72898c5b-5162-48a0-bc26-c4d1c582c9a3",
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "f57efb94-ace1-422e-b0a2-96bb06999026"
+      },
+      "text": "pageViews\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.companyName has_any (_companyName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)",
+      "usedVariables": [
+        "_clientType",
+        "_companyName",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_publisher",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.clientType)\n| project [\"Client Type\"] = tostring(customDimensions.clientType)\n| sort by ['Client Type'] asc \n",
+      "id": "6b394b72-66d0-4ee2-b924-84b8c11281d3",
+      "usedVariables": [
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_publisher",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.companyName)\n| project [\"Company Name\"] = tostring(customDimensions.companyName)\n| sort by ['Company Name'] asc \n\n\n\n\n",
+      "id": "6e5245dc-e98d-4669-bd80-c0d4438b1dcd",
+      "usedVariables": [
+        "_clientType",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_publisher",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.clientType has_any (_clientType)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.extensionPublisher)\n| project [\"Publisher\"] = tostring(customDimensions.extensionPublisher)\n| sort by Publisher asc \n",
+      "id": "f356a791-55f7-40f1-8657-e9bbcdb9a054",
+      "usedVariables": [
+        "_clientType",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_environmentType",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.companyName has_any (_companyName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentType)\n| project [\"Environment Type\"] = tostring(customDimensions.environmentType)\n| sort by ['Environment Type'] asc ",
+      "id": "19cce425-86e6-48e7-8010-aedf8deaeaea",
+      "usedVariables": [
+        "_clientType",
+        "_companyName",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentName",
+        "_publisher",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.aadTenantId has_any (_entraTenantId)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.companyName has_any (_companyName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| where user_Id has_any (_userId)\n| summarize arg_max(timestamp,*) by tostring(customDimensions.environmentName)\n| project [\"Environment Name\"] = tostring(customDimensions.environmentName)\n| sort by ['Environment Name'] asc ",
+      "id": "678e5cde-e77f-4682-be2e-568cb7bd03b5",
+      "usedVariables": [
+        "_clientType",
+        "_companyName",
+        "_endTime",
+        "_entraTenantId",
+        "_environmentType",
+        "_publisher",
+        "_sessionId",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.companyName has_any (_companyName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where user_Id has_any (_userId)\n| summarize arg_max(timestamp,*) by tostring(session_Id)\n| project [\"Session Id\"] = tostring(session_Id)\n| sort by ['Session Id'] asc \n",
+      "id": "783e503b-3127-4304-88f5-702a7f19189a",
+      "usedVariables": [
+        "_clientType",
+        "_companyName",
+        "_endTime",
+        "_environmentName",
+        "_environmentType",
+        "_publisher",
+        "_startTime",
+        "_userId"
+      ]
+    },
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "99a3b70c-8819-4cce-844b-3c83734afb29"
+      },
+      "text": "traces\n| where timestamp between (_startTime .. _endTime)\n| where customDimensions.environmentType has_any (_environmentType)\n| where customDimensions.environmentName has_any (_environmentName)\n| where customDimensions.companyName has_any (_companyName)\n| where customDimensions.clientType has_any (_clientType)\n| where customDimensions.extensionPublisher has_any (_publisher)\n| where session_Id has_any (_sessionId)\n| summarize arg_max(timestamp,*) by tostring(user_Id)\n| project [\"User Id\"] = tostring(user_Id)\n| sort by ['User Id'] asc \n\n\n",
+      "id": "357c1cba-4b42-4104-b045-bd1c3c113473",
+      "usedVariables": [
+        "_clientType",
+        "_companyName",
+        "_endTime",
+        "_environmentName",
+        "_environmentType",
+        "_publisher",
+        "_sessionId",
+        "_startTime"
+      ]
+    }
+  ],
+  "embeddedApps": []
+}
